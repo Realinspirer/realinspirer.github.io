@@ -10,11 +10,12 @@
     -webkit-user-select: none;
     user-select: none;
     stroke: var(--button_accent_color);
+    overflow: hidden;
 }
 .bars{
     font-size: 30px;
     font-weight: bolder;
-    transition: 0.3s;
+    transition: var(--base_anim_speed);
 }
 .icon:hover{
     color: var(--button_hover_color);
@@ -31,7 +32,7 @@
     border-radius: 4px;
     background-color: var(--verticle_back_color);
     height: 0px;
-    transition: 0.3s;
+    transition: var(--base_anim_speed);
     opacity: 0;
     overflow: hidden;
 }
@@ -46,7 +47,7 @@
     right: 35px;
     border-radius: 4px;
     background-color: var(--verticle_back_color);
-    transition: 0.3s;
+    transition: var(--base_anim_speed);
 }
 @media screen and (max-width: 850px) {
     .Main_links_div a:nth-last-child(2){display: none;}
@@ -58,19 +59,26 @@
     .Main_links_div a:nth-last-child(3){display: none;}
 }
 @media screen and (max-width: 650px) {
+    .logo_div{height: 135px;}
     .Main_links_div a:nth-last-child(4){display: none;}
 }
-@media screen and (max-width: 510px) {
+
+@media screen and (max-width: 500px) {
+    .logo_div{height: 105px;}
     .Main_links_div a:nth-last-child(5){display: none;}
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width:380px) {
+  .logo_div{height: 85px;}
+}
+@media screen and (max-width: 317px) {
     .Main_links_div a:nth-last-child(6){display: none;}
 }
 
 /* Nav bar done */
 .ham {
     cursor: pointer;
-    transition: transform 400ms;
+    transition: transform var(--base_anim_speed);
+    -webkit-tap-highlight-color: transparent;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -81,7 +89,7 @@
   }
   .line {
     fill:none;
-    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    transition: stroke-dasharray var(--base_anim_speed), stroke-dashoffset var(--base_anim_speed);
     stroke:inherit;
     stroke-width:5.5;
     stroke-linecap:round;
