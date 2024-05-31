@@ -1,6 +1,6 @@
 @font-face {
     font-family: LT_Regular;
-    src: url("Fonts\\LTSAEADA-REGULAR.otf");
+    src: url("/Fonts/LTSaeada-Regular.otf");
 }
 :root{
     --button_accent_color:#363636ff;
