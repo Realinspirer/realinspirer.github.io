@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realinspirer - Programmer and Game Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Styles/Hamburger_nav_icon_style.css">
+    <script src="script.js"></script>
+    <link rel="icon" href="Images/logo.svg">
+</head>
+<body>
+    <!-- header -->
+    <div class="logo_div">
+        <img class="logo_img" src="Images/logo.svg" alt="">
+        <div class="Main_links_div">
+            <a class="Main_links" href=""><span>HOME</span></a>
+            <a class="Main_links" href=""><span>GAMES</span></a>
+            <a class="Main_links" href=""><span>DESIGNS</span></a>
+            <a class="Main_links" href=""><span>APPS</span></a>
+            <a class="Main_links" href=""><span>ABOUT ME</span></a>
+            <a class="Main_links icon" id="nav_bar" onclick="open_close_nav()" tabindex="0" onblur="Hide_nav()">
+                <i class="bars">
+                    <svg class="ham hamRotate ham7" id="ham_icon" viewBox="-1 -7 100 100" width="40">
+                        <path
+                              class="line top"
+                              d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
+                        <path
+                              class="line middle"
+                              d="m 70,50 h -40" />
+                        <path
+                              class="line bottom"
+                              d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
+                      </svg>
+                </i>
+            </a>
+            <!-- &#8801; -->
+        </div>
+        <div class="not_visible fader" id="verticle_nav">
+            <a class="Main_links" href=""><span>HOME</span></a>
+            <a class="Main_links" href=""><span>GAMES</span></a>
+            <a class="Main_links" href=""><span>DESIGNS</span></a>
+            <a class="Main_links" href=""><span>APPS</span></a>
+            <a class="Main_links" href=""><span>ABOUT ME</span></a>
+        </div>
+    </div>
+    <!-- header end -->
+</body>
+</html>

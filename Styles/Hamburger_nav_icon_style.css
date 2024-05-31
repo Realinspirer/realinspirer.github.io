@@ -1,0 +1,107 @@
+/*bars*/
+.icon{
+    display: none;
+    width: 50px;
+    height: 45px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    user-select: none;
+    stroke: var(--button_accent_color);
+}
+.bars{
+    font-size: 30px;
+    font-weight: bolder;
+    transition: 0.3s;
+}
+.icon:hover{
+    color: var(--button_hover_color);
+    stroke: var(--button_hover_color);
+}
+.not_visible{
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: 35px;
+    border-radius: 4px;
+    background-color: var(--verticle_back_color);
+    height: 0px;
+    transition: 0.3s;
+    opacity: 0;
+    overflow: hidden;
+}
+.ver_vis {
+    height: var(--verticle_nav_height);
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    right: 35px;
+    border-radius: 4px;
+    background-color: var(--verticle_back_color);
+    transition: 0.3s;
+}
+@media screen and (max-width: 850px) {
+    .Main_links_div a:nth-last-child(2){display: none;}
+    .Main_links_div a.icon{
+        display: flex;
+    }
+}
+@media screen and (max-width: 770px) {
+    .Main_links_div a:nth-last-child(3){display: none;}
+}
+@media screen and (max-width: 650px) {
+    .Main_links_div a:nth-last-child(4){display: none;}
+}
+@media screen and (max-width: 510px) {
+    .Main_links_div a:nth-last-child(5){display: none;}
+}
+@media screen and (max-width: 370px) {
+    .Main_links_div a:nth-last-child(6){display: none;}
+}
+
+/* Nav bar done */
+.ham {
+    cursor: pointer;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:inherit;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+  .ham7 .top {
+    stroke-dasharray: 40 82;
+  }
+  .ham7 .middle {
+    stroke-dasharray: 40 111;
+  }
+  .ham7 .bottom {
+    stroke-dasharray: 40 161;
+  }
+  .ham7.active .top {
+    stroke-dasharray: 17 82;
+    stroke-dashoffset: -62px;
+  }
+  .ham7.active .middle {
+    stroke-dashoffset: 23px;
+  }
+  .ham7.active .bottom {
+    stroke-dashoffset: -83px;
+  }
