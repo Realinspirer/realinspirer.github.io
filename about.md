@@ -1,1 +1,0 @@
-I am Realinspirer, a programmer, and a game developer. I am creating games from quite a time now, but been in C# programming for even longer. Now I mostly work on casual games, and some weird YouTube videos.

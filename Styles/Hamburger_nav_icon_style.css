@@ -48,22 +48,23 @@
     border-radius: 4px;
     background-color: var(--verticle_back_color);
     transition: var(--base_anim_speed);
+    z-index: 100;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 860px) {
     .Main_links_div a:nth-last-child(2){display: none;}
     .Main_links_div a.icon{
         display: flex;
     }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 800px) {
     .Main_links_div a:nth-last-child(3){display: none;}
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 680px) {
     .logo_div{height: 135px;}
     .Main_links_div a:nth-last-child(4){display: none;}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
     .logo_div{height: 105px;}
     .Main_links_div a:nth-last-child(5){display: none;}
 }
@@ -72,6 +73,7 @@
 }
 @media screen and (max-width: 317px) {
     .Main_links_div a:nth-last-child(6){display: none;}
+    .Main_links_div{ width: 100%; margin-top: -65px; float: right;}
 }
 
 /* Nav bar done */

@@ -1,0 +1,26 @@
+[
+    {
+        "title":"Vector works",
+        "subtitle":"Discover vector art and designs!",
+        "image_url":"Images\\Discover_section\\vector_img.png",
+        "click_url":"https://www.google.com"
+    },
+    {
+        "title":"Game assets",
+        "subtitle":"Discover game art and assets!",
+        "image_url":"Images/Featured_section/Runner.png",
+        "click_url":"https://www.google.com"
+    },
+    {
+        "title":"Game UI",
+        "subtitle":"Discover UI and such elements!",
+        "image_url":"Images/Featured_section/Runner.png",
+        "click_url":"https://www.google.com"
+    },
+    {
+        "title":"Apps",
+        "subtitle":"Discover utility applications!",
+        "image_url":"Images/Featured_section/Runner.png",
+        "click_url":"https://www.google.com"
+    }
+]

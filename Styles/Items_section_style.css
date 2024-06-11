@@ -1,0 +1,163 @@
+
+.items_grid{
+    --item_back_color:white;
+    --item_highlight_color:#fffbf4ff;
+    --height_of_item:400px;
+    --highlight_color:#cd996cf2;
+    --top_normal:70%;
+    --top_highlight:60%;
+    --font_size_items:30px;
+    --font_size_items_relative:6vw;
+    --shadow_gradient:linear-gradient(180deg, #ffdfa7bd, #ffecccc6);
+    --shadow_text_color:#5a4c2fec;
+    --item_def_shadow:gray;
+    --shadow_top_val:89%;
+    --shadow_border_radius:40%;
+}
+
+
+.items_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 0 var(--margin_sides) calc(var(--margin_sides) + 5px) var(--margin_sides);
+}
+.items_grid .grid_item{
+    height: var(--height_of_item);
+    margin: 0;
+    background-color: var(--item_back_color);
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--big_border_radius);
+    transition: var(--base_anim_speed);
+    filter: drop-shadow(0 0 2px var(--item_def_shadow));
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    
+}
+.items_grid .grid_item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--base_anim_speed);
+}
+.items_grid .grid_item:hover img{
+    transform: scale(112%);
+}
+.items_grid .grid_item::before{
+    content: "";
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: var(--top_normal);
+    background-color: var(--item_back_color);
+    z-index: 2;
+    filter: drop-shadow(0 0 10px #222222ff);
+    border-radius: 0 var(--base_border_radius) 0 var(--base_border_radius);
+    transition: 0.15s;
+    background-image: url(../Images/back_t.png);
+    background-size: cover;
+}
+.items_grid .grid_item:hover::before{
+    filter: drop-shadow(0 0 15px #e1e1e1ff);
+    border-radius: 45% 45% 0 0;
+    top:var(--top_highlight);
+
+    background-color: var(--item_highlight_color);
+    opacity: 0.93;    
+
+}
+.items_grid .grid_item:hover{
+    transform: translateY(-4px);
+    filter: drop-shadow(0 0 6px var(--highlight_color));
+}
+.grid_item > p{
+    z-index: 5;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: calc(var(--top_normal) + 7% );
+    font-size: var(--font_size_items);
+    text-align: center;
+    font-family: LT_light;
+    line-height: 70%;
+    padding: 0 10px 0 10px;
+    color: var(--button_accent_color);
+    transition: var(--base_anim_speed);
+
+}
+.items_grid .grid_item:hover > p{
+    top: calc(var(--top_highlight) + 10%);
+    /* color: var(--highlight_color); */
+}
+.grid_item > p span{
+    font-size: calc(var(--font_size_items) * 0.5);
+    line-height: 0px;
+    color: var(--button_accent_color);
+}
+
+.items_grid .grid_item .item_shadow{
+    content: "fsdfds";
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    top:100%;
+    z-index: 5;
+    background-image: var(--shadow_gradient);
+    transition: var(--base_anim_speed);
+    opacity: 0;
+}
+.items_grid .grid_item:hover .item_shadow{
+    top: var(--shadow_top_val);
+    border-radius: var(--shadow_border_radius) var(--shadow_border_radius) 0 0;
+    opacity: 1;
+}
+.item_shadow p{
+    position: absolute;
+    width: 100%;
+    bottom: 17%;
+    font-size: calc( var(--font_size_items) * 0.65);
+    color: var(--shadow_text_color);
+    margin:0;
+}
+
+
+@media screen and (max-width:400px) {
+    .items_grid{
+        grid-template-columns: 1fr;
+        --height_of_item:200px;
+        --font_size_items:var(--font_size_items_relative);
+    }
+}
+@media screen and (max-width:500px) and (min-width:401px) {
+    .items_grid{
+        grid-template-columns: 1fr 1fr;
+        --height_of_item:220px;
+        --font_size_items:16px;
+    }
+}
+@media screen and (max-width:800px) and (min-width:501px) {
+    .items_grid{
+        grid-template-columns: 1fr 1fr;
+        --height_of_item:270px;
+        --font_size_items:23px;
+    }
+}
+@media screen and (max-width:1025px) and (min-width:801px) {
+    .items_grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        --height_of_item:300px;
+        --font_size_items:25px;
+    }
+}
+@media screen and (max-width:1200px) and (min-width:1026px) {
+    .items_grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        --height_of_item:330px;
+    }
+}
+

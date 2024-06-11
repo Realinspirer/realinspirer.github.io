@@ -2,13 +2,48 @@
     font-family: LT_Regular;
     src: url("/Fonts/LTSaeada-Regular.otf");
 }
+@font-face {
+    font-family: LT_extralight;
+    src: url("/Fonts/LTSAEADA-EXTRALIGHT.OTF");
+}
+@font-face {
+    font-family: LT_light;
+    src: url("/Fonts/LTSAEADA-LIGHT.OTF");
+}
 :root{
+    /* button */
     --button_accent_color:#363636ff;
     --button_hover_color:#ece3e3ff;
+    /* button end */
+    /* vertcle hamburger icon */
     --verticle_back_color:#d2d2d2ff;
+    /* vertcle hamburger icon end */
+    /* commons */
+    --base_border_radius:4px;
+    --big_border_radius:10px;
     --verticle_nav_height:300px;
     --base_anim_speed:0.25s;
+    --margin_sides:20px;
+    --margin_sides_320:10px;
+    --margin_sides_450:15px;
+    --base_blur_amount:7px;
+    --big_blur_amount:9px;
+    /* commons end */
+    --major_div_major_fontsize:var(--major_div_major_fontsize_fixed);
+    --major_div_major_fontsize_fixed:70px;
+    --major_div_major_fontsize_relative:10vw;
 }
+@media screen and (max-width:350px) {
+    :root{
+        --margin_sides:var(--margin_sides_320);
+    }
+}
+@media screen and (max-width:450px) and (min-width:350px) {
+    :root{
+        --margin_sides:var(--margin_sides_450);
+    }
+}
+
 
 ::selection{
     background-color: #595959ff;
@@ -30,7 +65,7 @@ body{
 }
 .logo_div{
     height: 150px;
-    padding: 10px 20px 10px 15px;
+    padding: 10px var(--margin_sides) 10px var(--margin_sides);
     border: #a8a8a8ff 1px dotted;
     margin: auto;
 }
@@ -110,5 +145,12 @@ body{
 .Main_links:hover span:after {
     opacity: 1;
     right: 1px;
+}
+.Main_links.active{
+    border: solid 1px var(--button_accent_color);
+    transition: var(--base_anim_speed);
+}
+.Main_links.active:hover{
+    border: solid 1px transparent;
 }
 /*main links done*/

@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realinspirer - Programmer and Game Developer</title>
+    <link rel="icon" href="Images/logo.svg">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/Scripts/Featured_section_things/script_section_gen.js"></script>
+    <script src="/Scripts/Blur_section/Discover_section_generator.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Styles/Hamburger_nav_icon_style.css">
-    <script src="script.js"></script>
-    <link rel="icon" href="Images/logo.svg">
+    <link rel="stylesheet" href="Styles/Major_div_button.css">
+    <link rel="stylesheet" href="Styles/Section_style.css">
+    <link rel="stylesheet" href="Styles/Items_section_style.css">
+    <link rel="stylesheet" href="Styles/Blur_section_element_thing.css">
+    <link rel="stylesheet" href="Styles/Items_normal.css">
 </head>
 <body>
     <!-- header -->
     <div class="logo_div">
         <img class="logo_img" src="Images/logo.svg" alt="">
         <div class="Main_links_div">
-            <a class="Main_links" href=""><span>HOME</span></a>
+            <a class="Main_links active" href=""><span>HOME</span></a>
             <a class="Main_links" href=""><span>GAMES</span></a>
             <a class="Main_links" href=""><span>DESIGNS</span></a>
             <a class="Main_links" href=""><span>APPS</span></a>
             <a class="Main_links" href=""><span>ABOUT ME</span></a>
-            <a class="Main_links icon" id="nav_bar" onclick="open_close_nav()" tabindex="0" onblur="Hide_nav()">
+            <a class="Main_links icon" id="nav_bar" onclick="open_close_nav()">
                 <i class="bars">
                     <svg class="ham hamRotate ham7" id="ham_icon" viewBox="-1 -7 100 100" width="40">
                         <path
@@ -36,8 +44,8 @@
             </a>
             <!-- &#8801; -->
         </div>
-        <div class="not_visible fader" id="verticle_nav">
-            <a class="Main_links" href=""><span>HOME</span></a>
+        <div class="not_visible" id="verticle_menu" tabindex="0">
+            <a class="Main_links active" href=""><span>HOME</span></a>
             <a class="Main_links" href=""><span>GAMES</span></a>
             <a class="Main_links" href=""><span>DESIGNS</span></a>
             <a class="Main_links" href=""><span>APPS</span></a>
@@ -45,5 +53,69 @@
         </div>
     </div>
     <!-- header end -->
+
+    <!-- major div -->
+    <div class="major_div">
+        <p class="major_text">HECK'S KITCHEN!</p>
+        <div class="major_button"><p>Play Now!</p></div>
+        <div class="video_above_blur"></div>
+        <video class="major_div_img" src="Images/render.mp4" autoplay loop muted alt="Back">
+        </video>
+    </div>
+    <!-- major div end -->
+
+    <!-- featured sections -->
+    <p class="section_text">FEATURED PROJECTS</p>
+    <div class="items_grid" id="featured_section">
+        <!-- <div class="grid_item">
+            <p>Banana Bounce!
+                <span><br>Avoid obstacles while you bounce^^!</span>
+            </p>
+            <img src="Images/Featured_section/Banana Bounce!.png" alt="game_cover">
+            <div class="item_shadow">
+                <p>Play now!</p>
+            </div>
+        </div> -->
+    </div>
+    <!-- featured section end -->
+
+    <!-- Section 1 start -->
+    <p class="section_text">DISCOVER WORKS</p>
+    <div class="items_grid items_grid_narrow" id="section_discover">
+        <!-- <div class="blur_section_item">
+            <img src="Images/Featured_section/Runner.png" alt="Item cover">
+            <p class="title_section">Background</p>
+            <p class="subtitle_section">This is a subtitle</p>
+        </div> -->
+    </div>
+    <!-- Section 1 end -->
+
+    <!-- games section start -->
+    <p class="section_text section_text_60">GAMES</p>
+    <div class="items_grid items_grid_narrow_0">
+
+        <div class="item_normal">
+            <img src="Images/Featured_section/Banana Bounce!.png" alt="icon">
+            <div class="items_text">
+                <p class="item_normal_title">Banana Bounce</p>
+                <p class="item_normal_subtitle">Runner</p>
+                <p class="item_normal_desc">A game based on real life</p>
+                <a class="normal_button">Play now</a>
+            </div>
+        </div>
+        <div class="item_normal">
+            <img src="Images/Featured_section/Banana Bounce!.png" alt="icon">
+            <div class="items_text">
+                <p class="item_normal_title">Banana Bounce</p>
+                <p class="item_normal_subtitle">Runner</p>
+                <p class="item_normal_desc">A game based on real life</p>
+                <a class="normal_button">Play now</a>
+            </div> 
+        </div>
+
+
+    </div>
+    <!-- games section end -->
+
 </body>
 </html>
