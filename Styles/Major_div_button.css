@@ -3,7 +3,7 @@
     /* major div */
     --major_div_height_320:330px;
     --major_div_height_450:400px;
-    --major_div_height:470px;
+    --major_div_height:500px;
     
     --major_div_gradient_dark:linear-gradient(180deg, #7e7e7e00, #545454f2);
     --major_div_gradient_light:linear-gradient(180deg, #adadad00, #a8a8a8f2);
@@ -24,7 +24,7 @@
 
 .major_div{    
     height: var(--major_div_height);
-    margin: var(--margin_sides) 0 20px 0;
+    margin: 0 0 20px 0;
     position: relative;
     /* border-radius: var(--big_border_radius); */
     overflow: hidden;
