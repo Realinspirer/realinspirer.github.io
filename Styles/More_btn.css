@@ -1,0 +1,118 @@
+
+.more_button{
+    height: var(--item_size);
+    margin: 0;
+    border-radius: var(--big_border_radius);
+    filter: drop-shadow(0 0 2px var(--item_def_shadow));
+    transition: var(--base_anim_speed);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    background-color: white;
+}
+.more_button::before{
+    position: absolute;
+    content: "";
+    right: 100%;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--button_accent_color);
+    transition: var(--base_anim_speed);
+}
+.more_button::after{
+    position: absolute;
+    content: "";
+    z-index: -2;
+    right: 100%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(93, 93, 93);
+    transition: var(--base_anim_speed);
+}
+.more_button:hover::before{
+    right: 30%;
+}
+.more_button:hover::after{
+    right: 0%;
+}
+.more_button p{
+    font-family: LT_light;
+    display: inline-block;
+    margin-left: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -115%);
+    color: var(--button_accent_color);
+    font-size: var(--title_font_size);
+    transition: var(--base_anim_speed);
+}
+.more_button:hover p{
+    margin-left: var(--item_padding);
+    left: 0%;
+    transform: translate(0%, -50%);
+    color: var(--button_hover_color);
+    font-size: calc(var(--title_font_size) * 1.2);
+}
+
+.more_button p span{
+    font-size: 0.55em;
+    display: block;
+    margin: 0;
+    height: 0;
+    line-height: 1.3em;
+    transition: var(--base_anim_speed);
+    opacity: 0;
+    margin-left: 0.3em;
+}
+.more_button:hover p span{
+    height: 1em;
+    opacity: 1;
+}
+.more_button:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 5px var(--item_def_shadow));
+}
+
+.more_img{
+    position: absolute;
+    z-index: -1;
+    top: 10%;
+    right: 2%;
+    background-image: url(../Images/more_thing.png);
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    width: 25%;
+    height: 80%;
+    margin: 0;
+    /* opacity: 0; */
+    transition: var(--base_anim_speed);
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    transform: translateX(-150%);
+}.more_img{
+    /* background-color: rebeccapurple; */
+    top: 55%;
+    right: 50%;
+    height: 20%;
+    width: 10%;
+    transform: translate(50%);
+    background-position: top;
+    /* background-color: red; */
+}
+.more_button:hover .more_img{
+    top: 10%;
+    height: 80%;
+    width: 25%;
+    right: 2%;
+    background-position: center;
+
+
+    opacity: 1;
+    transform: translateX(0);
+}

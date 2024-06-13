@@ -8,7 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/Scripts/Featured_section_things/script_section_gen.js"></script>
     <script src="/Scripts/Blur_section/Discover_section_generator.js"></script>
-    <script src="script.js"></script>
+    <script src="/Scripts/Normal_sections_generator/Normal_section_gen.js"></script>
+    <script src="Scripts/script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Styles/Hamburger_nav_icon_style.css">
     <link rel="stylesheet" href="Styles/Major_div_button.css">
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="Styles/Items_section_style.css">
     <link rel="stylesheet" href="Styles/Blur_section_element_thing.css">
     <link rel="stylesheet" href="Styles/Items_normal.css">
+    <link rel="stylesheet" href="Styles/More_btn.css">
 </head>
 <body>
     <!-- header -->
@@ -76,6 +78,7 @@
                 <p>Play now!</p>
             </div>
         </div> -->
+        
     </div>
     <!-- featured section end -->
 
@@ -91,10 +94,9 @@
     <!-- Section 1 end -->
 
     <!-- games section start -->
-    <p class="section_text section_text_60">GAMES</p>
-    <div class="items_grid items_grid_narrow_0">
-
-        <div class="item_normal">
+    <p class="section_text">RECENT GAMES</p>
+    <div class="items_grid items_grid_narrow_0" id="more_games_section">
+        <!-- <div class="item_normal">
             <img src="Images/Featured_section/Banana Bounce!.png" alt="icon">
             <div class="items_text">
                 <p class="item_normal_title">Banana Bounce</p>
@@ -102,20 +104,23 @@
                 <p class="item_normal_desc">A game based on real life</p>
                 <a class="normal_button">Play now</a>
             </div>
+        </div> -->
+        <div class="more_button">
+            <p>View All Games<span>Lists of all games</span></p>
+            <div class="more_img"></div>
         </div>
-        <div class="item_normal">
-            <img src="Images/Featured_section/Banana Bounce!.png" alt="icon">
-            <div class="items_text">
-                <p class="item_normal_title">Banana Bounce</p>
-                <p class="item_normal_subtitle">Runner</p>
-                <p class="item_normal_desc">A game based on real life</p>
-                <a class="normal_button">Play now</a>
-            </div> 
-        </div>
-
-
     </div>
     <!-- games section end -->
+     
+    <!-- more apps section start -->
+    <p class="section_text">RECENT APPS</p>
+    <div class="items_grid items_grid_narrow_0" id="more_apps_section">
+        <div class="more_button">
+            <p>View All Apps<span>Lists of all apps</span></p>
+            <div class="more_img"></div>
+        </div>
+    </div>
+    <!-- more apps section end -->
 
 </body>
 </html>

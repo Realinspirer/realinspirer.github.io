@@ -13,10 +13,11 @@ class section_class{
         this.click_url = cl_url;
     }
 }
-var window_argument:string = "";
 
-get_json();
-async function get_json() {
+get_json_featured();
+async function get_json_featured() {
+    var window_argument:string = "_self";
+
     var response = await fetch('/Scripts/Featured_section_things/Section_thing.json');
     var res_ar:Array<section_class> = await response.json();
 

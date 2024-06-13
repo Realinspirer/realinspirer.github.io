@@ -1,0 +1,26 @@
+[
+    {
+        "title":"ImageSHOT!",
+        "subtitle":"Utilities",
+        "description":"Export images in a grid",
+        "image_url":"Images\\Featured_section\\Runner.png",
+        "button_text":"Learn more",
+        "click_url":"https://bing.com"
+    },
+    {
+        "title":"Items Tracker",
+        "subtitle":"Utilities",
+        "description":"Products price tracker",
+        "image_url":"Images\\Featured_section\\Runner.png",
+        "button_text":"Learn more",
+        "click_url":"https://bing.com"
+    },
+    {
+        "title":"Due Tracker",
+        "subtitle":"Utilities",
+        "description":"Track client dues",
+        "image_url":"Images\\Featured_section\\Runner.png",
+        "button_text":"Learn more",
+        "click_url":"https://bing.com"
+    }
+]

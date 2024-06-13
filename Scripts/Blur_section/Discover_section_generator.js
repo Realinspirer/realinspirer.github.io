@@ -16,10 +16,10 @@ class discover_section {
         this.click_url = cl_url;
     }
 }
-var window_argument_discover = "";
-get_json();
-function get_json() {
+get_json_discover();
+function get_json_discover() {
     return __awaiter(this, void 0, void 0, function* () {
+        var window_argument_discover = "";
         var response = yield fetch('/Scripts/Blur_section/Discover_section.json');
         var res_ar = yield response.json();
         res_ar.reverse().forEach(res => {

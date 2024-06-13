@@ -1,13 +1,14 @@
 .item_normal *{
-    padding: initial;
+    padding: unset;
 }
-
-.item_normal{
+.items_grid_narrow_0{
     --item_size:170px;
-    --img_size:120px;
     --item_padding:20px;
-    --text_margin_left:10px;
     --title_font_size:25px;
+}
+.item_normal{
+    --img_size:120px;
+    --text_margin_left:10px;
     --text_desc:15px;
     --button_margin:20px;
 }
@@ -112,13 +113,13 @@
 @media screen and (max-width:400px) {
     .items_grid_narrow_0{
         grid-template-columns: 1fr;
+        --title_font_size:4vw;
+        --item_padding:10px;
+        --item_size:95px;
     }
     .item_normal{
-        --item_size:95px;
         --img_size:75px;
-        --title_font_size:4vw;
 
-        --item_padding:10px;
         --text_margin_left:5px;
         --button_margin:10px;
         --text_desc:5px;
@@ -127,13 +128,13 @@
 @media screen and (max-width:750px) and (min-width:401px) {
     .items_grid_narrow_0{
         grid-template-columns: 1fr;
+        --title_font_size:22px;
+        --item_size:130px;
+        --item_padding:15px;
     }
     .item_normal{
-        --item_size:130px;
         --img_size:100px;
-        --title_font_size:22px;
 
-        --item_padding:15px;
         --text_margin_left:10px;
         --button_margin:15px;
         --text_desc:10px;
@@ -142,13 +143,13 @@
 @media screen and (max-width:800px) and (min-width:750px) {
     .items_grid_narrow_0{
         grid-template-columns: 1fr 1fr;
+        --title_font_size:20px;
+        --item_padding:15px;
+        --item_size:140px;
     }
     .item_normal{
-        --item_size:140px;
         --img_size:105px;
-        --title_font_size:20px;
 
-        --item_padding:15px;
         --text_margin_left:8px;
         --button_margin:13px;
         --text_desc:10px;
@@ -157,13 +158,13 @@
 @media screen and (max-width:1025px) and (min-width:801px) {
     .items_grid_narrow_0{
         grid-template-columns: 1fr 1fr;
+        --item_padding:17px;
+        --title_font_size:22px;
+        --item_size:155px;
     }
     .item_normal{
-        --item_size:155px;
         --img_size:110px;
-        --title_font_size:22px;
 
-        --item_padding:17px;
         --text_margin_left:10px;
         --button_margin:17px;
         --text_desc:10px;

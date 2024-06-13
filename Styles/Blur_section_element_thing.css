@@ -1,5 +1,5 @@
 .blur_section_item{
-    --item_height:250px;
+    --item_height:350px;
     --top_size:30%;
     --top_gradient:linear-gradient(180deg, #00000000, #141414d8);
     --item_def_shadow:gray;
@@ -88,17 +88,22 @@
     opacity: 1;
 }
 
-
+.items_grid_narrow{
+    grid-template-columns: 1fr 1fr;
+}
 
 @media screen and (max-width:400px) {
+    .items_grid_narrow{
+        grid-template-columns: 1fr;
+    }
     .blur_section_item{
-        --item_height:180px;
+        --item_height:240px;
         --font_size_items:var(--font_size_items_relative);
     }
 }
 @media screen and (max-width:500px) and (min-width:401px) {
     .blur_section_item{
-        --item_height:190px;
+        --item_height:270px;
         --font_size_items:30px;
     }
     .items_grid_narrow{
@@ -107,7 +112,7 @@
 }
 @media screen and (max-width:800px) and (min-width:501px) {
     .blur_section_item{
-        --item_height:220px;
+        --item_height:290px;
         --font_size_items:30px;
     }
     .items_grid_narrow{
@@ -116,7 +121,7 @@
 }
 @media screen and (max-width:1025px) and (min-width:801px) {
     .blur_section_item{
-        --item_height:210px;
+        --item_height:300px;
         --font_size_items:28px;
     }
     .items_grid_narrow{
@@ -125,7 +130,7 @@
 }
 @media screen and (max-width:1200px) and (min-width:1026px) {
     .blur_section_item{
-        --item_height:240px;
+        --item_height:320px;
         --font_size_items:35px;
     }
     .items_grid_narrow{

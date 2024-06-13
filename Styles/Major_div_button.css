@@ -24,9 +24,9 @@
 
 .major_div{    
     height: var(--major_div_height);
-    margin: var(--margin_sides) var(--margin_sides) 20px var(--margin_sides);
+    margin: var(--margin_sides) 0 20px 0;
     position: relative;
-    border-radius: var(--big_border_radius);
+    /* border-radius: var(--big_border_radius); */
     overflow: hidden;
     display: block;
 

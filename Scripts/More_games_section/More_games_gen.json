@@ -1,0 +1,26 @@
+[
+    {
+        "title":"HK Runner!",
+        "subtitle":"Runner",
+        "description":"A 3D runner",
+        "image_url":"Images\\Featured_section\\Runner.png",
+        "button_text":"Play now",
+        "click_url":"https://bing.com"
+    },
+    {
+        "title":"Escape It!",
+        "subtitle":"Point & Click",
+        "description":"Escape the world",
+        "image_url":"Images\\Featured_section\\Runner.png",
+        "button_text":"Play now",
+        "click_url":"https://bing.com"
+    },
+    {
+        "title":"Package Delivery",
+        "subtitle":"Side Scrolling",
+        "description":"Collect and avoid",
+        "image_url":"Images\\Featured_section\\Runner.png",
+        "button_text":"Play now",
+        "click_url":"https://bing.com"
+    }
+]

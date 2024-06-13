@@ -11,10 +11,10 @@ class discover_section{
         this.click_url = cl_url;
     }
 }
-var window_argument_discover:string = "";
 
-get_json();
-async function get_json() {
+get_json_discover();
+async function get_json_discover() {
+    var window_argument_discover:string = "";
     var response = await fetch('/Scripts/Blur_section/Discover_section.json');
     var res_ar:Array<discover_section> = await response.json();
 
