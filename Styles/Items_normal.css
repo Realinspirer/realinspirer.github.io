@@ -73,9 +73,9 @@
     display: inline-block;
     -webkit-user-select: none;
     user-select: none;
-    padding: 10px;
+    padding: 0.62em;
     border: 1px var(--button_accent_color) dashed;
-    border-radius: var(--base_border_radius);
+    border-radius: 0.3em;
     position: relative;
     cursor: pointer;
     color: var(--button_accent_color);
@@ -84,7 +84,7 @@
 }
 .normal_button:hover{
     color: var(--button_hover_color);
-    border-color: #fff;
+    border-color: transparent;
 }
 .normal_button::before {
     content: "";

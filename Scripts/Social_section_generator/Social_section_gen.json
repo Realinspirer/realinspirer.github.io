@@ -1,0 +1,44 @@
+[
+    {
+        "title":"YouTube",
+        "subtitle":"Subscribe for blogs, animations<br> and much more!",
+        "image_url":"Images\\Socials\\yt1.png",
+        "button_text":"Subscribe",
+        "click_url":"https://www.youtube.com/@Realinspirer?sub_confirmation=1"
+    },
+    {
+        "title":"Itch.io",
+        "subtitle":"Follow for project and games!",
+        "image_url":"Images\\Socials\\itch.png",
+        "button_text":"Follow",
+        "click_url":"https://realinspirer.itch.io/"
+    },
+    {
+        "title":"Github",
+        "subtitle":"Follow for site development and projects!",
+        "image_url":"Images\\Socials\\github.png",
+        "button_text":"Follow",
+        "click_url":"https://github.com/Realinspirer/"
+    },
+    {
+        "title":"YouTube (Music)",
+        "subtitle":"Subscribe for music and unique (lyrics) videos!",
+        "image_url":"Images\\Socials\\yt2.png",
+        "button_text":"Subscribe",
+        "click_url":"https://www.youtube.com/@RealinspirerMusic?sub_confirmation=1"
+    },
+    {
+        "title":"YouTube (Nightcore)",
+        "subtitle":"Subscribe for nightcore music!",
+        "image_url":"Images\\Socials\\yt3.png",
+        "button_text":"Subscribe",
+        "click_url":"https://www.youtube.com/@RealinspirerNightcore?sub_confirmation=1"
+    },
+    {
+        "title":"Email",
+        "subtitle":"Want to contact me?",
+        "image_url":"Images\\Socials\\email.png",
+        "button_text":"Send email",
+        "click_url":"mailto:realinspirer@outlook.com"
+    }
+]

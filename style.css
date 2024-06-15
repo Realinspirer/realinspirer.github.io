@@ -27,6 +27,7 @@
     --margin_sides_320:10px;
     --margin_sides_450:15px;
     --base_blur_amount:7px;
+    --small_blur_amount:4px;
     --big_blur_amount:9px;
     /* commons end */
     --major_div_major_fontsize:var(--major_div_major_fontsize_fixed);

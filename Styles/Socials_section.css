@@ -1,0 +1,72 @@
+.social_section{
+    --temp_color:var(--button_accent_color);
+    --temp_color_hover:var(--button_hover_color);
+}
+.social_section, .social_section *{
+   margin: initial;
+}
+.social_section{
+    margin: 0;
+    height: var(--item_size);
+    background-color: white;
+    border-radius: var(--big_border_radius);
+    filter: drop-shadow(0 0 2px var(--item_def_shadow));
+    overflow: hidden;
+    transition: var(--base_anim_speed);
+}
+.social_section:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 5px var(--item_def_shadow));
+}
+.social_section .social_img{
+    margin:0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: var(--base_anim_speed);
+}
+.social_section .back_grad{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(-90deg, #1d1d1dd7, #43434354);
+    width: 100%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.social_texts{
+    font-family: LT_light;
+    color: var(--button_hover_color);
+    margin-right: 1.5em;
+    margin-top: 0.3em;
+    font-size: calc( var(--title_font_size) * 1.2);
+    cursor: default;
+}
+.social_texts .subtitle{
+    font-size: 0.5em;
+    margin-top: 0;
+    opacity: 0;
+    max-height: 0;
+    transition: var(--base_anim_speed);
+}
+.social_section:hover .social_texts .subtitle{
+    max-height: 2em;
+    margin-top: 0.25em;
+    opacity: 1;
+}
+.social_texts .normal_button{
+    --button_accent_color:var(--temp_color_hover);
+    --button_hover_color:var(--temp_color);
+    font-size: 0.5em;
+    margin-top: 0.8em;
+    z-index: 1;
+}
+.social_section:hover .social_img{
+    transform: scale(1.2);
+}
+.social_section:hover .social_img{
+    filter: blur(var(--small_blur_amount));
+}
