@@ -10,6 +10,7 @@
     <script src="/Scripts/Blur_section/Discover_section_generator.js"></script>
     <script src="/Scripts/Normal_sections_generator/Normal_section_gen.js"></script>
     <script src="/Scripts/Social_section_generator/Social_section_gen.js"></script>
+    <script src="/Scripts/Design_section_generator/Design_section_gen.js"></script>
     <script src="Scripts/script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Styles/Hamburger_nav_icon_style.css">
@@ -21,6 +22,7 @@
     <link rel="stylesheet" href="Styles/More_btn.css">
     <link rel="stylesheet" href="Styles/Designs_section.css">
     <link rel="stylesheet" href="Styles/Socials_section.css">
+    <link rel="stylesheet" href="Styles/Footer.css">
 </head>
 <body>
     <!-- header -->
@@ -29,7 +31,7 @@
         <div class="Main_links_div">
             <a class="Main_links active" href=""><span>HOME</span></a>
             <a class="Main_links" href=""><span>GAMES</span></a>
-            <a class="Main_links" href=""><span>DESIGNS</span></a>
+            <a class="Main_links" href=""><span>PROJECTS</span></a>
             <a class="Main_links" href=""><span>APPS</span></a>
             <a class="Main_links" href=""><span>ABOUT ME</span></a>
             <a class="Main_links icon" id="nav_bar" onclick="open_close_nav()">
@@ -52,7 +54,7 @@
         <div class="not_visible" id="verticle_menu" tabindex="0">
             <a class="Main_links active" href=""><span>HOME</span></a>
             <a class="Main_links" href=""><span>GAMES</span></a>
-            <a class="Main_links" href=""><span>DESIGNS</span></a>
+            <a class="Main_links" href=""><span>PROJECTS</span></a>
             <a class="Main_links" href=""><span>APPS</span></a>
             <a class="Main_links" href=""><span>ABOUT ME</span></a>
         </div>
@@ -117,9 +119,10 @@
 
 
     <!-- Designs section -->
+
      <p class="section_text">EXPLORE DESIGNS</p>
-    <div class="items_grid item_grid_design">
-        <div class="design_item">
+    <div class="items_grid item_grid_design" id="Designs_section">
+        <!-- <div class="design_item">
             <div class="design_text">
                 <p class="design_title">
                     Background
@@ -128,47 +131,7 @@
             </div>
             <img src="Images/back1.png" alt="design_item">
             
-        </div>
-        <div class="design_item">
-            <div class="design_text">
-                <p class="design_title">
-                    Background
-                    <span>Things you can relate</span>
-                </p>
-            </div>
-            <img src="Images/back1.png" alt="design_item">
-            
-        </div>
-        <div class="design_item">
-            <div class="design_text">
-                <p class="design_title">
-                    Background
-                    <span>Things you can relate</span>
-                </p>
-            </div>
-            <img src="Images/back1.png" alt="design_item">
-            
-        </div>
-        <div class="design_item">
-            <div class="design_text">
-                <p class="design_title">
-                    Background
-                    <span>Things you can relate</span>
-                </p>
-            </div>
-            <img src="Images/back1.png" alt="design_item">
-            
-        </div>
-        <div class="design_item">
-            <div class="design_text">
-                <p class="design_title">
-                    Background
-                    <span>Things you can relate</span>
-                </p>
-            </div>
-            <img src="Images/back1.png" alt="design_item">
-            
-        </div>
+        </div> -->
         <div class="more_button_square">
             <p>View All Designs<span>List of all designs</span></p>
             <div class="more_img"></div>
@@ -178,7 +141,7 @@
     <!-- Designs section end -->
 
     <!-- games section start -->
-    <p class="section_text">RECENT GAMES</p>
+    <p class="section_text">RECENT PROJECTS</p>
     <div class="items_grid items_grid_narrow_0" id="more_games_section">
         <!-- <div class="item_normal">
             <img src="Images/Featured_section/Banana Bounce!.png" alt="icon">
@@ -190,21 +153,93 @@
             </div>
         </div> -->
         <div class="more_button">
+            <p>View All Projects<span>List of all projects</span></p>
+            <div class="more_img"></div>
+        </div>
+        <div class="more_button">
             <p>View All Games<span>List of all games</span></p>
+            <div class="more_img"></div>
+        </div>
+        <div class="more_button">
+            <p>View All apps<span>List of all apps</span></p>
             <div class="more_img"></div>
         </div>
     </div>
     <!-- games section end -->
      
     <!-- more apps section start -->
-    <p class="section_text">RECENT APPS</p>
-    <div class="items_grid items_grid_narrow_0" id="more_apps_section">
+
+    <!-- <div class="items_grid items_grid_narrow_0" id="more_apps_section">
         <div class="more_button">
             <p>View All Apps<span>List of all apps</span></p>
             <div class="more_img"></div>
         </div>
-    </div>
+    </div> -->
+    
     <!-- more apps section end -->
+
+    <!-- footer section -->
+    <div class="footer_div">
+        <div class="footer_logo">
+            <img class="footer_img" src="Images/logo_light.svg" alt="footer_img">
+            <p class="footer_logo_title">REALINSPIRER
+                <span><br>IMAGINE AND CREATE</span>
+            </p>
+        </div>
+
+        <div class="footer_links_parent">
+            <div class="footer_links_section">
+                <p class="footer_links_title">Contact</p>
+                <ul class="footer_links_list">
+                    <li><a>Email</a></li>
+                </ul>
+            </div>
+            <div class="footer_links_section">
+                <p class="footer_links_title">Socials</p>
+                <ul class="footer_links_list">
+                    <li><a>YouTube</a></li>
+                    <li><a>Itch.io</a></li>
+                    <li><a>Github</a></li>
+                </ul>
+            </div>
+            <div class="footer_links_section">
+                <p class="footer_links_title">Creations</p>
+                <ul class="footer_links_list">
+                    <li><a>Games</a></li>
+                    <li><a>Apps</a></li>
+                    <li><a>Designs</a></li>
+                </ul>
+                <ul class="footer_links_list footer_links_margin">
+                    <li><a>Animations</a></li>
+                    <li><a>3D</a></li>
+                    <li><a>..and much more</a></li>
+                </ul>
+            </div>
+            <div class="footer_links_section">
+                <p class="footer_links_title">About me</p>
+                <ul class="footer_links_list">
+                    <li><a>Know more</a></li>
+                </ul>
+            </div>
+            <div class="footer_links_section">
+                <p class="footer_links_title">Hire me</p>
+                <ul class="footer_links_list">
+                    <li><a>Linkedin</a></li>
+                    <li><a>Freelancer</a></li>
+                    <li><a>Email</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <p class="github_thing_footer">This site is hosted on Github pages
+            <span><a><br>Check out the site repository</a></span>
+        </p>
+        <div class="separator_footer"></div>
+        <p class="copyright_thing_footer">This website is fully designed by Realinspirer
+            <span><br>©️ Realinspirer 2024, All rights reserved</span>
+        </p>
+    </div>
+    <!-- footer section end -->
 
 </body>
 </html>

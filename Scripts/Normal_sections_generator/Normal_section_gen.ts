@@ -17,7 +17,7 @@ class normal_section_class{
 }
 
 
-get_json_normal("\\Scripts\\More_apps_generator\\More_apps_gen.json", "more_apps_section" );
+get_json_normal("\\Scripts\\More_apps_generator\\More_apps_gen.json", "more_games_section" );
 get_json_normal("\\Scripts\\More_games_section\\More_games_gen.json", "more_games_section" );
 async function get_json_normal(json_loc:string, id_grid:string, window_argument:string="") {
 

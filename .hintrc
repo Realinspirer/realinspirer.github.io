@@ -8,7 +8,8 @@
       {
         "ignore": [
           "-webkit-tap-highlight-color",
-          "backdrop-filter"
+          "backdrop-filter",
+          "text-underline-offset"
         ]
       }
     ]

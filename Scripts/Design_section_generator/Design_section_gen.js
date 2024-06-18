@@ -8,31 +8,27 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-class normal_section_class {
+class just_title_subtitle_image {
     constructor(title, sub_title, des, img, btn_txt, cl_url) {
         this.title = title;
         this.subtitle = sub_title;
-        this.description = des;
         this.image_url = img;
-        this.button_text = btn_txt;
-        this.click_url = cl_url;
     }
 }
-get_json_normal("\\Scripts\\More_apps_generator\\More_apps_gen.json", "more_games_section");
-get_json_normal("\\Scripts\\More_games_section\\More_games_gen.json", "more_games_section");
-function get_json_normal(json_loc, id_grid, window_argument = "") {
+get_json_design("\\Scripts\\Design_section_generator\\Design_section_gen.json", "Designs_section");
+function get_json_design(json_loc, id_grid, window_argument = "") {
     return __awaiter(this, void 0, void 0, function* () {
         var response = yield fetch(json_loc);
         var res_ar = yield response.json();
         res_ar.reverse().forEach(res => {
-            var items = `<div class=\"item_normal\">` +
-                `<img src="${res.image_url}" alt="icon">` +
-                `<div class="items_text">` +
-                `<p class="item_normal_title">${res.title}</p>` +
-                `<p class="item_normal_subtitle">${res.subtitle}</p>` +
-                `<p class="item_normal_desc">${res.description}</p>` +
-                `<a class="normal_button" onclick="window.open('${res.click_url}','${window_argument}')">${res.button_text}</a>` +
+            var items = `<div class="design_item">` +
+                `<div class="design_text">` +
+                `<p class="design_title">` +
+                `${res.title}` +
+                `<span>${res.subtitle}<span>` +
+                `</p>` +
                 `</div>` +
+                `<img src="${res.image_url}" alt="design_item">` +
                 `</div>`;
             $(`#${id_grid}`).prepend(items);
         });

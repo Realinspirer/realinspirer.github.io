@@ -1,7 +1,7 @@
 [
     {
         "title":"HK Runner!",
-        "subtitle":"Runner",
+        "subtitle":"Games • Runner",
         "description":"A 3D runner",
         "image_url":"Images\\Featured_section\\Runner.png",
         "button_text":"Play now",
@@ -9,7 +9,7 @@
     },
     {
         "title":"Escape It!",
-        "subtitle":"Point & Click",
+        "subtitle":"Games • Point & Click",
         "description":"Escape the world",
         "image_url":"Images\\Featured_section\\Runner.png",
         "button_text":"Play now",
@@ -17,7 +17,7 @@
     },
     {
         "title":"Package Delivery",
-        "subtitle":"Side Scrolling",
+        "subtitle":"Games • Side Scrolling",
         "description":"Collect and avoid",
         "image_url":"Images\\Featured_section\\Runner.png",
         "button_text":"Play now",

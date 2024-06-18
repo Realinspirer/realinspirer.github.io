@@ -1,7 +1,7 @@
 [
     {
         "title":"ImageSHOT!",
-        "subtitle":"Utilities",
+        "subtitle":"Apps • Utilities",
         "description":"Export images in a grid",
         "image_url":"Images\\Featured_section\\Runner.png",
         "button_text":"Learn more",
@@ -9,7 +9,7 @@
     },
     {
         "title":"Items Tracker",
-        "subtitle":"Utilities",
+        "subtitle":"Apps • Utilities",
         "description":"Products price tracker",
         "image_url":"Images\\Featured_section\\Runner.png",
         "button_text":"Learn more",
@@ -17,7 +17,7 @@
     },
     {
         "title":"Due Tracker",
-        "subtitle":"Utilities",
+        "subtitle":"Apps • Utilities",
         "description":"Track client dues",
         "image_url":"Images\\Featured_section\\Runner.png",
         "button_text":"Learn more",
