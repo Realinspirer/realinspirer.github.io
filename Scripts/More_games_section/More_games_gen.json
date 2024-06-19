@@ -1,26 +1,50 @@
 [
     {
+        "title":"Banana Bounce!",
+        "subtitle":"Games • Obstacle",
+        "description":"Bounce to the sky!",
+        "image_url":"Images\\Featured_section\\banana_bounce.png",
+        "button_text":"Play now",
+        "click_url":""
+    },
+    {
         "title":"HK Runner!",
         "subtitle":"Games • Runner",
         "description":"A 3D runner",
         "image_url":"Images\\Featured_section\\Runner.png",
         "button_text":"Play now",
-        "click_url":"https://bing.com"
+        "click_url":""
     },
     {
-        "title":"Escape It!",
+        "title":"Heck's Kitchen!",
         "subtitle":"Games • Point & Click",
-        "description":"Escape the world",
-        "image_url":"Images\\Featured_section\\Runner.png",
+        "description":"Let him COOK!",
+        "image_url":"Images\\Normal_section\\hk.png",
         "button_text":"Play now",
-        "click_url":"https://bing.com"
+        "click_url":""
     },
     {
         "title":"Package Delivery",
         "subtitle":"Games • Side Scrolling",
         "description":"Collect and avoid",
-        "image_url":"Images\\Featured_section\\Runner.png",
+        "image_url":"Images\\Normal_section\\pk.png",
         "button_text":"Play now",
         "click_url":"https://bing.com"
+    },
+    {
+        "title":"Sling & Shoot!",
+        "subtitle":"Games • Casual",
+        "description":"Eliminate targets!",
+        "image_url":"Images\\Normal_section\\ss.png",
+        "button_text":"Play now",
+        "click_url":""
+    },
+    {
+        "title":"Drag Race!",
+        "subtitle":"Games • Casual Racing",
+        "description":"Can you win?",
+        "image_url":"Images\\Normal_section\\dr.png",
+        "button_text":"Play now",
+        "click_url":""
     }
 ]

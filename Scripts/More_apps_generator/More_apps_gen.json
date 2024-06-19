@@ -3,24 +3,24 @@
         "title":"ImageSHOT!",
         "subtitle":"Apps • Utilities",
         "description":"Export images in a grid",
-        "image_url":"Images\\Featured_section\\Runner.png",
+        "image_url":"Images\\Normal_section\\imageshot.png",
         "button_text":"Learn more",
-        "click_url":"https://bing.com"
+        "click_url":""
     },
     {
         "title":"Items Tracker",
         "subtitle":"Apps • Utilities",
         "description":"Products price tracker",
-        "image_url":"Images\\Featured_section\\Runner.png",
+        "image_url":"Images\\Normal_section\\items.png",
         "button_text":"Learn more",
-        "click_url":"https://bing.com"
+        "click_url":""
     },
     {
         "title":"Due Tracker",
         "subtitle":"Apps • Utilities",
         "description":"Track client dues",
-        "image_url":"Images\\Featured_section\\Runner.png",
+        "image_url":"Images\\Normal_section\\due.png",
         "button_text":"Learn more",
-        "click_url":"https://bing.com"
+        "click_url":""
     }
 ]

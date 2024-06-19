@@ -2,22 +2,45 @@
     {
         "title": "Banana Bounce",
         "description": "Avoid obstacles while you bounce^^!",
-        "image_url": "Images/Featured_section/Banana Bounce!.png",
+        "image_url": "Images/Featured_section/Banana_bounce.png",
         "shadow_text": "PLAY NOW!",
-        "click_url": "https://google.com"
+        "click_url": ""
     },
+    
+    {
+        "title": "VFX Showcase",
+        "description": "Video effects made using blender.",
+        "image_url": "Images/Featured_section/frame.png",
+        "shadow_text": "WATCH NOW!",
+        "click_url": ""
+    },
+    {
+        "title": "Logos & vector",
+        "description": "Vector based logos, banners and much more",
+        "image_url": "Images/Featured_section/logos_featured.png",
+        "shadow_text": "LEARN MORE »",
+        "click_url": ""
+    },
+    {
+        "title": "Game Assets",
+        "description": "Have a look at Banana Bounce game assets!",
+        "image_url": "Images/Featured_section/bb_assets.png",
+        "shadow_text": "VIEW MORE »",
+        "click_url": ""
+    },
+    {
+        "title": "Sling & Shoot!",
+        "description": "Eliminate targets while you sling!",
+        "image_url": "Images/Featured_section/Sling & shoot.png",
+        "shadow_text": "PLAY NOW!",
+        "click_url": ""
+    },
+
     {
         "title": "Heck's Kitchen!",
         "description": "A game that tells a story... a frightening story.",
         "image_url": "Images/Featured_section/Heck's_kitchen.png",
         "shadow_text": "PLAY NOW!",
-        "click_url": "https://bing.com"
-    },
-    {
-        "title": "HK! Runner",
-        "description": "Fun 3D runner game",
-        "image_url": "Images/Featured_section/Runner.png",
-        "shadow_text": "PLAY NOW!",
-        "click_url": "https://bing.com"
+        "click_url": ""
     }
 ]

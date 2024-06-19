@@ -1,17 +1,47 @@
 [
     {
-        "title":"Designs",
-        "subtitle":"We all love them!",
-        "image_url":"\\Images\\Discover_section\\vector_img.png"
+        "title":"Vector design",
+        "subtitle":"Home logo themed",
+        "image_url":"\\Images\\Designs\\0.png"
     },
     {
-        "title":"Designs",
-        "subtitle":"We all love them!",
-        "image_url":"\\Images\\Discover_section\\vector_img.png"
+        "title":"Logo design",
+        "subtitle":"for Graphics designer",
+        "image_url":"\\Images\\Designs\\2.png"
     },
     {
-        "title":"Designs",
-        "subtitle":"We all love them!",
-        "image_url":"\\Images\\Discover_section\\vector_img.png"
+        "title":"Logo design",
+        "subtitle":"for Graphics designer (dark)",
+        "image_url":"\\Images\\Designs\\4.png"
+    },
+    {
+        "title":"Logo design",
+        "subtitle":"Symbolic logo",
+        "image_url":"\\Images\\Designs\\1.png"
+    },
+    {
+        "title":"Logo design",
+        "subtitle":"Symbolic logo (monochrome)",
+        "image_url":"\\Images\\Designs\\3.png"
+    },
+    {
+        "title":"Banner Design",
+        "subtitle":"Get some gifts!",
+        "image_url":"\\Images\\Designs\\5.png"
+    },
+    {
+        "title":"Logo design",
+        "subtitle":"Unique and fun design",
+        "image_url":"\\Images\\Designs\\6.png"
+    },
+    {
+        "title":"Banner Design",
+        "subtitle":"Soup?",
+        "image_url":"\\Images\\Designs\\7.png"
+    },
+    {
+        "title":"Brochure Design",
+        "subtitle":"For educational businesses",
+        "image_url":"\\Images\\Designs\\8.png"
     }
 ]

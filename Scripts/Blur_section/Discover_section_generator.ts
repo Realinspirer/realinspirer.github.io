@@ -14,7 +14,7 @@ class discover_section{
 
 get_json_discover();
 async function get_json_discover() {
-    var window_argument_discover:string = "";
+    var window_argument_discover:string = "_self";
     var response = await fetch('/Scripts/Blur_section/Discover_section.json');
     var res_ar:Array<discover_section> = await response.json();
 

@@ -19,7 +19,7 @@ class discover_section {
 get_json_discover();
 function get_json_discover() {
     return __awaiter(this, void 0, void 0, function* () {
-        var window_argument_discover = "";
+        var window_argument_discover = "_self";
         var response = yield fetch('/Scripts/Blur_section/Discover_section.json');
         var res_ar = yield response.json();
         res_ar.reverse().forEach(res => {
