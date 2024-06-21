@@ -32,13 +32,13 @@
     {
         "title":"Animations",
         "subtitle":"Discover 3D and 2D animations!",
-        "image_url":"Images/Featured_section/Runner.png",
-        "click_url":"https://www.google.com"
+        "image_url":"Images/Discover_section/animations.png",
+        "click_url":""
     },
     {
         "title":"3D",
         "subtitle":"Discover 3D projects!",
-        "image_url":"Images/Featured_section/Runner.png",
-        "click_url":"https://www.google.com"
+        "image_url":"Images/Discover_section/3D.png",
+        "click_url":""
     }
 ]
