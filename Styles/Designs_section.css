@@ -75,7 +75,7 @@
         --title_font_size:3vw;
         --item_padding:3px;
         --item_size:100px;
-        --big_border_radius:4px;
+        /* --big_border_radius:4px; */
     }
 }
 @media screen and (max-width:500px) and (min-width:401px) {
@@ -85,7 +85,7 @@
         --item_size:130px;
         gap: 10px;
         --item_padding:4px;
-        --big_border_radius:5px;
+        /* --big_border_radius:5px; */
     }
 }
 @media screen and (max-width:630px) and (min-width:500px) {
@@ -95,7 +95,7 @@
         --item_size:160px;
         gap: 10px;
         --item_padding:4px;
-        --big_border_radius:5px;
+        /* --big_border_radius:5px; */
     }
 }
 @media screen and (max-width:750px) and (min-width:630px) {
@@ -104,7 +104,7 @@
         --title_font_size:1em;
         --item_size:200px;
         --item_padding:5px;
-        --big_border_radius:6px;        
+        /* --big_border_radius:6px;         */
     }
 }
 @media screen and (max-width:800px) and (min-width:750px) {
@@ -113,7 +113,7 @@
         --title_font_size:1.1em;
         --item_padding:5px;
         --item_size:230px;
-        --big_border_radius:7px;
+        /* --big_border_radius:7px; */
 
     }
 }
@@ -123,17 +123,21 @@
         --item_padding:5px;
         --title_font_size:1em;
         --item_size:230px;
-        --big_border_radius:7px;
+        /* --big_border_radius:7px; */
     }
 }
 @media screen and (max-width:1200px) and (min-width:1025px) {
     .item_grid_design{
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        --big_border_radius:8.5px
+        /* --big_border_radius:8.5px */
     }
 }
 @media screen and (max-width:1300px) and (min-width:1200px) {
     .item_grid_design{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+.item_grid_design{
+    --big_border_radius:clamp(4px, 1.2vw ,10px);
 }

@@ -6,7 +6,7 @@
     font-size: calc(var(--major_div_major_fontsize) * 0.4);
     margin: calc(var(--margin_sides)) var(--margin_sides) calc(var(--margin_sides) + 5px) var(--margin_sides);
     color: var(--button_accent_color);
-    padding: 0 0 10px 0;
+    padding: 0 0 0.4em 0;
     display: inline-block;
     cursor: pointer;
     transition: var(--base_anim_speed);
@@ -15,7 +15,7 @@
 }
 .section_text:hover{
     color: var(--button_hover_color);
-    transform: translateX(16px);
+    transform: translateX(0.6em);
 }
 .section_text::before{
     content: "";
@@ -27,16 +27,16 @@
     top: 85%;
     /* width: 7vw; */
     transition: var(--base_anim_speed);
-    border-radius: var(--base_border_radius);
+    border-radius: 0.2em;
     z-index: -1;
 }
 .section_text_60.section_text::before {
       right: 60%;
 }
 .section_text:hover::before{
-    right: -17px;
-    top: -11px;
-    left: -17px;
+    right: -0.6em;
+    top: -0.55em;
+    left: -0.6em;
 }
 
 .section_text::after{
@@ -59,7 +59,7 @@
 .section_text:hover::after{
     opacity: 1;
     color: #634730;
-    margin: 0 0 0 25px;
+    margin: 0 0 0 1.5em;
 }
 .section_text.not_selectable{
     pointer-events: none;

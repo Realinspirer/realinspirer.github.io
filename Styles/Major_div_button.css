@@ -24,7 +24,7 @@
 
 .major_div{    
     height: var(--major_div_height);
-    margin: 0 0 20px 0;
+    margin: 0 0 calc(var(--margin_sides) * 1.2) 0;
     position: relative;
     /* border-radius: var(--big_border_radius); */
     overflow: hidden;
@@ -151,8 +151,8 @@
         --major_div_height:var(--major_div_height_450);
     }
 }
-@media screen and (max-width:680px) {
+/* @media screen and (max-width:680px) {
     :root{
         --major_div_major_fontsize:var(--major_div_major_fontsize_relative);
     }
-}
+} */

@@ -19,31 +19,96 @@
     --verticle_back_color:#d2d2d2ff;
     /* vertcle hamburger icon end */
     /* commons */
-    --base_border_radius:4px;
-    --big_border_radius:10px;
-    --verticle_nav_height:300px;
+    /* --base_border_radius:0.25rem;
+    --big_border_radius:0.625rem; */
+
+
+    --base_border_radius:clamp(0.13rem, 0.7vw ,0.25rem);
+    --big_border_radius:clamp(0.4rem ,1.7vw, 0.625rem);
+
+    /* --big_border_radius:1.7vw; */
+    /* --big_border_radius:0.4rem; */
+
+
+    --verticle_nav_height:355px;
     --base_anim_speed:0.25s;
-    --margin_sides:20px;
-    --margin_sides_320:10px;
-    --margin_sides_450:15px;
+    --margin_sides: clamp(0.5rem, 3vw, 1.25rem); 
+
     --base_blur_amount:7px;
     --small_blur_amount:4px;
     --big_blur_amount:9px;
     /* commons end */
-    --major_div_major_fontsize:var(--major_div_major_fontsize_fixed);
-    --major_div_major_fontsize_fixed:70px;
-    --major_div_major_fontsize_relative:10vw;
+    --major_div_major_fontsize:clamp(2rem, 10vw, 4.35rem);
+    /* --major_div_major_fontsize_fixed:; */
+    /* 70px; */
+    /* --major_div_major_fontsize_relative:10vw; */
+    --req_icon:'\00bb';
+    --icon_font_size:28px;
+    --left_icon_padding:1px;
+
+    --background_thing:none;
 }
-@media screen and (max-width:350px) {
+html, body{
+    overflow-x: hidden;
+}
+/* @media screen and (max-width:350px) {
     :root{
-        --margin_sides:var(--margin_sides_320);
+        --margin_sides:0.5rem;
     }
 }
 @media screen and (max-width:450px) and (min-width:350px) {
+    
+} */
+/* @media screen and (max-width:450px)  {
     :root{
-        --margin_sides:var(--margin_sides_450);
+        --margin_sides:0.5rem;
+        --base_border_radius:0.13rem;
+        --big_border_radius:0.4rem;
     }
 }
+@media screen and (max-width:550px) and (min-width:450px) {
+    :root{
+        --margin_sides:0.75rem;
+        --base_border_radius:0.13rem;
+        --big_border_radius:0.4rem;
+    }
+}
+@media screen and (max-width:700px) and (min-width:550px)  {
+    :root{
+        --margin_sides:0.83rem;
+        --base_border_radius:0.13rem;
+        --big_border_radius:0.4rem;
+    }
+}
+@media screen and (max-width:800px) and (min-width:700px) {
+    :root{
+        --margin_sides:0.85rem;
+        --base_border_radius:0.15rem;
+        --big_border_radius:0.50rem;
+    }
+}
+@media screen and (max-width:1025px) and (min-width:801px) {
+    :root{
+        --margin_sides:0.88rem;
+        --base_border_radius:0.18rem;
+        --big_border_radius:0.55rem;
+    }
+}
+@media screen and (max-width:1200px) and (min-width:1025px) {
+    :root{
+        --margin_sides:0.93rem;
+        --base_border_radius:0.2rem;
+        --big_border_radius:0.6rem;
+    }
+}
+
+@media screen and (max-width:1300px) and (min-width:1200px) {
+    :root{
+        --margin_sides:0.95rem;
+        --base_border_radius:0.25rem;
+        --big_border_radius:0.625rem;
+    }
+} */
 
 
 ::selection{
@@ -63,7 +128,11 @@ body{
     padding: inherit;
     margin: inherit;
     box-sizing: border-box; 
+    scroll-behavior: smooth;
 }
+
+
+
 .logo_div{
     height: 150px;
     padding: 10px var(--margin_sides) 10px var(--margin_sides);
@@ -77,6 +146,7 @@ body{
     -webkit-user-select: none;
     user-select: none;
     -webkit-user-drag: none;
+    cursor: pointer;
 }
 .Main_links_div{
     float: right;
@@ -118,6 +188,13 @@ body{
     content: "";
     border-radius: 4px;
     background-color: var(--button_accent_color);
+    background-image: var(--background_thing);
+}
+.donate{
+    --background_thing: linear-gradient(90deg, #ee8e43,#f4be4a);
+    --req_icon:'❤️';
+    --icon_font_size:17px;
+    --left_icon_padding:-5px;
 }
 .Main_links:hover::before{
     transition: all ease var(--base_anim_speed);
@@ -131,8 +208,8 @@ body{
     position: relative;
 }
 .Main_links span:after {
-    content: '\00bb';
-    font-size: 28px;
+    content: var(--req_icon);
+    font-size: var(--icon_font_size);
     position: absolute;
     opacity: 0;
     top: 22%;
@@ -145,7 +222,7 @@ body{
 }
 .Main_links:hover span:after {
     opacity: 1;
-    right: 1px;
+    right: var(--left_icon_padding);
 }
 .Main_links.active{
     border: solid 1px var(--button_accent_color);
@@ -154,4 +231,6 @@ body{
 .Main_links.active:hover{
     border: solid 1px transparent;
 }
+
+
 /*main links done*/
