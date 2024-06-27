@@ -18,8 +18,6 @@ class normal_section_class {
         this.click_url = cl_url;
     }
 }
-get_json_normal("\\Scripts\\More_apps_generator\\More_apps_gen.json", "more_games_section");
-get_json_normal("\\Scripts\\More_games_section\\More_games_gen.json", "more_games_section");
 function get_json_normal(json_loc, id_grid, window_argument = "") {
     return __awaiter(this, void 0, void 0, function* () {
         var response = yield fetch(json_loc);
