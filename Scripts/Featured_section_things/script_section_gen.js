@@ -17,7 +17,6 @@ class section_class {
         this.click_url = cl_url;
     }
 }
-get_json_featured();
 function get_json_featured() {
     return __awaiter(this, void 0, void 0, function* () {
         var window_argument = "_self";

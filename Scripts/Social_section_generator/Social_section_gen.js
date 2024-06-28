@@ -17,7 +17,6 @@ class normal_section_class_no_desc {
         this.click_url = cl_url;
     }
 }
-get_json_social("\\Scripts\\Social_section_generator\\Social_section_gen.json", "socials_grid");
 function get_json_social(json_loc, id_grid, window_argument = "") {
     return __awaiter(this, void 0, void 0, function* () {
         var response = yield fetch(json_loc);

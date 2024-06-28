@@ -15,7 +15,6 @@ class just_title_subtitle_image {
         this.image_url = img;
     }
 }
-get_json_design("\\Scripts\\Design_section_generator\\Design_section_gen.json", "Designs_section");
 function get_json_design(json_loc, id_grid, window_argument = "") {
     return __awaiter(this, void 0, void 0, function* () {
         var response = yield fetch(json_loc);

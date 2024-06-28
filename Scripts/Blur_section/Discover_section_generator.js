@@ -16,7 +16,6 @@ class discover_section {
         this.click_url = cl_url;
     }
 }
-get_json_discover();
 function get_json_discover() {
     return __awaiter(this, void 0, void 0, function* () {
         var window_argument_discover = "_self";

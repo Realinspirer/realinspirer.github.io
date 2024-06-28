@@ -14,7 +14,6 @@ class section_class{
     }
 }
 
-get_json_featured();
 async function get_json_featured() {
     var window_argument:string = "_self";
 

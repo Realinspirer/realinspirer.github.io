@@ -36,3 +36,21 @@ function get_json_normal(json_loc, id_grid, window_argument = "") {
         });
     });
 }
+function get_json_normal_count(json_loc, id_grid, count, window_argument = "") {
+    return __awaiter(this, void 0, void 0, function* () {
+        var response = yield fetch(json_loc);
+        var res_ar = yield response.json();
+        res_ar.slice(0, count).reverse().forEach(res => {
+            var items = `<div class=\"item_normal\">` +
+                `<img src="${res.image_url}" alt="icon">` +
+                `<div class="items_text">` +
+                `<p class="item_normal_title">${res.title}</p>` +
+                `<p class="item_normal_subtitle">${res.subtitle}</p>` +
+                `<p class="item_normal_desc">${res.description}</p>` +
+                `<a class="normal_button" onclick="window.open('${res.click_url}','${window_argument}')">${res.button_text}</a>` +
+                `</div>` +
+                `</div>`;
+            $(`#${id_grid}`).prepend(items);
+        });
+    });
+}

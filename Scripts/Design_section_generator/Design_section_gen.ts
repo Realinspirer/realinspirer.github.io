@@ -11,7 +11,6 @@ class just_title_subtitle_image{
 }
 
 
-get_json_design("\\Scripts\\Design_section_generator\\Design_section_gen.json", "Designs_section" );
 async function get_json_design(json_loc:string, id_grid:string, window_argument:string="") {
 
     var response = await fetch(json_loc);
