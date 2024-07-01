@@ -41,7 +41,7 @@ async function get_json_normal(json_loc:string, id_grid:string, window_argument:
     
 }
 
-async function get_json_normal_count(json_loc:string, id_grid:string, count:number, window_argument:string="") {
+async function get_json_normal_count(json_loc:string, id_grid:string, count:number, window_argument:string="_self") {
 
     var response = await fetch(json_loc);
     var res_ar:Array<normal_section_class> = await response.json();

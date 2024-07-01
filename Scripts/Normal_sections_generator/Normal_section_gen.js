@@ -18,8 +18,8 @@ class normal_section_class {
         this.click_url = cl_url;
     }
 }
-function get_json_normal(json_loc, id_grid, window_argument = "") {
-    return __awaiter(this, void 0, void 0, function* () {
+function get_json_normal(json_loc_1, id_grid_1) {
+    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, window_argument = "_self") {
         var response = yield fetch(json_loc);
         var res_ar = yield response.json();
         res_ar.reverse().forEach(res => {
@@ -36,8 +36,8 @@ function get_json_normal(json_loc, id_grid, window_argument = "") {
         });
     });
 }
-function get_json_normal_count(json_loc, id_grid, count, window_argument = "") {
-    return __awaiter(this, void 0, void 0, function* () {
+function get_json_normal_count(json_loc_1, id_grid_1, count_1) {
+    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, count, window_argument = "_self") {
         var response = yield fetch(json_loc);
         var res_ar = yield response.json();
         res_ar.slice(0, count).reverse().forEach(res => {

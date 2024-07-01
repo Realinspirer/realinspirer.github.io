@@ -17,8 +17,8 @@ class normal_section_class_no_desc {
         this.click_url = cl_url;
     }
 }
-function get_json_social(json_loc, id_grid, window_argument = "") {
-    return __awaiter(this, void 0, void 0, function* () {
+function get_json_social(json_loc_1, id_grid_1) {
+    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, window_argument = "") {
         var response = yield fetch(json_loc);
         var res_ar = yield response.json();
         res_ar.reverse().forEach(res => {
