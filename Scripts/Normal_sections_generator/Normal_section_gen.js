@@ -19,7 +19,7 @@ class normal_section_class {
     }
 }
 function get_json_normal(json_loc_1, id_grid_1) {
-    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, window_argument = "_self") {
+    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, window_argument = "") {
         var response = yield fetch(json_loc);
         var res_ar = yield response.json();
         res_ar.reverse().forEach(res => {

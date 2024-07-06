@@ -4,7 +4,8 @@
         "description": "Avoid obstacles while you bounce^^!",
         "image_url": "Images/Featured_section/Banana_bounce.png",
         "shadow_text": "PLAY NOW!",
-        "click_url": ""
+        "click_url": "/Games/Banana_Bounce!/",
+        "window_argument": "_self"
     },
     
     {
@@ -12,28 +13,32 @@
         "description": "Video effects made using blender.",
         "image_url": "Images/Featured_section/frame.png",
         "shadow_text": "WATCH NOW!",
-        "click_url": ""
+        "click_url": "https://youtu.be/5w27HBM6pb8?si=srOOjB1_b0uzJn8C",
+        "window_argument": ""
     },
     {
         "title": "Logos & vector",
         "description": "Vector based logos, banners and much more",
         "image_url": "Images/Featured_section/logos_featured.png",
         "shadow_text": "LEARN MORE »",
-        "click_url": ""
+        "click_url": "",
+        "window_argument": "_self"
     },
     {
         "title": "Game Assets",
         "description": "Have a look at Banana Bounce game assets!",
         "image_url": "Images/Featured_section/bb_assets.png",
         "shadow_text": "VIEW MORE »",
-        "click_url": ""
+        "click_url": "",
+        "window_argument": "_self"
     },
     {
         "title": "Sling & Shoot!",
         "description": "Eliminate targets while you sling!",
         "image_url": "Images/Featured_section/Sling & shoot.png",
         "shadow_text": "PLAY NOW!",
-        "click_url": ""
+        "click_url": "",
+        "window_argument": "_self"
     },
 
     {
@@ -41,6 +46,7 @@
         "description": "A game that tells a story... a frightening story.",
         "image_url": "Images/Featured_section/Heck's_kitchen.png",
         "shadow_text": "PLAY NOW!",
-        "click_url": ""
+        "click_url": "",
+        "window_argument": "_self"
     }
 ]

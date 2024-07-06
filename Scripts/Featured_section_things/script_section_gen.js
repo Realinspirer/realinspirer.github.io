@@ -9,21 +9,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 class section_class {
-    constructor(title, des, img, sh_txt, cl_url) {
+    constructor(title, des, img, sh_txt, cl_url, win_ar) {
         this.title = title;
         this.description = des;
         this.image_url = img;
         this.shadow_text = sh_txt;
         this.click_url = cl_url;
+        this.window_argument = win_ar;
     }
 }
 function get_json_featured() {
     return __awaiter(this, void 0, void 0, function* () {
-        var window_argument = "_self";
+        // var window_argument:string = "_self";
         var response = yield fetch('/Scripts/Featured_section_things/Section_thing.json');
         var res_ar = yield response.json();
         res_ar.reverse().forEach(res => {
-            var items = `<div class=\"grid_item\" onclick="window.open('${res.click_url}','${window_argument}')">` +
+            var items = `<div class=\"grid_item\" onclick="window.open('${res.click_url}','${res.window_argument}')">` +
                 `<p>${res.title}` +
                 `<span><br>${res.description}</span>` +
                 `</p>` +
