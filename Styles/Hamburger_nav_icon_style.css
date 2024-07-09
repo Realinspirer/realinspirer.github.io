@@ -42,7 +42,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    position: fixed;
+    /* position: fixed; */
     top: 100px;
     right: 35px;
     border-radius: 4px;
