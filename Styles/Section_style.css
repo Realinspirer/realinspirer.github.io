@@ -3,7 +3,8 @@
 
 .section_text{
     position: relative;
-    font-size: calc(var(--major_div_major_fontsize) * 0.4);
+    font-size: clamp(1em, 5.333vw, 1.8em);
+    /* font-size: 1.1em; */
     margin: calc(var(--margin_sides)) var(--margin_sides) calc(var(--margin_sides) + 5px) var(--margin_sides);
     color: var(--button_accent_color);
     padding: 0 0 0.4em 0;
@@ -52,7 +53,7 @@
     width: -moz-fit-content;
     width: fit-content;
     text-wrap: nowrap;
-    font-size: calc(var(--major_div_major_fontsize) * 0.25);
+    font-size: 0.55em;
     opacity: 0;
     transition: var(--base_anim_speed);
 }
@@ -63,4 +64,11 @@
 }
 .section_text.not_selectable{
     pointer-events: none;
+}
+
+
+.section_text.small{
+    font-size: clamp(0.85em, 4.533vw, 1.4em);
+    margin: var(--margin_sides) var(--margin_sides) var(--margin_sides) var(--margin_sides);
+
 }

@@ -19,37 +19,52 @@ class normal_section_class {
     }
 }
 function get_json_normal(json_loc_1, id_grid_1) {
-    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, window_argument = "") {
+    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, window_argument = "_self") {
         var response = yield fetch(json_loc);
         var res_ar = yield response.json();
         res_ar.reverse().forEach(res => {
-            var items = `<div class=\"item_normal\">` +
-                `<img src="${res.image_url}" alt="icon">` +
-                `<div class="items_text">` +
-                `<p class="item_normal_title">${res.title}</p>` +
-                `<p class="item_normal_subtitle">${res.subtitle}</p>` +
-                `<p class="item_normal_desc">${res.description}</p>` +
-                `<a class="normal_button" onclick="window.open('${res.click_url}','${window_argument}')">${res.button_text}</a>` +
-                `</div>` +
-                `</div>`;
+            var items = create_string(res, window_argument);
             $(`#${id_grid}`).prepend(items);
         });
     });
+}
+function create_string(res, window_argument) {
+    return `<div class=\"item_normal\">` +
+        `<img src="${res.image_url}" alt="icon">` +
+        `<div class="items_text">` +
+        `<p class="item_normal_title">${res.title}</p>` +
+        `<p class="item_normal_subtitle">${res.subtitle}</p>` +
+        `<p class="item_normal_desc">${res.description}</p>` +
+        `<a class="normal_button" onclick="window.open('${res.click_url}','${window_argument}')">${res.button_text}</a>` +
+        `</div>` +
+        `</div>`;
 }
 function get_json_normal_count(json_loc_1, id_grid_1, count_1) {
     return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, count, window_argument = "_self") {
         var response = yield fetch(json_loc);
         var res_ar = yield response.json();
         res_ar.slice(0, count).reverse().forEach(res => {
-            var items = `<div class=\"item_normal\">` +
-                `<img src="${res.image_url}" alt="icon">` +
-                `<div class="items_text">` +
-                `<p class="item_normal_title">${res.title}</p>` +
-                `<p class="item_normal_subtitle">${res.subtitle}</p>` +
-                `<p class="item_normal_desc">${res.description}</p>` +
-                `<a class="normal_button" onclick="window.open('${res.click_url}','${window_argument}')">${res.button_text}</a>` +
-                `</div>` +
-                `</div>`;
+            var items = create_string(res, window_argument);
+            $(`#${id_grid}`).prepend(items);
+        });
+    });
+}
+function get_json_normal_random(json_loc_1, id_grid_1, count_1) {
+    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, count, excluded = -1, window_argument = "_self") {
+        var response = yield fetch(json_loc);
+        var res_ar = yield response.json();
+        var res_rand = new Array();
+        if (excluded >= 0) {
+            res_ar.splice(excluded, 1);
+        }
+        for (let index = 0; index < count; index++) {
+            var rand_index = Math.floor(Math.random() * res_ar.length);
+            var item = res_ar[rand_index];
+            res_ar.splice(rand_index, 1);
+            res_rand.push(item);
+        }
+        res_rand.reverse().forEach(res => {
+            var items = create_string(res, window_argument);
             $(`#${id_grid}`).prepend(items);
         });
     });
