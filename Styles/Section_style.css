@@ -3,8 +3,8 @@
 
 .section_text{
     position: relative;
-    font-size: clamp(1em, 5.333vw, 1.8em);
-    /* font-size: 1.1em; */
+    font-size: clamp(1.17rem, 0.75rem + 2.24vw, 1.8rem);
+    /* font-size: 1.165em; */
     margin: calc(var(--margin_sides)) var(--margin_sides) calc(var(--margin_sides) + 5px) var(--margin_sides);
     color: var(--button_accent_color);
     padding: 0 0 0.4em 0;
@@ -50,8 +50,10 @@
     top: 16%;
     left: 100%;
     height: 100%;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 6.5em;
+    /* background-color: red; */
+    /* width: -moz-fit-content; */
+    /* width: fit-content; */
     text-wrap: nowrap;
     font-size: 0.55em;
     opacity: 0;
@@ -68,7 +70,7 @@
 
 
 .section_text.small{
-    font-size: clamp(0.85em, 4.533vw, 1.4em);
+    font-size: clamp(1rem, 5.333vw, 1.4rem);
     margin: var(--margin_sides) var(--margin_sides) var(--margin_sides) var(--margin_sides);
 
 }

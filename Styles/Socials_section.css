@@ -8,11 +8,14 @@
 .social_section{
     margin: 0;
     height: var(--item_size);
+    height: 12.2em;
+
     background-color: white;
-    border-radius: var(--big_border_radius);
+    border-radius: 0.5em;
     filter: drop-shadow(0 0 2px var(--item_def_shadow));
     overflow: hidden;
     transition: var(--base_anim_speed);
+    
 }
 .social_section:hover {
     transform: scale(1.02);
@@ -40,13 +43,13 @@
 .social_texts{
     font-family: LT_light;
     color: var(--button_hover_color);
-    margin-right: 1.5em;
+    margin-right: 1em;
     margin-top: 0.3em;
-    font-size: calc( var(--title_font_size) * 1.2);
+    font-size: 1.9em;
     cursor: default;
 }
 .social_texts .subtitle{
-    font-size: 0.5em;
+    font-size: 0.55em;
     margin-top: 0;
     opacity: 0;
     max-height: 0;
@@ -60,8 +63,8 @@
 .social_texts .normal_button{
     --button_accent_color:var(--temp_color_hover);
     --button_hover_color:var(--temp_color);
-    font-size: 0.5em;
-    margin-top: 0.8em;
+    font-size: 0.6em;
+    margin-top: 0.6em;
     z-index: 1;
 }
 .social_section:hover .social_img{

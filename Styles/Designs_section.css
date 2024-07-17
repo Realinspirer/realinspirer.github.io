@@ -33,7 +33,7 @@
     font-size: var(--title_font_size);
     text-align: center;
     color: var(--button_hover_color);
-    margin-bottom: 7%;
+    margin-bottom: 0.6em;
     transform: translateY(130%);
     opacity: 0;
     transition: var(--base_anim_speed);
@@ -61,7 +61,7 @@
 .design_title span{
     display: block;
     font-size: 0.7em;
-    line-height: 1.6em;
+    line-height: 1.2em;
 }
 .design_item:hover{
     transform: scale(1.02);
