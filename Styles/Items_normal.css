@@ -4,7 +4,7 @@
 }
 .items_grid_narrow_0{
 
-    font-size: clamp(0.65rem, 0.592rem + 0.4vw, 0.87rem);
+    font-size: clamp(0.6rem, 0.529rem + 0.379vw, 0.87rem);
 
     --item_size: 10em;
     --item_size: clamp(10em, 9.737em + 1.404vw, 11em);
