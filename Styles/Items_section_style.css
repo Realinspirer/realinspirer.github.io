@@ -2,12 +2,9 @@
 .items_grid{
     --item_back_color:white;
     --item_highlight_color:#fffbf4ff;
-    --height_of_item:400px;
     --highlight_color:#cd996cf2;
     --top_normal:70%;
     --top_highlight:60%;
-    --font_size_items:30px;
-    --font_size_items_relative:6vw;
     --shadow_gradient:linear-gradient(180deg, #ffdfa7bd, #ffecccc6);
     --shadow_text_color:#5a4c2fec;
     --item_def_shadow:gray;
@@ -24,7 +21,13 @@
     margin: 0 var(--margin_sides) calc(var(--margin_sides) + 5px) var(--margin_sides);
 }
 .items_grid .grid_item{
-    height: var(--height_of_item);
+    height: 17rem;
+    height: 25rem;
+    height: clamp(23rem, 13rem + 13.333vw, 25rem);
+
+
+    font-size: 1.3rem;
+
     margin: 0;
     background-color: var(--item_back_color);
     overflow: hidden;
@@ -63,16 +66,16 @@
     background-size: cover;
 }
 .items_grid .grid_item:hover::before{
-    filter: drop-shadow(0 0 15px #e1e1e1ff);
+    filter: drop-shadow(0 0 10px #e1e1e1ff);
     border-radius: 45% 45% 0 0;
     top:var(--top_highlight);
 
     background-color: var(--item_highlight_color);
-    opacity: 0.93;    
+    opacity: 0.93;
 
 }
 .items_grid .grid_item:hover{
-    transform: translateY(-4px);
+    transform: scale(1.01);
     filter: drop-shadow(0 0 6px var(--highlight_color));
 }
 .grid_item > p{
@@ -80,8 +83,9 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    top: calc(var(--top_normal) + 7% );
-    font-size: var(--font_size_items);
+    top: calc(var(--top_normal) + 9%);
+    /* background-color: red; */
+    font-size:1.35em;
     text-align: center;
     font-family: LT_light;
     line-height: 70%;
@@ -91,13 +95,18 @@
 
 }
 .items_grid .grid_item:hover > p{
-    top: calc(var(--top_highlight) + 10%);
+    top: calc(var(--top_highlight) + 15%);
+    font-size: 1.5em;
     /* color: var(--highlight_color); */
 }
 .grid_item > p span{
-    font-size: calc(var(--font_size_items) * 0.5);
-    line-height: 0px;
+    font-size: 0.61em;
+    line-height: 0.3em;
     color: var(--button_accent_color);
+    transition: var(--base_anim_speed);
+}
+.grid_item:hover > p span{
+    opacity: 0;
 }
 
 .items_grid .grid_item .item_shadow{
@@ -121,44 +130,43 @@
     position: absolute;
     width: 100%;
     bottom: 17%;
-    font-size: calc( var(--font_size_items) * 0.65);
+    font-size: 1em;
     color: var(--shadow_text_color);
     margin:0;
 }
 
+@media screen and (max-width:1200px) {
+    .items_grid{
+        grid-template-columns: 1fr 1fr;
+        /* --height_of_item:200px; */
+        /* --font_size_items:var(--font_size_items_relative); */
+        
+    }
+    .items_grid .grid_item{
+        height: 25rem;
+        height: 20rem;
+        height: clamp(20rem, 15rem + 13.333vw, 25rem);
 
-@media screen and (max-width:400px) {
+        font-size: 1.1rem;
+        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 0.864rem + 0.582vw, 1.3rem);
+    }
+}
+@media screen and (max-width:650px) {
     .items_grid{
         grid-template-columns: 1fr;
-        --height_of_item:200px;
-        --font_size_items:var(--font_size_items_relative);
+        /* --height_of_item:200px; */
+        /* --font_size_items:var(--font_size_items_relative); */
+    }
+    .items_grid .grid_item{
+        height: 25rem;
+        height: 17rem;
+        height: clamp(17rem, 10rem + 37.333vw, 24rem);
+
+        font-size: 1rem;
+        font-size: 1.3rem;
+        font-size: clamp(1rem, 0.7rem + 1.6vw, 1.3rem);
     }
 }
-@media screen and (max-width:500px) and (min-width:401px) {
-    .items_grid{
-        grid-template-columns: 1fr 1fr;
-        --height_of_item:220px;
-        --font_size_items:16px;
-    }
-}
-@media screen and (max-width:800px) and (min-width:501px) {
-    .items_grid{
-        grid-template-columns: 1fr 1fr;
-        --height_of_item:270px;
-        --font_size_items:23px;
-    }
-}
-@media screen and (max-width:1025px) and (min-width:801px) {
-    .items_grid{
-        grid-template-columns: 1fr 1fr 1fr;
-        --height_of_item:300px;
-        --font_size_items:25px;
-    }
-}
-@media screen and (max-width:1200px) and (min-width:1026px) {
-    .items_grid{
-        grid-template-columns: 1fr 1fr 1fr;
-        --height_of_item:330px;
-    }
-}
+
 

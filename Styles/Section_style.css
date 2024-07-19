@@ -3,8 +3,9 @@
 
 .section_text{
     position: relative;
-    font-size: clamp(1.17rem, 0.75rem + 2.24vw, 1.8rem);
-    /* font-size: 1.165em; */
+    font-size: clamp(1.18rem, 0.715rem + 2.48vw, 1.8rem);
+    /* font-size: 1.18rem;
+    font-size: 1.8rem; */
     margin: calc(var(--margin_sides)) var(--margin_sides) calc(var(--margin_sides) + 5px) var(--margin_sides);
     color: var(--button_accent_color);
     padding: 0 0 0.4em 0;
