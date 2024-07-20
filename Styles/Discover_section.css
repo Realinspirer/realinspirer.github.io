@@ -99,14 +99,11 @@
 .dis_item_sec .normal_button::before{
     background-image: linear-gradient(#878787, #4d4d4d);
 }
+.dis_item_sec .normal_button{
+    filter: drop-shadow(0 0 0.6rem var(--normal_drop));
+}
 .dis_item_sec .normal_button:hover{
     color: #f2f2f2;
-    filter: drop-shadow(0 0 0.65em var(--normal_drop));
-}
-@media (pointer:coarse){
-    .dis_item_sec .normal_button{
-        filter: drop-shadow(0 0 0.6rem var(--normal_drop));
-    }
 }
 
 @media screen and (max-width:950px){
