@@ -8,10 +8,16 @@
       {
         "ignore": [
           "-webkit-tap-highlight-color",
-          "backdrop-filter",
-          "text-underline-offset"
+          "text-underline-offset",
+          "scrollbar-width"
         ]
       }
     ]
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 126",
+    "not firefox <= 126"
+  ]
 }

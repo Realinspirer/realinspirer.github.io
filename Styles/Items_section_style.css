@@ -7,7 +7,7 @@
     --top_highlight:60%;
     --shadow_gradient:linear-gradient(180deg, #ffdfa7bd, #ffecccc6);
     --shadow_text_color:#5a4c2fec;
-    --item_def_shadow:gray;
+    --item_def_shadow:#a1a1a1;
     --shadow_top_val:89%;
     --shadow_border_radius:40%;
 }
@@ -40,7 +40,6 @@
     -webkit-user-select: none;
     user-select: none;
     cursor: pointer;
-    border: 1px #a3a3a3 solid;
     
 }
 /* .items_grid .grid_item::after{
@@ -61,6 +60,7 @@
     height: 100%;
     object-fit: cover;
     transition: var(--base_anim_speed);
+    z-index: -1;
 }
 .items_grid .grid_item:hover img{
     transform: scale(112%);
@@ -84,7 +84,6 @@
 }
 .items_grid .grid_item:hover::before{
     filter: drop-shadow(0 0 10px #e1e1e1ff);
-    backdrop-filter: blur(5px);
     top:var(--top_highlight);
 
     background-color: var(--item_highlight_color);

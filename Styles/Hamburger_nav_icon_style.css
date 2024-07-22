@@ -31,13 +31,16 @@
     right: 35px;
     border-radius: 4px;
     background-color: var(--verticle_back_color);
-    height: 0px;
+    /* height: 0px; */
+    max-height: 0;
     transition: var(--base_anim_speed);
     opacity: 0;
     overflow: hidden;
 }
 .ver_vis {
-    height: var(--verticle_nav_height);
+    /* height: var(--verticle_nav_height); */
+    
+    max-height: 25rem;
     overflow: hidden;
     position: absolute;
     display: flex;

@@ -10,6 +10,7 @@
     font-family: LT_light;
     src: url("/Fonts/LTSAEADA-LIGHT.OTF");
 }
+
 :root{
     /* button */
     --button_accent_color:#363636ff;
@@ -161,6 +162,8 @@ body{
     text-align: center;
     align-items: center;
     overflow: hidden;
+
+    --margin_icon: 0.05em;
 }
 
 /**Main links**/
@@ -168,10 +171,10 @@ body{
     color: #4c4949ff;
     position: relative;
     text-decoration: none;
-    margin: 5px;
-    width: 120px;
-    padding: 15px 0px 15px 0px;
-    border-radius: 4px;
+    margin: 0.3125em;
+    width: 7.5em;
+    padding:    1em 0px 1em;
+    border-radius: 0.25em;
     text-align: center;
     /**box-shadow: inset 0 0 0 0 #202020ff;**/
 }
@@ -189,7 +192,7 @@ body{
     right: 100%;
     bottom: 0;
     content: "";
-    border-radius: 4px;
+    border-radius: inherit;
     background-color: var(--button_accent_color);
     background-image: var(--background_thing);
 }
@@ -198,6 +201,7 @@ body{
     --req_icon:'❤️';
     --icon_font_size:17px;
     --left_icon_padding:-5px;
+    --margin_icon: -0.2em;
 }
 .Main_links:hover::before{
     transition: all ease var(--base_anim_speed);
@@ -210,12 +214,17 @@ body{
     transition: var(--base_anim_speed);
     position: relative;
 }
-.Main_links span:after {
+.Main_links span::after {
     content: var(--req_icon);
     font-size: var(--icon_font_size);
     position: absolute;
     opacity: 0;
-    top: 22%;
+    top: 0;
+    bottom: 0;
+    margin-top: var(--margin_icon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     right: -20px;
     transition: var(--base_anim_speed);
 }

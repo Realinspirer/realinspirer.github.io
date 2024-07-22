@@ -52,7 +52,7 @@
     filter: blur(var(--base_blur_amount)); */
 }
 .major_div .video_above_blur{
-    content: "dsadasd";
+    content: "";
     color: blue;
     position: absolute;
     bottom: 0;
@@ -63,6 +63,7 @@
     transition: var(--base_anim_speed);
 }
 .major_div:hover .video_above_blur{
+    
     -webkit-backdrop-filter: blur(var(--base_blur_amount));
     backdrop-filter: blur(var(--base_blur_amount));
 }
