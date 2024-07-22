@@ -2,7 +2,6 @@ class section_class{
     title: string;
     description: string;
     image_url: string;
-    shadow_text: string;
     click_url: string;
     window_argument: string;
     constructor(title:string, des:string,
@@ -10,32 +9,29 @@ class section_class{
         this.title = title;
         this.description = des;
         this.image_url = img;
-        this.shadow_text = sh_txt;
         this.click_url = cl_url;
         this.window_argument = win_ar;
     }
 }
 
-async function get_json_featured() {
+async function get_json_featured(loc:string, id:string) {
     // var window_argument:string = "_self";
 
-    var response = await fetch('/Scripts/Featured_section_things/Section_thing.json');
+    var response = await fetch(loc);
     var res_ar:Array<section_class> = await response.json();
 
-    res_ar.reverse().forEach(res => {
+    res_ar.forEach(res => {
         var items = 
-    `<div class=\"grid_item\" onclick="window.open('${res.click_url}','${res.window_argument}')">` +
-        `<p>${res.title}` +
-            `<span><br>${res.description}</span>`+
-        `</p>`+
-        `<img src="${res.image_url}" alt="game_cover">`+
-        `<div class="item_shadow">`+
-            `<p>${res.shadow_text}</p>`+
-        `</div>` +
-    `</div>`
-
-    $("#featured_section").prepend(items);
+    `<div class="game_feat" onclick="window.open('${res.click_url}', '${res.window_argument}')">
+                <img src="${res.image_url}" alt="game_cover">
+                <div class="game_grad"></div>
+                <h1 class="title">${res.title}
+                    <span>${res.description}</span>
+                </h1>
+    </div>`
+    $(`#${id}`).append(items);
 
     });
+    document.querySelector(`#${id} .game_feat`)?.classList.add("game_active");
     
 }

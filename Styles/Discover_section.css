@@ -131,6 +131,7 @@
     object-fit: cover;
     height: 100%;
     transition: calc(var(--base_anim_speed) / 2);
+    z-index: 5;
 }
 
 .cover_img_sec .img_scroller{

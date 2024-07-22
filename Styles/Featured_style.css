@@ -1,0 +1,301 @@
+.featured_game, .featured_game *, .featured_parent{
+    padding: initial;
+    margin: initial;
+
+    --grad: radial-gradient(#00000000, #101010c5);
+
+}
+.featured_game{
+    position: relative;
+    overflow: hidden;
+    filter: drop-shadow(0 0 0.5em #797979b3);
+
+}
+.game_feat{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.game_grad{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    background-image: var(--grad);
+    transition: var(--base_anim_speed);
+    /* transform: translateY(5em); */
+    transform: scale(1.5);
+}
+.game_feat:hover .game_grad{
+    transform: scale(1);
+    /* transform: translateY(0); */
+}
+.featured_game{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    height: 33.5em;
+    /* height: clamp(15rem, 80vw, 27rem); */
+    /* margin:  var(--margin_sides) 0 var(--margin_sides) 0; */
+    margin: var(--margin_sides) 0 var(--margin_sides);
+
+    align-items: center;
+    /* overflow-x: auto; */
+    overflow-x: hidden;
+}
+.featured_game > .game_feat:first-child{
+    margin-left: 1em;
+
+}
+.featured_game > .game_feat:last-child{
+    margin-right: 1em;
+
+}
+.game_feat{
+    flex: 0 0 65%;
+    height: 100%;
+    display: inline-block;
+    border-radius: var(--big_border_radius);
+    transition: var(--base_anim_speed);
+}
+
+.game_feat:not(.game_active){
+    height: 92%;
+    opacity: 0.5;
+    transition: var(--base_anim_speed);
+}
+.game_feat:hover:not(.game_active){
+    opacity: 0.8;
+    
+}
+.game_feat img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--base_anim_speed);
+}
+.game_feat:hover img{
+    transform: scale(1.3);
+}
+
+.game_feat .title{
+    color: var(--button_hover_color);
+    position: absolute;
+    bottom: 0;
+    font-family: LT_light;
+    margin: 0 0 0.5em 0.5em;
+    font-size: 2.5em;
+    transition: var(--base_anim_speed);
+    transform-origin: 0 100%;
+}
+.game_feat:hover .title{
+    /* font-size: 2.7em; */
+    transform: scale(1.1);
+}
+.game_feat .title span{
+    font-size: 0.55em;
+    display: block;
+    margin-top: 0.1em;
+}
+.featured_parent{
+    position: relative;
+
+    font-size: clamp(0.6rem, 3.2vw, 1rem);
+    /* font-size: 0.5rem; */
+    margin: 0;
+}
+.featured_parent .scroll_button{
+    background-color: white;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    
+    position: absolute;
+    /* bottom: 0; */
+    /* left: 0; */
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+    margin: auto;
+
+    z-index: 3;
+    overflow: hidden;
+
+    filter: drop-shadow(0 0 var(--base_blur_amount) #616161);
+    transition: var(--base_anim_speed);
+    cursor: pointer;
+    opacity: 0.75;
+}
+.featured_parent .scroll_button:hover{
+    filter: drop-shadow(0 0 var(--big_blur_amount) #424242);
+}
+.featured_parent .scroll_button.left{
+    left: 0.5em;
+    transform: rotate(90deg);
+}
+.featured_parent .scroll_button.right{
+    right: 0.5em;
+    transform: rotate(-90deg);
+}
+.featured_parent .scroll_button img{
+    width: 100%;
+    /* background-color: red; */
+    height: 100%;
+    padding: 0.5em;
+    padding-top: 0.7em;
+    /* align-items: center; */
+    object-fit: scale-down;
+}
+.featured_parent .scroll_button.left:hover.rotate{
+    transform:rotate(-90deg);
+}
+.featured_parent .scroll_button.right:hover.rotate{
+    transform:rotate(90deg);
+}
+@media (pointer:coarse) {
+    .featured_parent .scroll_button.left.rotate{
+        transform:rotate(-90deg);
+    }
+    .featured_parent .scroll_button.right.rotate{
+        transform:rotate(90deg);
+    }
+}
+.auto_controls *, .auto_controls{
+    margin: initial;
+    padding: initial;
+    
+}
+.auto_controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--margin_sides);
+
+    font-size: clamp(0.55em,2.933vw,1em);
+    gap: 0.7em;
+
+    --controls_color: #00000035;
+}
+.auto_controls #sc_button{
+    border:none;
+    color: var(--controls_color);
+    width: 1.1em;
+    height: 1.1em;
+    /* background-color: red; */
+    opacity: 0.5;
+    cursor: pointer;
+
+    transition: var(--base_anim_speed);
+}
+.auto_controls #sc_button img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.auto_controls #sc_button:hover{
+    opacity: 1;
+}
+
+.timer{
+    position: relative;
+    height: 2em;
+    width: 2em;
+    /* background-color: red; */
+    border-radius: 50%;
+    background-image: conic-gradient(transparent var(--timer), 0, var(--controls_color));
+}
+.timer::before{
+    content: "";
+    position: absolute;
+    --uni_out:-0.15em;
+    left: var(--uni_out);
+    top: var(--uni_out);
+    right: var(--uni_out);
+    bottom: var(--uni_out);
+    border-radius: inherit;
+    border: 1px solid var(--controls_color);
+}
+.game_feat{
+    overflow: hidden;
+    position: relative;
+}
+
+.game_feat.game_active::after{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    right: 0;
+    width: 400%;
+    
+    content: "";
+    background-color: transparent;
+    background-image: linear-gradient(30deg, transparent 40%, #ffffff6f 50%, transparent 60%);
+
+    transition: var(--base_anim_speed);
+    animation: shine_anim 4s infinite;
+}
+
+@keyframes shine_anim{
+    0%{
+        transform: translate(-100%);
+    }
+    100%{
+        transform: translate(100%);
+    }
+}
+
+@media screen and (max-width:950px) {
+    .game_feat{
+        flex: 0 0 87%;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    .featured_game{
+        height: 40em;
+    }
+}
+/* .featured_parent > *{
+    overflow: visible;
+} */
+/* .featured_parent{
+    overflow: hidden;
+} */
+
+/* @media screen and (max-width:750px)  {
+    .featured_game{
+        height:43vw;
+        font-size: 1.8vw;
+    }
+}
+@media screen and (max-width:800px) and (min-width:750px) {
+    .featured_game{
+        height:21rem;
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:1025px) and (min-width:801px) {
+    .featured_game{
+        height:24rem;
+        font-size: 0.90rem;
+    }
+}
+@media screen and (max-width:1200px) and (min-width:1025px) {
+    .featured_game{
+        height:26rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width:1300px) and (min-width:1200px) {
+    .featured_game{
+        height:27rem;
+        font-size: 1rem;
+    }
+} */

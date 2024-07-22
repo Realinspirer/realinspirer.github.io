@@ -13,27 +13,26 @@ class section_class {
         this.title = title;
         this.description = des;
         this.image_url = img;
-        this.shadow_text = sh_txt;
         this.click_url = cl_url;
         this.window_argument = win_ar;
     }
 }
-function get_json_featured() {
+function get_json_featured(loc, id) {
     return __awaiter(this, void 0, void 0, function* () {
         // var window_argument:string = "_self";
-        var response = yield fetch('/Scripts/Featured_section_things/Section_thing.json');
+        var _a;
+        var response = yield fetch(loc);
         var res_ar = yield response.json();
-        res_ar.reverse().forEach(res => {
-            var items = `<div class=\"grid_item\" onclick="window.open('${res.click_url}','${res.window_argument}')">` +
-                `<p>${res.title}` +
-                `<span><br>${res.description}</span>` +
-                `</p>` +
-                `<img src="${res.image_url}" alt="game_cover">` +
-                `<div class="item_shadow">` +
-                `<p>${res.shadow_text}</p>` +
-                `</div>` +
-                `</div>`;
-            $("#featured_section").prepend(items);
+        res_ar.forEach(res => {
+            var items = `<div class="game_feat" onclick="window.open('${res.click_url}', '${res.window_argument}')">
+                <img src="${res.image_url}" alt="game_cover">
+                <div class="game_grad"></div>
+                <h1 class="title">${res.title}
+                    <span>${res.description}</span>
+                </h1>
+    </div>`;
+            $(`#${id}`).append(items);
         });
+        (_a = document.querySelector(`#${id} .game_feat`)) === null || _a === void 0 ? void 0 : _a.classList.add("game_active");
     });
 }

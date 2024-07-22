@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Styles/Hamburger_nav_icon_style.css">
-    <link rel="stylesheet" href="Styles/Major_div_button.css">
+    <!-- <link rel="stylesheet" href="Styles/Major_div_button.css"> -->
     <link rel="stylesheet" href="Styles/Section_style.css">
     <link rel="stylesheet" href="Styles/Items_section_style.css">
     <link rel="stylesheet" href="Styles/Discover_section.css">
@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="Styles/Socials_section.css">
     <link rel="stylesheet" href="Styles/Footer.css">
     <link rel="stylesheet" href="Styles/Hire_div.css">
+    <link rel="stylesheet" href="Styles/Featured_style.css">
 </head>
 <body>
 
@@ -79,18 +80,59 @@
     <!-- experimental end -->
 
     <!-- major div -->
-    <div class="major_div">
+    <!-- <div class="major_div">
         <h1 class="major_text">HECK'S KITCHEN!</h1>
         <div class="major_button"><p>Play Now!</p></div>
         <div class="video_above_blur"></div>
         <video class="major_div_img" src="Images/render.mp4" autoplay loop muted alt="Back">
         </video>
-    </div>
+    </div> -->
     <!-- major div end -->
 
+    <!-- featured section -->
+
+    <div class="featured_parent">
+        <a class="scroll_button left" id="left_scroller"><img alt="symbol" src="/Images/Symbols/down.png"></a>
+        <a class="scroll_button right" id="right_scroller"><img alt="symbol" src="/Images/Symbols/down.png"></a>
+        <div class="featured_game" id="scroll_hor">
+    
+            <!-- <div class="game_feat" onclick="window.open('Banana_Bounce!', '_self')">
+                <img src="Images/Featured_section/frame.png" alt="game_cover">
+                <div class="game_grad game_active"></div>
+                <h1 class="title">VFX Showcase
+                    <span>Video effects made using Blender</span>
+                </h1>
+            </div>
+            <div class="game_feat">
+                <img src="/Images/Discover_section/vector_img.png" alt="game_cover">
+                <div class="game_grad"></div>
+                <h1 class="title">Featured
+                    <span>Heck's Kitchen!</span>
+                </h1>
+            </div>
+            <div class="game_feat">
+                <img src="/Images/Discover_section/vector_img.png" alt="game_cover">
+                <div class="game_grad"></div>
+                <h1 class="title">Featured
+                    <span>Heck's Kitchen!</span>
+                </h1>
+            </div> -->
+
+            
+    </div>
+    </div>
+
+    <div class="auto_controls">
+        <a id="sc_button"><img src="/Images/Symbols/pause.png" alt="pause/play"></a>
+        <div class="timer" id="timer_circle"></div>
+    </div>
+
+    <!-- featured section end -->
+
     <!-- featured sections -->
-    <p class="section_text">FEATURED PROJECTS</p>
-    <div class="items_grid" id="featured_section">
+    <!-- <p class="section_text">FEATURED PROJECTS</p> -->
+    <!-- <div class="items_grid" id="featured_section"> -->
+
         <!-- <div class="grid_item">
             <p>Banana Bounce!
                 <span><br>Avoid obstacles while you bounce^^!</span>
@@ -101,7 +143,7 @@
             </div>
         </div> -->
         
-    </div>
+    <!-- </div> -->
     <!-- featured section end -->
 
         <!-- Section 1 start -->
@@ -400,4 +442,5 @@
 </body>
 
     <script src="Scripts/Image_scroller_scripts/Img_sc_script.js"></script>
+    <script src="/Games/Scripts/Scroll_vertical.js"></script>
 </html>
