@@ -98,12 +98,12 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
         }
         start_auto_interval() {
             if (!this.paused) {
-                __classPrivateFieldSet(this, _scroller_elements_class_instances, __classPrivateFieldGet(this, _scroller_elements_class_instances, "a", _scroller_elements_class_timer_get) + 10 / 1000, "a", _scroller_elements_class_timer_set);
+                __classPrivateFieldSet(this, _scroller_elements_class_instances, __classPrivateFieldGet(this, _scroller_elements_class_instances, "a", _scroller_elements_class_timer_get) + 500 / 1000, "a", _scroller_elements_class_timer_set);
             }
             if (__classPrivateFieldGet(this, _scroller_elements_class_instances, "a", _scroller_elements_class_timer_get) >= __classPrivateFieldGet(this, _scroller_elements_class_threshold, "f")) {
                 this.click_next_item();
             }
-            setTimeout(() => this.start_auto_interval(), 10);
+            setTimeout(() => this.start_auto_interval(), 500);
         }
     }
     _scroller_elements_class_curr_sel = new WeakMap(), _scroller_elements_class_paused_ = new WeakMap(), _scroller_elements_class_pause_play_img_element = new WeakMap(), _scroller_elements_class_timer_ = new WeakMap(), _scroller_elements_class_threshold = new WeakMap(), _scroller_elements_class_instances = new WeakSet(), _scroller_elements_class_timer_get = function _scroller_elements_class_timer_get() {
@@ -147,7 +147,7 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
                     main_img.style.opacity = "1";
                     clearInterval(item.current_anim);
                 }
-            }, 10);
+            }, 80);
         }));
         item.click_next_item();
         item.start_auto_interval();

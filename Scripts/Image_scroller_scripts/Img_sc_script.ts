@@ -117,14 +117,14 @@
         start_auto_interval(){
 
             if(!this.paused){
-                this.#timer += 10/1000;
+                this.#timer += 500/1000;
             }
             
             if(this.#timer >= this.#threshold){
                 this.click_next_item();
             }
 
-            setTimeout(() => this.start_auto_interval(), 10);
+            setTimeout(() => this.start_auto_interval(), 500);
         }
     }
 
@@ -184,7 +184,7 @@
                         main_img.style.opacity = "1";
                         clearInterval(item.current_anim!);
                     }
-                }, 10);
+                }, 80);
 
 
             })

@@ -187,8 +187,6 @@
     content: "";
     transition: calc(var(--base_anim_speed) / 2);
 
-    /* --timer_val:50%; */
-
     /* background-image: linear-gradient(90deg, #8282826f 0 var(--timer_val), transparent 0); */
     background-color: #a1a1a16f;
 

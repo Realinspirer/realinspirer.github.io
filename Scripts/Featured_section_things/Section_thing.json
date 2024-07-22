@@ -1,7 +1,7 @@
 [
     {
         "title": "VFX Showcase",
-        "description": "Video effects made using blender",
+        "description": "Video effects made using Blender",
         "image_url": "Images/Featured_section/frame.png",
         "click_url": "https://youtu.be/5w27HBM6pb8?si=srOOjB1_b0uzJn8C",
         "window_argument": ""
@@ -15,7 +15,7 @@
     },
     {
         "title": "Logos & Vector",
-        "description": "Vector based logos, banners and much more",
+        "description": "Vector based artworks!",
         "image_url": "Images/Featured_section/logos_featured.png",
         "click_url": "",
         "window_argument": "_self"
