@@ -2,28 +2,29 @@
     {
         "title": "VFX Showcase",
         "description": "Video effects made using Blender",
-        "image_url": "Images/Featured_section/frame.png",
+        "def_img": "Images/Featured_section/frame.png",
+        "other_imgs": [{"img_url": "Images/Featured_section/frame_small.png", "width":950}],
         "click_url": "https://youtu.be/5w27HBM6pb8?si=srOOjB1_b0uzJn8C",
         "window_argument": ""
     },
     {
         "title": "Banana Bounce!",
         "description": "Avoid obstacles while you bounce^^!",
-        "image_url": "Images/Featured_section/Banana_bounce.png",
+        "def_img": "/Games/Banana_Bounce!/Images/Banana_bounce_landscape.png",
         "click_url": "/Games/Banana_Bounce!/",
         "window_argument": "_self"
     },
     {
         "title": "Logos & Vector",
         "description": "Vector based artworks!",
-        "image_url": "Images/Featured_section/logos_featured.png",
+        "def_img": "Images/Featured_section/logos_featured.png",
         "click_url": "",
         "window_argument": "_self"
     },
     {
         "title": "Heck's Kitchen!",
         "description": "A game that tells a story... a frightening story",
-        "image_url": "Images/Featured_section/Heck's_kitchen.png",
+        "def_img": "Images/Featured_section/Heck's_kitchen.png",
         "click_url": "",
         "window_argument": "_self"
     }

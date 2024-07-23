@@ -253,10 +253,13 @@
     }
 }
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:1050px) {
     .game_feat{
         flex: 0 0 85%;
     }
+    
+}
+@media screen and (max-width:950px) {
     .featured_game{
         height: 42em;
     }

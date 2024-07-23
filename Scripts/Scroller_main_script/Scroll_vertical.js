@@ -49,7 +49,6 @@
     // scroller buttons
     let left_btn = document.getElementById("left_scroller");
     let right_btn = document.getElementById("right_scroller");
-    let scroller_child_len = scroller.children.length;
     check_both_scroller();
     function check_both_scroller() {
         if (index == 0) {
@@ -59,7 +58,7 @@
             left_btn.classList.remove('rotate');
         }
         if (scroller != null) {
-            if (index == scroller_child_len - 1) {
+            if (index == scroller.children.length - 1) {
                 right_btn.classList.add('rotate');
             }
             else {
@@ -139,7 +138,7 @@
         var yDiff = yDown - yUp;
         if (Math.abs(xDiff) > Math.abs(yDiff)) {
             if (xDiff > 0) {
-                if (index < scroller_child_len - 1) {
+                if (index < scroller.children.length - 1) {
                     scroll_right();
                 }
             }

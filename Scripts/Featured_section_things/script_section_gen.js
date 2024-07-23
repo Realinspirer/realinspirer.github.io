@@ -8,11 +8,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+class Image_with_viewport {
+    constructor(img_url, width) {
+        this.img_url = img_url;
+        this.width = width;
+    }
+}
 class section_class {
-    constructor(title, des, img, sh_txt, cl_url, win_ar) {
+    constructor(title, des, img, other_imgs, cl_url, win_ar) {
         this.title = title;
         this.description = des;
-        this.image_url = img;
+        this.def_img = img;
+        this.other_imgs = other_imgs;
         this.click_url = cl_url;
         this.window_argument = win_ar;
     }
@@ -25,8 +32,14 @@ function get_json_featured(loc, id) {
         var res_ar = yield response.json();
         res_ar.forEach(res => {
             var items = `<div class="game_feat" onclick="window.open('${res.click_url}', '${res.window_argument}')">
-                <img src="${res.image_url}" alt="game_cover">
-                <div class="game_grad"></div>
+                <picture>`;
+            if (res.other_imgs != null && res.other_imgs.length >= 0) {
+                res.other_imgs.forEach(url => {
+                    items += `<source srcset="${url.img_url}" media="(max-width: ${url.width}px)"/>`;
+                });
+            }
+            items += `<img src=${res.def_img} alt="cover_img"/> </picture>`;
+            items += `<div class="game_grad"></div>
                 <h1 class="title">${res.title}
                     <span>${res.description}</span>
                 </h1>

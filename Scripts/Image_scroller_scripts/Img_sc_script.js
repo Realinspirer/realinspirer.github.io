@@ -10,7 +10,7 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
     return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 };
-(function () {
+const Scroller_const = (function () {
     var _scroller_elements_class_instances, _scroller_elements_class_curr_sel, _scroller_elements_class_paused_, _scroller_elements_class_pause_play_img_element, _scroller_elements_class_timer_, _scroller_elements_class_timer_get, _scroller_elements_class_timer_set, _scroller_elements_class_threshold;
     class scroller_elements_class {
         get current_selected_index() {
@@ -114,42 +114,56 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
         (_a = this.scroller) === null || _a === void 0 ? void 0 : _a.style.setProperty('--timer_val', (((__classPrivateFieldGet(this, _scroller_elements_class_timer_, "f") / __classPrivateFieldGet(this, _scroller_elements_class_threshold, "f")) * 100) + '%').toString());
     };
     let all_covers = document.querySelectorAll(".cover_img_sec");
-    let items = [];
-    all_covers.forEach((item) => {
-        let root_parent = item.closest(".discover_item");
-        root_parent === null || root_parent === void 0 ? void 0 : root_parent.insertAdjacentHTML("afterbegin", `<div class="pause_play_button"><img alt="Pause/Play" src="Images/Symbols/pause.png"></div>`);
-        items.push(new scroller_elements_class(item.querySelector(".sc_btn.left"), item.querySelector(".sc_btn.right"), item.querySelector(".img_scroller"), item.querySelector(".main_img"), Array.from(item.querySelectorAll(".sc_img img")), root_parent.querySelector(".pause_play_button")));
-    });
-    items.forEach((item) => {
+    // let items:Array<scroller_elements_class> = [];
+    function add_to_items(cover_img_sec_element) {
         var _a;
-        item.pause_play_btn.addEventListener("click", function () {
-            item.paused = !item.paused;
-        });
-        item.right_button.addEventListener("click", function () {
-            item.click_next_item();
-        });
-        item.left_button.addEventListener("click", function () {
-            item.click_prev_item();
-        });
-        (_a = item.images) === null || _a === void 0 ? void 0 : _a.forEach(im => im.parentElement.addEventListener("click", function () {
-            var _a;
-            (_a = item.current_selected_parent) === null || _a === void 0 ? void 0 : _a.classList.toggle("active");
-            item.current_selected_index = item.images.indexOf(im);
-            item.current_selected_parent.classList.toggle("active");
-            let main_img = item.main_img;
-            main_img.style.opacity = "0";
-            if (item.current_anim != null) {
-                clearInterval(item.current_anim);
-            }
-            item.current_anim = setInterval(function () {
-                if (parseFloat(window.getComputedStyle(main_img).opacity) <= 0) {
-                    item.main_img.src = im.src;
-                    main_img.style.opacity = "1";
-                    clearInterval(item.current_anim);
+        let cur_scroller = cover_img_sec_element.querySelector(".img_scroller");
+        console.log(`Child count: ${cur_scroller.children.length}`);
+        if (cur_scroller.children != null && cur_scroller.children.length > 0) {
+            let root_parent = cover_img_sec_element.closest(".discover_item");
+            root_parent === null || root_parent === void 0 ? void 0 : root_parent.insertAdjacentHTML("afterbegin", `<div class="pause_play_button"><img alt="Pause/Play" src="Images/Symbols/pause.png"></div>`);
+            let created_item = new scroller_elements_class(cover_img_sec_element.querySelector(".sc_btn.left"), cover_img_sec_element.querySelector(".sc_btn.right"), cur_scroller, cover_img_sec_element.querySelector(".main_img"), Array.from(cover_img_sec_element.querySelectorAll(".img_scroller .sc_img img")), root_parent.querySelector(".pause_play_button"));
+            created_item.pause_play_btn.addEventListener("click", function () {
+                created_item.paused = !created_item.paused;
+            });
+            created_item.right_button.addEventListener("click", function () {
+                created_item.click_next_item();
+            });
+            created_item.left_button.addEventListener("click", function () {
+                created_item.click_prev_item();
+            });
+            (_a = created_item.images) === null || _a === void 0 ? void 0 : _a.forEach(im => im.parentElement.addEventListener("click", function () {
+                var _a;
+                (_a = created_item.current_selected_parent) === null || _a === void 0 ? void 0 : _a.classList.toggle("active");
+                created_item.current_selected_index = created_item.images.indexOf(im);
+                created_item.current_selected_parent.classList.toggle("active");
+                let main_img = created_item.main_img;
+                main_img.style.opacity = "0";
+                if (created_item.current_anim != null) {
+                    clearInterval(created_item.current_anim);
                 }
-            }, 80);
-        }));
-        item.click_next_item();
-        item.start_auto_interval();
+                created_item.current_anim = setInterval(function () {
+                    if (parseFloat(window.getComputedStyle(main_img).opacity) <= 0) {
+                        created_item.main_img.src = im.src;
+                        main_img.style.opacity = "1";
+                        clearInterval(created_item.current_anim);
+                    }
+                }, 80);
+            }));
+            created_item.click_next_item();
+            created_item.start_auto_interval();
+        }
+        else {
+            console.warn("Image scroller did not contain any children, added listner!");
+            cur_scroller.addEventListener("Added_children", () => add_to_items(cover_img_sec_element));
+        }
+    }
+    all_covers.forEach((item) => {
+        add_to_items(item);
     });
+    return {
+        add_scroller_item(cover_img_sec_element) {
+            add_to_items(cover_img_sec_element);
+        }
+    };
 })();

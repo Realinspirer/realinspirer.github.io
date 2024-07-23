@@ -1,4 +1,4 @@
-(function() {
+const Scroller_const = (function() {
     class scroller_elements_class{
         left_button:HTMLElement|null;
         right_button:HTMLElement|null;
@@ -129,72 +129,92 @@
     }
 
     let all_covers = document.querySelectorAll(".cover_img_sec");
-    let items:Array<scroller_elements_class> = [];
+    // let items:Array<scroller_elements_class> = [];
+
+    function add_to_items(cover_img_sec_element:Element){
+
+        let cur_scroller = cover_img_sec_element.querySelector<HTMLElement>(".img_scroller")!;
+
+        console.log(`Child count: ${cur_scroller.children.length}`);
+        if(cur_scroller.children != null && cur_scroller.children.length > 0){
+
+            let root_parent = cover_img_sec_element.closest(".discover_item");
+            root_parent?.insertAdjacentHTML("afterbegin",`<div class="pause_play_button"><img alt="Pause/Play" src="Images/Symbols/pause.png"></div>`);
+
+            let created_item = new scroller_elements_class(cover_img_sec_element.querySelector(".sc_btn.left"),
+                cover_img_sec_element.querySelector(".sc_btn.right"),
+                cur_scroller,
+                cover_img_sec_element.querySelector(".main_img"),
+                Array.from<HTMLImageElement>(cover_img_sec_element.querySelectorAll<HTMLImageElement>(".img_scroller .sc_img img")), 
+                root_parent!.querySelector(".pause_play_button")
+            );
+
+            created_item.pause_play_btn!.addEventListener("click", function(){
+                created_item.paused = !created_item.paused;
+            });
+    
+            created_item.right_button!.addEventListener("click", 
+                function() 
+                { 
+                    created_item.click_next_item();
+                });
+    
+            created_item.left_button!.addEventListener("click", 
+                function() 
+                { 
+                    created_item.click_prev_item();
+                });
+    
+            created_item.images?.forEach(im => 
+                im!.parentElement!.addEventListener("click", function() {
+                    created_item.current_selected_parent?.classList.toggle("active");
+    
+                    created_item.current_selected_index = created_item.images!.indexOf(im);
+                    
+                    created_item.current_selected_parent!.classList.toggle("active");
+    
+                    let main_img = created_item.main_img!;
+    
+                    main_img.style.opacity = "0";
+                    
+                    if(created_item.current_anim!=null){
+                        clearInterval(created_item.current_anim);
+                    }
+                    created_item.current_anim = setInterval(function(){
+                        if(parseFloat(window.getComputedStyle(main_img).opacity) <= 0){
+                            created_item.main_img!.src = im!.src;
+                            main_img.style.opacity = "1";
+                            clearInterval(created_item.current_anim!);
+                        }
+                    }, 80);
+    
+    
+                })
+    
+            );
+    
+            created_item.click_next_item();
+    
+            created_item.start_auto_interval();
+        }
+        else{
+            console.warn("Image scroller did not contain any children, added listner!");
+            cur_scroller.addEventListener("Added_children", () => add_to_items(cover_img_sec_element));
+        }
+
+    }
+
 
     all_covers.forEach((item) => {
+        add_to_items(item);
 
-        let root_parent = item.closest(".discover_item");
-        root_parent?.insertAdjacentHTML("afterbegin",`<div class="pause_play_button"><img alt="Pause/Play" src="Images/Symbols/pause.png"></div>`);
-
-        items.push( new scroller_elements_class(item.querySelector(".sc_btn.left"),
-            item.querySelector(".sc_btn.right"),
-            item.querySelector(".img_scroller"),
-            item.querySelector(".main_img"),
-            Array.from<HTMLImageElement>(item.querySelectorAll(".sc_img img")), 
-            root_parent!.querySelector(".pause_play_button")
-        ));
     });
 
-    items.forEach((item) => {
-
-        item.pause_play_btn!.addEventListener("click", function(){
-            item.paused = !item.paused;
-        });
-
-        item.right_button!.addEventListener("click", 
-            function() 
-            { 
-                item.click_next_item();
-            });
-
-        item.left_button!.addEventListener("click", 
-            function() 
-            { 
-                item.click_prev_item();
-            });
-
-        item.images?.forEach(im => 
-            im!.parentElement!.addEventListener("click", function() {
-                item.current_selected_parent?.classList.toggle("active");
-
-                item.current_selected_index = item.images!.indexOf(im);
-                
-                item.current_selected_parent!.classList.toggle("active");
-
-                let main_img = item.main_img!;
-
-                main_img.style.opacity = "0";
-                
-                if(item.current_anim!=null){
-                    clearInterval(item.current_anim);
-                }
-                item.current_anim = setInterval(function(){
-                    if(parseFloat(window.getComputedStyle(main_img).opacity) <= 0){
-                        item.main_img!.src = im!.src;
-                        main_img.style.opacity = "1";
-                        clearInterval(item.current_anim!);
-                    }
-                }, 80);
-
-
-            })
-
-        );
-
-        item.click_next_item();
-
-        item.start_auto_interval();
-    });
+    return {
+        add_scroller_item(cover_img_sec_element:HTMLElement){
+            add_to_items(cover_img_sec_element);
+        }
+    }
 
 
 })();
