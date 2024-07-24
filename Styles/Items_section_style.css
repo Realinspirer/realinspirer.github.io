@@ -130,7 +130,7 @@
 }
 
 .items_grid .grid_item .item_shadow{
-    content: "fsdfds";
+    content: "";
     position: absolute;
     width: 100%;
     text-align: center;

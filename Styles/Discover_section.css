@@ -1,5 +1,5 @@
 
-.discover_sec, .discover_sec *:not(.normal_button){
+:where(.discover_sec, .discover_sec *:not(.normal_button)){
     margin: initial;
     padding: initial;
 }
@@ -11,7 +11,7 @@
     font-size: 0.82rem;
     font-size: clamp(0.85rem, 0.559rem + 0.49vw, 1rem);
 
-    margin: 1em 0 2em;
+    margin: 1em 0 0em;
     
 }
 
@@ -31,7 +31,8 @@
 }
 .discover_item .just_main_img, .discover_item .main_img{
     border-radius: var(--big_border_radius);
-    filter: drop-shadow(0 0 5px #b8b8b8);
+    filter: drop-shadow(0 0 5px #b2b2b2);
+    border:1px solid #9a9a9a;
     display: block;
 }
 .discover_item .just_main_img{
@@ -79,7 +80,7 @@
 }
 .dis_item_sec .subtitle{
     font-size: 1.2em;
-    margin-left: 0.25em;
+    /* margin-left: 0.25em; */
     padding-right: 2em;
 
 }
@@ -331,11 +332,11 @@
         text-align: center;
         justify-content: start;
         /* height: 12em; */
-        /* background-color: red; */
+        margin-block-end: 1em;
     }
-    .dis_item_sec:last-child{
+    /* .dis_item_sec:last-child{
         margin-bottom: 1em;
-    }
+    } */
     .discover_item:nth-child(even) .dis_item_sec_img{
         order: 0;
     }

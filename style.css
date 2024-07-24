@@ -262,6 +262,7 @@ body{
     transition: var(--base_anim_speed);
     overflow: hidden;
     z-index: 1;
+    text-decoration: none;
 }
 .normal_button:hover{
     color: var(--button_hover_color);

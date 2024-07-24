@@ -1,0 +1,84 @@
+:where(.Donate_div *:not(.normal_button)), .Donate_div{
+    padding: initial;
+    margin: initial;
+    
+}
+
+.Donate_div {
+    /* height: 30em; */
+
+    background-color: white;
+    margin-bottom: var(--margin_sides);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+
+    font-size: clamp( 1rem);
+    font-size: clamp(0.92rem, 0.82rem + 0.2vw, 1rem);
+    
+}
+
+.donate_section{
+    padding: 5em 0 5em;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-family: LT_light;
+    gap:1em;
+
+}
+
+.donate_section img{
+    height: 8em;
+    width: 8em;
+    object-fit: contain;
+    /* margin-top: 3em; */
+}
+.donate_section .title{
+    font-size: 2.3em;
+}
+.donate_section .subtitle{
+    font-size: 1.2em;
+    text-align: center;
+    display: block;
+    margin: 0 2.5em 0;
+}
+
+.donate_section.hire{
+    background-color: #f8f5e7ff;
+    color: #75726b;
+
+    --button_back:#fceaa6ff;
+    --hover_grad:linear-gradient(90deg, #ff8426ff, #fca958ff);
+}
+.donate_section.donate{
+    background-color: #f8e7e7ff;
+    color: #726969;
+
+    --button_back:#fcbfbfff;
+    --hover_grad:linear-gradient(90deg, #ff4c4cff, #ff7d7dff);
+}
+
+.donate_section .normal_button{
+    margin-top: 1em;
+    font-size: 1.1em;
+    width: 8em;
+    text-align: center;
+    border: none;
+    border-radius: 0.4em;
+    background-color: var(--button_back);
+}
+.donate_section .normal_button::before{
+    background-image: var(--hover_grad);
+}
+
+@media screen and (max-width:800px) {
+    .Donate_div{
+        grid-template-columns: 100%;
+
+        font-size: 0.8rem;
+        font-size: clamp(0.8rem, 0.68rem + 0.64vw, 1rem);
+    }
+}

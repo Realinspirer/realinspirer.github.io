@@ -57,18 +57,19 @@
     height: 100%;
     display: inline-block;
     border-radius: var(--big_border_radius);
-    transition: calc(var(--base_anim_speed) / 2 );
+    transition: var(--base_anim_speed);
+
+    transition: height calc(var(--base_anim_speed) * 2);
 }
 
 .game_feat:not(.game_active){
-    height: 92%;
-    opacity: 0.5;
-    transition: var(--base_anim_speed);
+    height: 90%;
+    /* opacity: 0.5; */
 }
-.game_feat:hover:not(.game_active){
+/* .game_feat:hover:not(.game_active){
     opacity: 0.8;
     
-}
+} */
 .game_feat img{
     width: 100%;
     height: 100%;

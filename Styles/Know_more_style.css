@@ -1,0 +1,40 @@
+:where(.Know_more_section, .Know_more_section * :not(.normal_button)){
+    padding: 0;
+    margin: 0;
+}
+
+.Know_more_section{
+    height: 25em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--button_accent_color);
+    font-family: LT_light;
+    text-align: center;
+    background-color: #f4f4f4;
+    gap: 1em;
+
+    font-size: 0.68rem;
+    font-size: clamp(0.68rem, 0.596rem + 0.449vw, 1rem);
+}
+.Know_more_section img{
+    height: 6em;
+    width: 6em;
+    object-fit: contain;
+}
+
+.Know_more_section .normal_button{
+    font-size: 1.2em;
+    background-color: #74ad4c;
+    color: white;
+    border: none;
+    filter: drop-shadow(0 0 0.5em #8dd35a);
+}
+.Know_more_section .normal_button::before{
+    background-image: url(/Images/Know_more/Button_back.png);
+    background-size: 7em;
+}
+.Know_more_section .normal_button:hover{
+    color: var(--button_accent_color);
+}
