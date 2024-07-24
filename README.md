@@ -1,2 +1,2 @@
-# Project Website Repository
-This is the repository behind my [project site](https://realinspirer.github.io/). 
+# Website Repository
+This is the repository behind the site https://realinspirer.github.io/. 
