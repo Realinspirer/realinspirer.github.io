@@ -193,7 +193,7 @@ const Scroller_const = (function() {
 
                             let pa_img = main_img.parentElement!;
                             let prev_sources = pa_img.querySelectorAll("source");
-                            if(prev_sources != null){
+                            if(prev_sources.length > 0){
                                 prev_sources.forEach( ch=>
                                     ch.remove()
                                 );

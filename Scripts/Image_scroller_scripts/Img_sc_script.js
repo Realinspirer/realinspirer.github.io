@@ -152,7 +152,7 @@ const Scroller_const = (function () {
                             main_img.style.cssText = im.dataset.custom_style;
                             let pa_img = main_img.parentElement;
                             let prev_sources = pa_img.querySelectorAll("source");
-                            if (prev_sources != null) {
+                            if (prev_sources.length > 0) {
                                 prev_sources.forEach(ch => ch.remove());
                             }
                             let req_imgs = im.dataset.other_imgs;

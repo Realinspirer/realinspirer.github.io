@@ -172,7 +172,7 @@
     border-radius: var(--base_border_radius);
     position: relative;
     cursor: pointer;
-    transition: var(--base_anim_speed);
+    transition: transform var(--base_anim_speed), border var(--base_anim_speed);
     background-color: white;
 }
 .img_scroller .sc_img.active{

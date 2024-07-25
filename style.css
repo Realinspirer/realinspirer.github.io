@@ -259,7 +259,7 @@ body{
     position: relative;
     cursor: pointer;
     color: var(--button_accent_color);
-    transition: var(--base_anim_speed);
+    transition: color var(--base_anim_speed), border-color var(--base_anim_speed);
     overflow: hidden;
     z-index: 1;
     text-decoration: none;
@@ -277,7 +277,9 @@ body{
     top: 0;
     right: 100%;
     z-index: -1;
-    transition: var(--base_anim_speed);
+    transition: right var(--base_anim_speed), 
+                color var(--base_anim_speed), 
+                border-radius var(--base_anim_speed);
     border-radius: 0 100% 100% 0
 }
 .normal_button:hover::before{
