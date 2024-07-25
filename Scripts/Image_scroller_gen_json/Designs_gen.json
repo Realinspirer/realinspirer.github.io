@@ -1,11 +1,38 @@
 [
-    "Images/Designs/0.png",
-    "Images/Designs/1.png",
-    "Images/Designs/2.png",
-    "Images/Designs/3.png",
-    "Images/Designs/4.png",
-    "Images/Designs/5.png",
-    "Images/Designs/6.png",
-    "Images/Designs/7.png",
-    "Images/Designs/8.png"
+    {
+        "img_path":"Images/Designs/0.png",
+        "custom_style":"object-fit:contain; background:linear-gradient(66deg, #d7d4c8ff, #eae8e1ff)"
+    },
+    {
+        "img_path":"Images/Designs/1.png",
+        "custom_style":"object-fit:contain;background:white"
+    },
+    {
+        "img_path":"Images/Designs/2.png",
+        "custom_style":"object-fit:contain;background:white"
+    },
+    {
+        "img_path":"Images/Designs/3.png",
+        "custom_style":"object-fit:contain;background:linear-gradient(#1f1f1f 0 50%, white 50% 100%)"
+    },
+    {
+        "img_path":"Images/Designs/4.png",
+        "custom_style":"object-fit:contain;background:#2d2d2d"
+    },
+    {
+        "img_path":"Images/Designs/5.png",
+        "custom_style":"object-fit:contain;background:#e4d939"
+    },
+    {
+        "img_path":"Images/Designs/6.png",
+        "custom_style":"object-fit:contain;background:#3a3a3a"
+    },
+    {
+        "img_path":"Images/Designs/7.png",
+        "custom_style":"object-fit:contain;background:#da914f"
+    },
+    {
+        "img_path":"Images/Designs/8.png",
+        "custom_style":"object-fit:cover;background:#dedede"
+    }
 ]

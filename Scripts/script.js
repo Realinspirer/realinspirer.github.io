@@ -1,4 +1,10 @@
 "use strict";
+class Image_with_viewport {
+    constructor(img_url, width) {
+        this.img_url = img_url;
+        this.width = width;
+    }
+}
 //navigation menu thing
 $(Loaded);
 let verticle_nav;

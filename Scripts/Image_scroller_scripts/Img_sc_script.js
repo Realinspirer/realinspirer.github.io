@@ -132,24 +132,47 @@ const Scroller_const = (function () {
             created_item.left_button.addEventListener("click", function () {
                 created_item.click_prev_item();
             });
-            (_a = created_item.images) === null || _a === void 0 ? void 0 : _a.forEach(im => im.parentElement.addEventListener("click", function () {
-                var _a;
-                (_a = created_item.current_selected_parent) === null || _a === void 0 ? void 0 : _a.classList.toggle("active");
-                created_item.current_selected_index = created_item.images.indexOf(im);
-                created_item.current_selected_parent.classList.toggle("active");
-                let main_img = created_item.main_img;
-                main_img.style.opacity = "0";
-                if (created_item.current_anim != null) {
-                    clearInterval(created_item.current_anim);
-                }
-                created_item.current_anim = setInterval(function () {
-                    if (parseFloat(window.getComputedStyle(main_img).opacity) <= 0) {
-                        created_item.main_img.src = im.src;
-                        main_img.style.opacity = "1";
+            let main_img = created_item.main_img;
+            let pic_ele = document.createElement("picture");
+            main_img.parentElement.replaceChild(pic_ele, created_item.main_img);
+            pic_ele.appendChild(main_img);
+            (_a = created_item.images) === null || _a === void 0 ? void 0 : _a.forEach(im => {
+                im.parentElement.addEventListener("click", function () {
+                    var _a;
+                    (_a = created_item.current_selected_parent) === null || _a === void 0 ? void 0 : _a.classList.toggle("active");
+                    created_item.current_selected_index = created_item.images.indexOf(im);
+                    created_item.current_selected_parent.classList.toggle("active");
+                    main_img.style.opacity = "0";
+                    if (created_item.current_anim != null) {
                         clearInterval(created_item.current_anim);
                     }
-                }, 80);
-            }));
+                    created_item.current_anim = setInterval(function () {
+                        if (parseFloat(window.getComputedStyle(main_img).opacity) <= 0) {
+                            main_img.style.opacity = "1";
+                            main_img.style.cssText = im.dataset.custom_style;
+                            let pa_img = main_img.parentElement;
+                            let prev_sources = pa_img.querySelectorAll("source");
+                            if (prev_sources != null) {
+                                prev_sources.forEach(ch => ch.remove());
+                            }
+                            let req_imgs = im.dataset.other_imgs;
+                            if (req_imgs != null) {
+                                let srcs_to_add = "";
+                                let req_array = req_imgs.split(";");
+                                req_array.forEach(ele => {
+                                    let computed_size = ele.split(":");
+                                    if (computed_size.length == 2) {
+                                        srcs_to_add += `<source srcset="${computed_size[1]}" media="(max-width: ${computed_size[0]}px)"/>`;
+                                    }
+                                });
+                                main_img.insertAdjacentHTML("beforebegin", srcs_to_add);
+                            }
+                            created_item.main_img.src = im.src;
+                            clearInterval(created_item.current_anim);
+                        }
+                    }, 100);
+                });
+            });
             created_item.click_next_item();
             created_item.start_auto_interval();
         }

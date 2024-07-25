@@ -265,6 +265,13 @@
         height: 42em;
     }
     
+    
+}
+@media screen and (max-width:700px) {
+    .featured_parent .scroll_button{
+        height: 3em;
+        width: 3em;
+    }
 }
 /* @media screen and (max-width:950px) {
     

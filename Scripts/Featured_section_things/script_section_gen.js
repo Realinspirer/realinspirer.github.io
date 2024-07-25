@@ -8,12 +8,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-class Image_with_viewport {
-    constructor(img_url, width) {
-        this.img_url = img_url;
-        this.width = width;
-    }
-}
 class section_class {
     constructor(title, des, img, other_imgs, cl_url, win_ar) {
         this.title = title;

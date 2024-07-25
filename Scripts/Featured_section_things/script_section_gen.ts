@@ -1,12 +1,3 @@
-class Image_with_viewport{
-    img_url:string;
-    width:number;
-    constructor(img_url:string, width:number){
-        this.img_url = img_url;
-        this.width = width;
-    }
-}
-
 class section_class{
     title: string;
     description: string;
