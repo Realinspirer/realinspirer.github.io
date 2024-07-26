@@ -186,7 +186,7 @@
     left: 0;
     bottom: 0;
     content: "";
-    transition: calc(var(--base_anim_speed) / 2);
+    transition: right calc(var(--base_anim_speed) / 2);
 
     /* background-image: linear-gradient(90deg, #8282826f 0 var(--timer_val), transparent 0); */
     background-color: #a1a1a16f;
@@ -209,9 +209,9 @@
     left: 0;
     bottom: 0;
     content: "";
-    background-color: #f1d7a038;
+    background-color: #f1d7a03e;
     opacity: 0;
-    transition: var(--base_anim_speed);
+    transition: opacity var(--base_anim_speed);
 }
 .sc_img:hover::after{
     opacity: 1;
@@ -245,7 +245,7 @@
     bottom: 0;
     margin: auto 0 auto;
     
-    transition: var(--base_anim_speed);
+    transition: filter var(--base_anim_speed);
     cursor: pointer;
 }
 .cover_img_sec .sc_btn img{
@@ -283,7 +283,7 @@
     opacity: 0.5;
     cursor: pointer;
 
-    transition: var(--base_anim_speed);
+    transition: opacity var(--base_anim_speed);
 }
 .discover_item .pause_play_button:hover{
     opacity: 1;

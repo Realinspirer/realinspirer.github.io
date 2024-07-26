@@ -9,7 +9,9 @@
         "ignore": [
           "-webkit-tap-highlight-color",
           "text-underline-offset",
-          "scrollbar-width"
+          "scrollbar-width",
+          "overflow-x: clip",
+          "overflow: clip"
         ]
       }
     ]

@@ -11,7 +11,8 @@
     padding: 0 0 0.4em 0;
     display: inline-block;
     cursor: pointer;
-    transition: var(--base_anim_speed);
+    transition: color var(--base_anim_speed),
+                transform var(--base_anim_speed);
     -webkit-user-select: none;
     user-select: none;
 }
@@ -28,7 +29,8 @@
     right: 80%;
     top: 85%;
     /* width: 7vw; */
-    transition: var(--base_anim_speed);
+    transition: right var(--base_anim_speed), left var(--base_anim_speed),
+                top var(--base_anim_speed);
     border-radius: 0.2em;
     z-index: -1;
 }
@@ -58,7 +60,8 @@
     text-wrap: nowrap;
     font-size: 0.55em;
     opacity: 0;
-    transition: var(--base_anim_speed);
+    transition: opacity var(--base_anim_speed), color var(--base_anim_speed),
+                margin var(--base_anim_speed);
 }
 .section_text:hover::after{
     opacity: 1;

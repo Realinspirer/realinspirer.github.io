@@ -10,8 +10,10 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
     return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 };
-const Scroller_const = (function () {
+(function () {
     var _scroller_elements_class_instances, _scroller_elements_class_curr_sel, _scroller_elements_class_paused_, _scroller_elements_class_pause_play_img_element, _scroller_elements_class_timer_, _scroller_elements_class_timer_get, _scroller_elements_class_timer_set, _scroller_elements_class_threshold;
+    let discover_parent = document.querySelector("#section_discover");
+    let time_event = new Event("Image_scroller_event");
     class scroller_elements_class {
         get current_selected_index() {
             return __classPrivateFieldGet(this, _scroller_elements_class_curr_sel, "f");
@@ -97,13 +99,15 @@ const Scroller_const = (function () {
             scroller.scrollTo({ left: (current_child.offsetLeft - gap) - to_calc });
         }
         start_auto_interval() {
+            discover_parent.addEventListener("Image_scroller_event", () => this.ascend_time());
+        }
+        ascend_time() {
             if (!this.paused) {
                 __classPrivateFieldSet(this, _scroller_elements_class_instances, __classPrivateFieldGet(this, _scroller_elements_class_instances, "a", _scroller_elements_class_timer_get) + 500 / 1000, "a", _scroller_elements_class_timer_set);
             }
             if (__classPrivateFieldGet(this, _scroller_elements_class_instances, "a", _scroller_elements_class_timer_get) >= __classPrivateFieldGet(this, _scroller_elements_class_threshold, "f")) {
                 this.click_next_item();
             }
-            setTimeout(() => this.start_auto_interval(), 500);
         }
     }
     _scroller_elements_class_curr_sel = new WeakMap(), _scroller_elements_class_paused_ = new WeakMap(), _scroller_elements_class_pause_play_img_element = new WeakMap(), _scroller_elements_class_timer_ = new WeakMap(), _scroller_elements_class_threshold = new WeakMap(), _scroller_elements_class_instances = new WeakSet(), _scroller_elements_class_timer_get = function _scroller_elements_class_timer_get() {
@@ -149,7 +153,10 @@ const Scroller_const = (function () {
                     created_item.current_anim = setInterval(function () {
                         if (parseFloat(window.getComputedStyle(main_img).opacity) <= 0) {
                             main_img.style.opacity = "1";
-                            main_img.style.cssText = im.dataset.custom_style;
+                            let inline_st = im.style.cssText;
+                            if (inline_st != null && inline_st != "") {
+                                main_img.style.cssText = inline_st;
+                            }
                             let pa_img = main_img.parentElement;
                             let prev_sources = pa_img.querySelectorAll("source");
                             if (prev_sources.length > 0) {
@@ -184,9 +191,10 @@ const Scroller_const = (function () {
     all_covers.forEach((item) => {
         add_to_items(item);
     });
-    return {
-        add_scroller_item(cover_img_sec_element) {
-            add_to_items(cover_img_sec_element);
-        }
-    };
+    // return {
+    //     add_scroller_item(cover_img_sec_element:HTMLElement){
+    //         add_to_items(cover_img_sec_element);
+    //     }
+    // }
+    setInterval(() => { discover_parent.dispatchEvent(time_event); }, 500);
 })();

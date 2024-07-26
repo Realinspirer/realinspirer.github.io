@@ -14,6 +14,8 @@
     text-align: center;
     background-color: #f4f4f4;
     gap: 1em;
+    position: relative;
+    overflow: clip;
 
     font-size: 0.68rem;
     font-size: clamp(0.68rem, 0.596rem + 0.449vw, 1rem);
@@ -37,4 +39,33 @@
 }
 .Know_more_section .normal_button:hover{
     color: var(--button_accent_color);
+}
+
+@supports(animation-timeline: view()){
+    .Know_more_section::before{
+        position: absolute;
+        vertical-align: center;
+        background-color: #65ff6216;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        content: "";
+        animation: scale_up linear forwards;
+        animation-timeline: view();
+        animation-range-start: 20vh;
+        animation-range-end: 60vh;
+        transform: scale(0);
+    }
+
+    @keyframes scale_up {
+        to{
+            transform: scale(20);
+        }
+        
+    }
 }

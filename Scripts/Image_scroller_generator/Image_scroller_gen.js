@@ -24,7 +24,7 @@ const Populate_image_scroller = (function () {
             var res_ar = yield response.json();
             var parent_to_add = document.querySelector(`#${id}`);
             res_ar.forEach(res => {
-                let cu_style = `data-custom_style="${res.custom_style}"`;
+                let cu_style = `style="${res.custom_style}"`;
                 let ot_imgs = `data-other_imgs="${res.other_imgs}"`;
                 if (res.custom_style == null) {
                     cu_style = "";
@@ -32,6 +32,10 @@ const Populate_image_scroller = (function () {
                 if (res.other_imgs == null) {
                     ot_imgs = "";
                 }
+                // let back_thing;
+                // if(cu_style.includes("url")){
+                //     if
+                // }
                 let to_add = `<div class="sc_img">` +
                     `<img src="${res.img_path}" ${cu_style} ${ot_imgs} alt="design_item">` +
                     `</div>`;

@@ -28,7 +28,7 @@
     border-radius: 0.5em;
     filter: drop-shadow(0 0 2px var(--item_def_shadow));
     overflow: hidden;
-    transition: var(--base_anim_speed);
+    transition: transform var(--base_anim_speed), filter var(--base_anim_speed);
     padding: clamp(0.8em, 4.267vw ,1em);
     /* padding: 1em; */
     /* background-color: red; */
@@ -65,7 +65,8 @@
 .items_text .item_normal_desc{
     opacity: 0;
     height: 0;
-    transition: var(--base_anim_speed);
+    transition: opacity var(--base_anim_speed), height var(--base_anim_speed),
+                height var(--base_anim_speed), margin var(--base_anim_speed);
     color: #696969;
     font-size: 1.2em;
 }

@@ -20,140 +20,7 @@
     /* gap: 0.65rem; */
     margin: 0 var(--margin_sides) calc(var(--margin_sides) + 1em) var(--margin_sides);
 }
-.items_grid .grid_item{
-    /* height: 17rem;
-    height: 25rem;
-    height: clamp(23rem, 13rem + 13.333vw, 25rem); */
-    height: 30rem;
-    height: 28rem;
-    font-size: clamp(28rem, 18rem + 13.333vw, 30rem);
 
-    font-size: 1.4rem;
-
-    margin: 0;
-    background-color: var(--item_back_color);
-    overflow: hidden;
-    position: relative;
-    border-radius: var(--big_border_radius);
-    transition: var(--base_anim_speed);
-    filter: drop-shadow(0 0 2px var(--item_def_shadow));
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: pointer;
-    
-}
-/* .items_grid .grid_item::after{
-    background-color: red;
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    margin: auto;
-    z-index: 100;
-    
-} */
-.items_grid .grid_item img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--base_anim_speed);
-    z-index: -1;
-}
-.items_grid .grid_item:hover img{
-    transform: scale(112%);
-}
-.items_grid .grid_item::before{
-    content: "";
-    position: absolute;
-    margin: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: var(--top_normal);
-    background-color: var(--item_back_color);
-    z-index: 2;
-    filter: drop-shadow(0 0 10px #222222ff);
-    /* border-radius: 0 var(--base_border_radius) 0 var(--base_border_radius); */
-    border-radius: 50% 50% 0 0;
-    transition: 0.15s;
-    background-image: url(../Images/back_t.png);
-    background-size: cover;
-}
-.items_grid .grid_item:hover::before{
-    filter: drop-shadow(0 0 10px #e1e1e1ff);
-    top:var(--top_highlight);
-
-    background-color: var(--item_highlight_color);
-    opacity: 0.93;
-
-}
-.items_grid .grid_item:hover{
-    transform: scale(1.01);
-    filter: drop-shadow(0 0 5px var(--highlight_color));
-}
-.grid_item > p{
-    z-index: 5;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    top: calc(var(--top_normal) + 12%);
-    font-size:1.35em;
-    text-align: center;
-    font-family: LT_light;
-    line-height: 70%;
-    padding: 0 0.23em 0;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    line-height: 0.1em;
-
-    color: var(--button_accent_color);
-    transition: var(--base_anim_speed);
-
-}
-.items_grid .grid_item:hover > p{
-    top: calc(var(--top_highlight) + 16%);
-    font-size: 1.5em;
-    /* color: var(--highlight_color); */
-}
-.grid_item > p span{
-    font-size: 0.61em;
-    line-height: 1em;
-    color: var(--button_accent_color);
-    transition: opacity var(--base_anim_speed);
-}
-.grid_item:hover > p span{
-    opacity: 0;
-}
-
-.items_grid .grid_item .item_shadow{
-    content: "";
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    bottom: 0;
-    top:100%;
-    z-index: 5;
-    background-image: var(--shadow_gradient);
-    transition: var(--base_anim_speed);
-    opacity: 0;
-}
-.items_grid .grid_item:hover .item_shadow{
-    top: var(--shadow_top_val);
-    border-radius: var(--shadow_border_radius) var(--shadow_border_radius) 0 0;
-    opacity: 1;
-}
-.item_shadow p{
-    position: absolute;
-    width: 100%;
-    bottom: 17%;
-    font-size: 1em;
-    color: var(--shadow_text_color);
-    margin:0;
-}
 
 @media screen and (max-width:1200px) {
     .items_grid{
@@ -162,30 +29,12 @@
         /* --font_size_items:var(--font_size_items_relative); */
         
     }
-    .items_grid .grid_item{
-        height: 25rem;
-        height: 20rem;
-        height: clamp(20rem, 15rem + 13.333vw, 25rem);
-
-        font-size: 1.1rem;
-        font-size: 1.3rem;
-        font-size: clamp(1.1rem, 0.864rem + 0.582vw, 1.3rem);
-    }
 }
 @media screen and (max-width:650px) {
     .items_grid{
         grid-template-columns: 1fr;
         /* --height_of_item:200px; */
         /* --font_size_items:var(--font_size_items_relative); */
-    }
-    .items_grid .grid_item{
-        height: 25rem;
-        height: 17rem;
-        height: clamp(17rem, 10rem + 37.333vw, 24rem);
-
-        font-size: 1rem;
-        font-size: 1.3rem;
-        font-size: clamp(1rem, 0.7rem + 1.6vw, 1.3rem);
     }
 }
 

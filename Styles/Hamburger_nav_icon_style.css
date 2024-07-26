@@ -15,7 +15,7 @@
 .bars{
     font-size: 30px;
     font-weight: bolder;
-    transition: var(--base_anim_speed);
+    transition: color var(--base_anim_speed), stroke var(--base_anim_speed);
 }
 .icon:hover{
     color: var(--button_hover_color);

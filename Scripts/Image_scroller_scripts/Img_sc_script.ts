@@ -1,4 +1,8 @@
-const Scroller_const = (function() {
+(function() {
+
+    let discover_parent = document.querySelector<HTMLElement>("#section_discover")!;
+    let time_event = new Event("Image_scroller_event");
+
     class scroller_elements_class{
         left_button:HTMLElement|null;
         right_button:HTMLElement|null;
@@ -115,7 +119,9 @@ const Scroller_const = (function() {
         #threshold = 10;
         
         start_auto_interval(){
-
+            discover_parent.addEventListener("Image_scroller_event", ()=>this.ascend_time());
+        }
+        ascend_time(){
             if(!this.paused){
                 this.#timer += 500/1000;
             }
@@ -123,8 +129,6 @@ const Scroller_const = (function() {
             if(this.#timer >= this.#threshold){
                 this.click_next_item();
             }
-
-            setTimeout(() => this.start_auto_interval(), 500);
         }
     }
 
@@ -188,7 +192,10 @@ const Scroller_const = (function() {
                     created_item.current_anim = setInterval(function(){
                         if(parseFloat(window.getComputedStyle(main_img).opacity) <= 0){
                             main_img.style.opacity = "1";
-                            main_img.style.cssText = im!.dataset.custom_style!;
+                            let inline_st = im!.style.cssText;
+                            if(inline_st != null && inline_st != ""){
+                                main_img.style.cssText = inline_st;
+                            }
 
 
                             let pa_img = main_img.parentElement!;
@@ -241,11 +248,12 @@ const Scroller_const = (function() {
 
     });
 
-    return {
-        add_scroller_item(cover_img_sec_element:HTMLElement){
-            add_to_items(cover_img_sec_element);
-        }
-    }
+    // return {
+    //     add_scroller_item(cover_img_sec_element:HTMLElement){
+    //         add_to_items(cover_img_sec_element);
+    //     }
+    // }
+    setInterval(() =>{ discover_parent.dispatchEvent(time_event);}, 500);
 
 
 })();

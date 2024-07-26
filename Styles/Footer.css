@@ -135,7 +135,7 @@
     text-decoration: underline dashed;
     text-underline-offset: 0.15em;
     text-decoration-color: transparent;
-    transition: var(--base_anim_speed);
+    transition: text-decoration var(--base_anim_speed), color var(--base_anim_speed);
     color: var(--color_sub);
 }
 .footer_div a:hover{

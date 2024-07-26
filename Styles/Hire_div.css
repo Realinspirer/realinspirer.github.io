@@ -58,7 +58,7 @@
     text-decoration: underline dashed;
     text-underline-offset: 0.15em;
     text-decoration-color: transparent;
-    transition: var(--base_anim_speed);
+    transition: text-decoration-color var(--base_anim_speed), color var(--base_anim_speed);
     color: var(--button_hover_color);
 }
 .hire_div .title a:hover{
@@ -83,7 +83,7 @@
     z-index: 1;
     text-decoration: none;
     color: var(--bubtton_accent_color);
-    transition: var(--base_anim_speed);
+    transition: border var(--base_anim_speed);
 }
 
 .block_button.dotted{
@@ -102,7 +102,7 @@
     z-index: -1;
     content: "";
     background-image: var(--grad);
-    transition: var(--base_anim_speed);
+    transition: right var(--base_anim_speed), border-radius var(--base_anim_speed);
     border-radius: 0 100% 100% 0;
 }
 .block_button:hover::before{
