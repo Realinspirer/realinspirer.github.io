@@ -34,7 +34,15 @@
     filter: drop-shadow(0 0 5px #b2b2b2);
     border:1px solid #9a9a9a;
     display: block;
+    transition: filter var(--base_anim_speed), transform var(--base_anim_speed);
+    position: relative;
 }
+.discover_item .just_main_img.clickable:hover, .discover_item .main_img.clickable:hover{
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 7px #a4a4a4);
+}
+
+
 .discover_item .just_main_img{
     width: 90%;
     height: 75%;
@@ -131,7 +139,8 @@
     width: 100%;
     object-fit: cover;
     height: 100%;
-    transition: opacity calc(var(--base_anim_speed) / 2);
+    transition: opacity calc(var(--base_anim_speed) / 2), filter var(--base_anim_speed),
+                transform var(--base_anim_speed);
     z-index: 5;
 }
 
@@ -166,6 +175,7 @@
 }
 
 .img_scroller .sc_img{
+    
     border: #808080ac solid 1px;
     flex: 0 0 15%;
     padding: 0.2em;

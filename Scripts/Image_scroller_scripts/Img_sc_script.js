@@ -11,7 +11,7 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
     return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 };
 (function () {
-    var _scroller_elements_class_instances, _scroller_elements_class_curr_sel, _scroller_elements_class_paused_, _scroller_elements_class_pause_play_img_element, _scroller_elements_class_timer_, _scroller_elements_class_timer_get, _scroller_elements_class_timer_set, _scroller_elements_class_threshold;
+    var _scroller_elements_class_instances, _scroller_elements_class_curr_sel, _scroller_elements_class_paused_, _scroller_elements_class_pause_play_img_element, _scroller_elements_class_timer_, _scroller_elements_class_timer_get, _scroller_elements_class_timer_set, _scroller_elements_class_threshold, _scroller_elements_class_ascend_time, _scroller_elements_class_current_url, _scroller_elements_class_current_window_argument;
     let discover_parent = document.querySelector("#section_discover");
     let time_event = new Event("Image_scroller_event");
     class scroller_elements_class {
@@ -42,6 +42,8 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
             _scroller_elements_class_pause_play_img_element.set(this, null);
             _scroller_elements_class_timer_.set(this, 0);
             _scroller_elements_class_threshold.set(this, 10);
+            _scroller_elements_class_current_url.set(this, null);
+            _scroller_elements_class_current_window_argument.set(this, null);
             this.left_button = left_button;
             this.right_button = right_button;
             this.scroller = scroller;
@@ -99,23 +101,41 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
             scroller.scrollTo({ left: (current_child.offsetLeft - gap) - to_calc });
         }
         start_auto_interval() {
-            discover_parent.addEventListener("Image_scroller_event", () => this.ascend_time());
+            discover_parent.addEventListener("Image_scroller_event", () => __classPrivateFieldGet(this, _scroller_elements_class_instances, "m", _scroller_elements_class_ascend_time).call(this));
         }
-        ascend_time() {
-            if (!this.paused) {
-                __classPrivateFieldSet(this, _scroller_elements_class_instances, __classPrivateFieldGet(this, _scroller_elements_class_instances, "a", _scroller_elements_class_timer_get) + 500 / 1000, "a", _scroller_elements_class_timer_set);
+        set_click_url(cl_url, win_arg) {
+            __classPrivateFieldSet(this, _scroller_elements_class_current_url, cl_url, "f");
+            __classPrivateFieldSet(this, _scroller_elements_class_current_window_argument, win_arg, "f");
+            if (__classPrivateFieldGet(this, _scroller_elements_class_current_url, "f") != null) {
+                this.main_img.style.cursor = "pointer";
+                this.main_img.classList.add("clickable");
             }
-            if (__classPrivateFieldGet(this, _scroller_elements_class_instances, "a", _scroller_elements_class_timer_get) >= __classPrivateFieldGet(this, _scroller_elements_class_threshold, "f")) {
-                this.click_next_item();
+            else {
+                this.main_img.style.cursor = "normal";
+                this.main_img.classList.remove("clickable");
+            }
+        }
+        handle_click_url() {
+            if (__classPrivateFieldGet(this, _scroller_elements_class_current_url, "f") != null) {
+                __classPrivateFieldGet(this, _scroller_elements_class_current_window_argument, "f") != null ?
+                    window.open(__classPrivateFieldGet(this, _scroller_elements_class_current_url, "f"), __classPrivateFieldGet(this, _scroller_elements_class_current_window_argument, "f")) :
+                    window.open(__classPrivateFieldGet(this, _scroller_elements_class_current_url, "f"));
             }
         }
     }
-    _scroller_elements_class_curr_sel = new WeakMap(), _scroller_elements_class_paused_ = new WeakMap(), _scroller_elements_class_pause_play_img_element = new WeakMap(), _scroller_elements_class_timer_ = new WeakMap(), _scroller_elements_class_threshold = new WeakMap(), _scroller_elements_class_instances = new WeakSet(), _scroller_elements_class_timer_get = function _scroller_elements_class_timer_get() {
+    _scroller_elements_class_curr_sel = new WeakMap(), _scroller_elements_class_paused_ = new WeakMap(), _scroller_elements_class_pause_play_img_element = new WeakMap(), _scroller_elements_class_timer_ = new WeakMap(), _scroller_elements_class_threshold = new WeakMap(), _scroller_elements_class_current_url = new WeakMap(), _scroller_elements_class_current_window_argument = new WeakMap(), _scroller_elements_class_instances = new WeakSet(), _scroller_elements_class_timer_get = function _scroller_elements_class_timer_get() {
         return __classPrivateFieldGet(this, _scroller_elements_class_timer_, "f");
     }, _scroller_elements_class_timer_set = function _scroller_elements_class_timer_set(val) {
         var _a;
         __classPrivateFieldSet(this, _scroller_elements_class_timer_, val, "f");
         (_a = this.scroller) === null || _a === void 0 ? void 0 : _a.style.setProperty('--timer_val', (((__classPrivateFieldGet(this, _scroller_elements_class_timer_, "f") / __classPrivateFieldGet(this, _scroller_elements_class_threshold, "f")) * 100) + '%').toString());
+    }, _scroller_elements_class_ascend_time = function _scroller_elements_class_ascend_time() {
+        if (!this.paused) {
+            __classPrivateFieldSet(this, _scroller_elements_class_instances, __classPrivateFieldGet(this, _scroller_elements_class_instances, "a", _scroller_elements_class_timer_get) + 500 / 1000, "a", _scroller_elements_class_timer_set);
+        }
+        if (__classPrivateFieldGet(this, _scroller_elements_class_instances, "a", _scroller_elements_class_timer_get) >= __classPrivateFieldGet(this, _scroller_elements_class_threshold, "f")) {
+            this.click_next_item();
+        }
     };
     let all_covers = document.querySelectorAll(".cover_img_sec");
     // let items:Array<scroller_elements_class> = [];
@@ -140,6 +160,7 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
             let pic_ele = document.createElement("picture");
             main_img.parentElement.replaceChild(pic_ele, created_item.main_img);
             pic_ele.appendChild(main_img);
+            main_img.addEventListener("click", () => created_item.handle_click_url());
             (_a = created_item.images) === null || _a === void 0 ? void 0 : _a.forEach(im => {
                 im.parentElement.addEventListener("click", function () {
                     var _a;
@@ -153,16 +174,20 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
                     created_item.current_anim = setInterval(function () {
                         if (parseFloat(window.getComputedStyle(main_img).opacity) <= 0) {
                             main_img.style.opacity = "1";
+                            let sc_img_dataset = im.dataset;
                             let inline_st = im.style.cssText;
                             if (inline_st != null && inline_st != "") {
                                 main_img.style.cssText = inline_st;
                             }
+                            let click_url = sc_img_dataset.click_url;
+                            let win_arg = sc_img_dataset.window_argument;
+                            created_item.set_click_url(click_url, win_arg);
                             let pa_img = main_img.parentElement;
                             let prev_sources = pa_img.querySelectorAll("source");
                             if (prev_sources.length > 0) {
                                 prev_sources.forEach(ch => ch.remove());
                             }
-                            let req_imgs = im.dataset.other_imgs;
+                            let req_imgs = sc_img_dataset.other_imgs;
                             if (req_imgs != null) {
                                 let srcs_to_add = "";
                                 let req_array = req_imgs.split(";");

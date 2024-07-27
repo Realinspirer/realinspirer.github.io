@@ -17,6 +17,8 @@
         // current_selected_index:number|null;
         #curr_sel:number|null;
 
+
+
         get current_selected_index():number|null{
             return this.#curr_sel;
         }
@@ -119,9 +121,9 @@
         #threshold = 10;
         
         start_auto_interval(){
-            discover_parent.addEventListener("Image_scroller_event", ()=>this.ascend_time());
+            discover_parent.addEventListener("Image_scroller_event", ()=>this.#ascend_time());
         }
-        ascend_time(){
+        #ascend_time(){
             if(!this.paused){
                 this.#timer += 500/1000;
             }
@@ -130,7 +132,32 @@
                 this.click_next_item();
             }
         }
+
+        #current_url:string|null|undefined = null;
+        #current_window_argument:string|null|undefined = null;
+
+        set_click_url(cl_url:string|null|undefined, win_arg:string|null|undefined){
+            this.#current_url = cl_url;
+            this.#current_window_argument = win_arg;
+            
+            if(this.#current_url != null){
+                this.main_img!.style.cursor = "pointer";
+                this.main_img!.classList.add("clickable");
+            }
+            else{
+                this.main_img!.style.cursor = "normal";
+                this.main_img!.classList.remove("clickable");
+            }
+        }
+        handle_click_url(){
+            if(this.#current_url != null){
+                this.#current_window_argument != null ? 
+                                                window.open(this.#current_url, this.#current_window_argument) :
+                                                window.open(this.#current_url);
+            }
+        }
     }
+
 
     let all_covers = document.querySelectorAll(".cover_img_sec");
     // let items:Array<scroller_elements_class> = [];
@@ -173,6 +200,7 @@
             let pic_ele = document.createElement("picture");
             main_img.parentElement!.replaceChild(pic_ele, created_item.main_img!);
             pic_ele.appendChild(main_img);
+            main_img.addEventListener("click", () => created_item.handle_click_url());
     
             created_item.images?.forEach(im => {
                 
@@ -192,10 +220,19 @@
                     created_item.current_anim = setInterval(function(){
                         if(parseFloat(window.getComputedStyle(main_img).opacity) <= 0){
                             main_img.style.opacity = "1";
+
+                            let sc_img_dataset = im!.dataset;
+
                             let inline_st = im!.style.cssText;
                             if(inline_st != null && inline_st != ""){
                                 main_img.style.cssText = inline_st;
                             }
+
+                            let click_url = sc_img_dataset.click_url;
+                            let win_arg = sc_img_dataset.window_argument;
+
+                            
+                            created_item.set_click_url(click_url, win_arg);
 
 
                             let pa_img = main_img.parentElement!;
@@ -206,7 +243,7 @@
                                 );
                             }
 
-                            let req_imgs = im!.dataset.other_imgs;
+                            let req_imgs = sc_img_dataset.other_imgs;
                             if(req_imgs != null){
                                 let srcs_to_add:string="";
                                 let req_array = req_imgs.split(";");
