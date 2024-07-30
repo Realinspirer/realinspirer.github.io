@@ -64,7 +64,8 @@
     order: 1;
 }
 .dis_item_sec{
-    height: 100%;
+    /* height: 100%; */
+    /* background-color: red; */
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -309,6 +310,19 @@
     right: auto;
 }
 
+.discover_item .just_main_img.apps{
+    object-fit: contain;
+    background: url(/Images/Apps/apps_back.png) center/cover;
+}
+.just_main_img_pic{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 @media screen and (max-width:950px){
     .discover_item{
         font-size: 1rem;
@@ -343,6 +357,7 @@
         justify-content: start;
         /* height: 12em; */
         margin-block-end: 1em;
+        height: 100%;
     }
     /* .dis_item_sec:last-child{
         margin-bottom: 1em;

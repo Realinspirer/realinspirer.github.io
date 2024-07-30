@@ -3,6 +3,11 @@
     src: url("/Fonts/LTSaeada-Regular.otf");
 }
 @font-face {
+    font-family: LT_Medium;
+    src: url("/Fonts/LTSaeada-Medium.otf");
+}
+
+@font-face {
     font-family: LT_extralight;
     src: url("/Fonts/LTSAEADA-EXTRALIGHT.OTF");
 }
@@ -50,7 +55,12 @@
     --background_thing:none;
 }
 html, body{
-    overflow-x: clip;
+    overflow-x: hidden;
+}
+@supports(overflow-x: clip){
+    html,body{
+        overflow-x: clip;
+    }
 }
 h1, h2, h3{
     font-weight: normal;
@@ -250,6 +260,7 @@ body{
 .normal_button{
     display: inline-block;
     -webkit-user-select: none;
+    text-align: center;
     user-select: none;
     padding: 0.62em;
     border: 1px var(--button_accent_color) dashed;
@@ -342,12 +353,13 @@ body{
 @supports(animation-timeline: view()){
     .fading_element_card{
 
-        opacity: 0.2; transform: translateY(8vh);
+        opacity: 0.1; transform: translateY(8vh);
 
         animation: scroll_fade linear forwards;
-        animation-timeline: view();
+        animation-timeline: view(y);
         animation-range-start: 0;
-        animation-range-end: 20vh;
+        animation-range-end: 25vh;
+        view-timeline-name: --timeline_name;
     
     }
     @keyframes scroll_fade {

@@ -179,6 +179,9 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
                             if (inline_st != null && inline_st != "") {
                                 main_img.style.cssText = inline_st;
                             }
+                            else {
+                                main_img.style.cssText = "";
+                            }
                             let click_url = sc_img_dataset.click_url;
                             let win_arg = sc_img_dataset.window_argument;
                             created_item.set_click_url(click_url, win_arg);

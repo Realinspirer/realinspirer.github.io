@@ -42,10 +42,14 @@
 }
 
 @supports(animation-timeline: view()){
+    .Know_more_section{
+        background-color: #65ff620e;
+    }
     .Know_more_section::before{
         position: absolute;
         vertical-align: center;
-        background-color: #65ff6216;
+        background-color: #f4f4f4;
+        background-image: radial-gradient(#f4f4f4, #e1f4db);
         left: 0;
         top: 0;
         bottom: 0;

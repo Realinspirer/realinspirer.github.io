@@ -1,0 +1,32 @@
+[
+    {
+        "img_path":"/Games/Banana_Bounce!/Images/bb_ch.png"
+    },
+    {
+        "img_path":"/Games/Banana_Bounce!/Images/bb_power.png"
+    },
+    {
+        "img_path":"/Images/Assets/bb_assets0.png",
+        "custom_style":"object-fit:contain; background:url(/Games/Banana_Bounce!/Images/Background.png) center/cover;"
+    },
+    {
+        "img_path":"/Images/Assets/bb_assets.png",
+        "custom_style":"object-fit:contain; background:url(/Games/Banana_Bounce!/Images/Background.png) center/cover;"
+    },
+    {
+        "img_path":"/Images/Assets/bb_1.png",
+        "custom_style":"object-fit:contain; background:url(/Games/Banana_Bounce!/Images/Background.png) center/cover;"
+    },
+    {
+        "img_path":"/Images/Assets/assets0.png",
+        "custom_style":"object-fit:contain; background:radial-gradient(#1ce1ebff, #399ae5ff) center/cover"
+    },
+    {
+        "img_path":"/Images/Assets/pk_assets.png",
+        "custom_style":"object-fit:contain; background:url(/Images/Assets/pk_back_dark.png) center/cover"
+    },
+    {
+        "img_path":"/Images/back1.png",
+        "custom_style":"object-fit:contain; background:url(/Images/Assets/blur_back.png) center/cover;"
+    }
+]
