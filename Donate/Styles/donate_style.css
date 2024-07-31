@@ -190,6 +190,7 @@ body{
     }
 
     .back_shadow::after, .back_shadow::before{
+        --angle:0deg;
         --main_gradient_conic:conic-gradient(from var(--angle), #f9416bff , #f535d5, #ba23e4, #6868f3, #f9416bff);
 
         position: absolute;
