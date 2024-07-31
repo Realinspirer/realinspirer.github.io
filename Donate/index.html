@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/Styles/Footer.css">
     <link rel="stylesheet" href="/Styles/Hire_div.css">
     <link rel="stylesheet" href="Styles/donate_style.css">
+    <link rel="stylesheet" href="Styles/text_updater_style.css">
 
     
 </head>
@@ -59,8 +60,14 @@
 
     <div class="greater_div">
         <div class="title_div">
-            <h1 class="title">Support a creator</h1>
-            <h2 class="subtitle">Fuel this creativity and passion</h2> 
+            <h1 class="title">
+                <span id="title_text"></span>
+                <div class='text_highlighter'></div>
+            </h1>
+            
+            <h2 class="subtitle">Fuel this creativity and passion </h2> 
+
+            <!-- <div class='console-container'><span id='text'></span></div> -->
         </div>
         <a class="normal_button" href="https://paypal.me/realinspirer/5USD" target="_blank" rel="noopener"><span>Donate</span></a>
 
@@ -168,6 +175,6 @@
         </p>
     </div>
     <!-- footer section end -->
-
 </body>
+<script src="Scripts/text_updater.js"></script>
 </html>

@@ -339,6 +339,13 @@ body{
         font-size: 1.25rem;
         font-size: clamp(1.25rem, 0.913rem + 1.8vw, 1.7rem);
     }
+    .greater_div .title_div .title{
+        --font_cus:1em;
+    }
+    .greater_div .title_div .title span{
+        font-size: var(--font_cus);
+        transition: font-size var(--base_anim_speed);
+    }
 }
 
 .down_title.last{
