@@ -10,16 +10,13 @@
           "-webkit-tap-highlight-color",
           "text-underline-offset",
           "scrollbar-width",
-          "overflow-x: clip",
-          "overflow: clip"
+          "overscroll-behavior-inline"
         ]
       }
     ]
   },
   "browserslist": [
     "defaults",
-    "not ie 11",
-    "not and_ff <= 126",
-    "not firefox <= 126"
+    "not ie 11"
   ]
 }
