@@ -7,7 +7,7 @@
     z-index: 10;
     border-radius: 2em;
     top:0.15em;
-    left: -0.5em;
+    left: 0em;
     
     animation: blinking_anim 0.8s infinite;
 }
