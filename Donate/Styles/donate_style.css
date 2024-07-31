@@ -93,6 +93,7 @@ body{
 .greater_div .normal_button span{
     color:transparent;
     background-image: var(--dark_gradient);
+    -webkit-background-clip: text;
     background-clip: text;
 }
 .greater_div .normal_button::before{
@@ -121,6 +122,7 @@ body{
     background-image: var(--main_gradient);
     font-family: LT_Regular;
     color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
 }
 
@@ -302,6 +304,12 @@ body{
     background-clip: text;
     font-size: 1.25em;
     transition: color var(--base_anim_speed);
+}
+@supports (not (-webkit-background-clip: text)) and (not (background-clip: text)){
+    .donate_section .normal_button span, .down_title span, .greater_div .normal_button span{
+        background-image: none;
+        color: var(--title_font_color);
+    }
 }
 
 @media screen and (max-width:700px) {
