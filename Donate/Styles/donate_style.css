@@ -33,6 +33,7 @@ body{
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     font-size: 1rem;
     font-size: 0.55rem;
@@ -101,6 +102,35 @@ body{
 }
 .greater_div .normal_button:hover{
     filter:drop-shadow(0 0 0.4em #f5c2f6);
+}
+.greater_div .sc_down_icon{
+    height: 8em;
+    width: 7em;
+    object-fit: contain;
+    /* background-color: red; */
+    position: absolute;
+    pointer-events: none;
+    left: 1.2em;
+    bottom: 4.5em;
+    transform-origin: 0 0.5;
+
+    animation: sc_down_icon_anim 3s infinite cubic-bezier(.06,1.28,.67,.58);
+}
+@keyframes sc_down_icon_anim{
+    0%{
+        transform: none;
+        opacity: 0.5;
+
+    }
+    50%{
+        transform: translateY(1em);
+        opacity: 1;
+    }
+    100%{
+        transform: none;
+        opacity: 0.5;
+
+    }
 }
 
 :where(.down_title *, .down_title){
@@ -296,6 +326,7 @@ body{
     color: white;
 
 }
+
 
 .donate_section .normal_button span
 {
