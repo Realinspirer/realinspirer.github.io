@@ -1,0 +1,65 @@
+.footer_div{
+    margin-top: 0;
+}
+.not_found_parent{
+
+    --base_color:#323232;
+    --base_color_0:#e6e6e6;
+    --color_light:#d0d0d0;
+    height: 40em;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/Images/404/back.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: var(--base_color_0);
+    text-align: center;
+    position: relative;
+
+    font-size: 0.8rem;
+    font-size: 1rem;
+    font-size: clamp(0.8rem, 0.723rem + 0.307vw, 1rem);
+}
+.not_found_parent::before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: "";
+    background-image: linear-gradient(#ebebebd4, transparent 15% 85%, #ebebebd4);
+}
+.not_found_parent > *{
+    filter: drop-shadow(0 0 13px #505050);
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.not_found_parent .title{
+    font-size: 7em;
+    background-image: url(/Images/404/back_text.png);
+    background-size: 50%;
+    -webkit-background-clip: text;
+    filter: none;
+    background-clip: text;
+    color: transparent;
+}
+.not_found_parent .subtitle{
+    font-size: 1.3em;
+}
+.not_found_parent  .normal_button{
+    margin-top: 1em;
+    color: inherit;
+    border: none;
+    background-color: var(--base_color);
+    color: var(--color_light);
+    font-size: 1.1em;
+}
+.not_found_parent .normal_button::before{
+    background-color: var(--color_light);
+}
+.not_found_parent .normal_button:hover{
+    color: var(--base_color);
+}
+

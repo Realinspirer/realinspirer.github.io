@@ -359,6 +359,7 @@ body{
         animation-timeline: view(y);
         animation-range-start: 0;
         animation-range-end: 25vh;
+        animation-range-end: 25svh;
         view-timeline-name: --timeline_name;
     
     }
