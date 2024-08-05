@@ -24,32 +24,33 @@ async function get_json_normal(json_loc:string, id_grid:string, window_argument:
     var res_ar:Array<normal_section_class> = await response.json();
 
     res_ar.reverse().forEach(res => {
-        var items = create_string(res, window_argument);
+        var items = create_string(res);
 
     $(`#${id_grid}`).prepend(items);
 
     });
     
 }
-function create_string(res:normal_section_class, window_argument:string){
+function create_string(res:normal_section_class){
+
     return `<div class=\"item_normal\">` +
         `<img src="${res.image_url}" alt="icon">` +
         `<div class="items_text">` +
             `<p class="item_normal_title">${res.title}</p>`+
             `<p class="item_normal_subtitle">${res.subtitle}</p>`+
             `<p class="item_normal_desc">${res.description}</p>`+
-            `<a class="normal_button" onclick="window.open('${res.click_url}','${window_argument}')">${res.button_text}</a>`+
+            `<a class="normal_button") href="${res.click_url}">${res.button_text}</a>`+
         `</div>` +
     `</div>`;
 }
 
-async function get_json_normal_count(json_loc:string, id_grid:string, count:number, window_argument:string="_self") {
+async function get_json_normal_count(json_loc:string, id_grid:string, count:number) {
 
     var response = await fetch(json_loc);
     var res_ar:Array<normal_section_class> = await response.json();
 
     res_ar.slice(0, count).reverse().forEach(res => {
-        var items = create_string(res, window_argument);
+        var items = create_string(res);
 
     $(`#${id_grid}`).prepend(items);
 
@@ -57,7 +58,7 @@ async function get_json_normal_count(json_loc:string, id_grid:string, count:numb
     
 }
 
-async function get_json_normal_random(json_loc:string, id_grid:string, count:number, excluded:number=-1, window_argument:string="_self") 
+async function get_json_normal_random(json_loc:string, id_grid:string, count:number, excluded:number=-1) 
 {
     var response = await fetch(json_loc);
     var res_ar:Array<normal_section_class> = await response.json();
@@ -75,7 +76,7 @@ async function get_json_normal_random(json_loc:string, id_grid:string, count:num
     }
 
     res_rand.reverse().forEach(res => {
-        var items = create_string(res, window_argument);
+        var items = create_string(res);
         $(`#${id_grid}`).prepend(items);
         
     });

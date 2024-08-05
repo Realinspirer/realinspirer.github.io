@@ -16,7 +16,7 @@ class normal_section_class_no_desc{
 
 
 
-async function get_json_social(json_loc:string, id_grid:string, window_argument:string="") {
+async function get_json_social(json_loc:string, id_grid:string) {
 
     var response = await fetch(json_loc);
     var res_ar:Array<normal_section_class_no_desc> = await response.json();
@@ -29,7 +29,7 @@ async function get_json_social(json_loc:string, id_grid:string, window_argument:
             `<div class="social_texts">` +
                 `<p class="title">${res.title}</p>`+
                 `<p class="subtitle">${res.subtitle}</p>`+
-                `<a class="normal_button" onclick="window.open('${res.click_url}','${window_argument}')">${res.button_text}</a>`+
+                `<a class="normal_button" href="${res.click_url}" target="_blank" rel="noopener">${res.button_text}</a>`+
             `</div>` +
         `</div>` +
 

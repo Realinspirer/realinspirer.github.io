@@ -17,8 +17,8 @@ class normal_section_class_no_desc {
         this.click_url = cl_url;
     }
 }
-function get_json_social(json_loc_1, id_grid_1) {
-    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, window_argument = "") {
+function get_json_social(json_loc, id_grid) {
+    return __awaiter(this, void 0, void 0, function* () {
         var response = yield fetch(json_loc);
         var res_ar = yield response.json();
         res_ar.reverse().forEach(res => {
@@ -28,7 +28,7 @@ function get_json_social(json_loc_1, id_grid_1) {
                 `<div class="social_texts">` +
                 `<p class="title">${res.title}</p>` +
                 `<p class="subtitle">${res.subtitle}</p>` +
-                `<a class="normal_button" onclick="window.open('${res.click_url}','${window_argument}')">${res.button_text}</a>` +
+                `<a class="normal_button" href="${res.click_url}" target="_blank" rel="noopener">${res.button_text}</a>` +
                 `</div>` +
                 `</div>` +
                 `</div>`;
