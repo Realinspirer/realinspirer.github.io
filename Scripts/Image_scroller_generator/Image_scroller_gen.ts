@@ -20,10 +20,11 @@ const Populate_image_scroller = (function(){
         }
     }
     
-    return async function(json_path:string, id:string){
+    return async function(json_path:string, id:string, count:number=8){
 
     var response = await fetch(json_path);
-    var res_ar:Array<img_scroller_class> = await response.json();
+    var res_ar_b:Array<img_scroller_class> = await response.json();
+    let res_ar = res_ar_b.slice(0, count);
 
     var parent_to_add = document.querySelector(`#${id}`);
 

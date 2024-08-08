@@ -31,17 +31,19 @@
 }
 .discover_item .just_main_img, .discover_item .main_img{
     border-radius: var(--big_border_radius);
-    filter: drop-shadow(0 0 5px #b2b2b2);
-    border:1px solid #9a9a9a;
+    filter: drop-shadow(0 0 0.5em #41414152);
+    border:1px solid #9a9a9ac6;
     display: block;
     transition: filter var(--base_anim_speed), transform var(--base_anim_speed);
     position: relative;
+    grid-row-start: 1;
+    grid-column-start: 1;
+
 }
 .discover_item .just_main_img.clickable:hover, .discover_item .main_img.clickable:hover{
     transform: scale(1.01);
-    filter: drop-shadow(0 0 7px #a4a4a4);
+    filter: drop-shadow(0 0 0.6em #a4a4a4);
 }
-
 
 .discover_item .just_main_img{
     width: 90%;
@@ -323,6 +325,51 @@
 }
 
 
+.discover_item .back_slide_img{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    height: 8em;
+    width: max-content;
+    object-fit: contain;
+    opacity: 0.3;
+    pointer-events: none;
+    
+}
+.discover_item:nth-child(even) .back_slide_img{
+    left: 1em;
+}
+@supports(animation-timeline: view()){
+    @media (prefers-reduced-motion: no-preference){
+        
+        .discover_item .back_slide_img{
+            animation: slide_img_anim linear forwards;
+            animation-timeline: view(y);
+        }
+        .discover_item:nth-child(even) .back_slide_img{
+            animation: slide_img_anim_back linear forwards;
+            animation-timeline: view(y);
+        }
+        @keyframes slide_img_anim {
+            from{
+                transform: translateX(1em);
+            }
+            to{
+                transform: translateX(-5em);
+            }
+        }
+        @keyframes slide_img_anim_back {
+            from{
+                transform: translateX(-1em);
+            }
+            to{
+                transform: translateX(5em);
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width:950px){
     .discover_item{
         font-size: 1rem;
@@ -336,6 +383,10 @@
         gap: 0;
 
         /* background-color: red; */
+    }
+    .discover_item .back_slide_img{
+        top: 75%;
+        opacity: 0.23;
     }
     .dis_item_sec_img{
         width: 100%;

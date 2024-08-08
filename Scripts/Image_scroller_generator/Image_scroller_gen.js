@@ -20,10 +20,11 @@ const Populate_image_scroller = (function () {
             this.window_argument = window_argument;
         }
     }
-    return function (json_path, id) {
-        return __awaiter(this, void 0, void 0, function* () {
+    return function (json_path_1, id_1) {
+        return __awaiter(this, arguments, void 0, function* (json_path, id, count = 8) {
             var response = yield fetch(json_path);
-            var res_ar = yield response.json();
+            var res_ar_b = yield response.json();
+            let res_ar = res_ar_b.slice(0, count);
             var parent_to_add = document.querySelector(`#${id}`);
             res_ar.forEach(res => {
                 let cu_style = `style="${res.custom_style}"`;
