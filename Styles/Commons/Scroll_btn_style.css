@@ -1,0 +1,49 @@
+.sc_button{
+    position: absolute;
+    z-index: 2;
+
+    --btn_width: 2.3em;
+
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    width: var(--btn_width);
+    height: var(--btn_width);
+    border: none;
+    background-color: white;
+    border-radius: 50%;
+    font-size: inherit;
+    font-family: inherit;
+
+    filter: drop-shadow(0 0 2px gray);
+    opacity: 0.85;
+    cursor: pointer;
+    transition: filter var(--base_anim_speed),
+                opacity var(--base_anim_speed);
+}
+.sc_button:hover{
+    filter: drop-shadow(0 0 5px gray);
+    opacity: 0.95;
+}
+.sc_button img{
+    width: 100%;
+    height: 100%;
+    
+    
+    padding: 0.45em;
+    padding-top: 0.55em;
+    object-fit: scale-down;
+}
+
+.sc_button.left{
+    left: 0;
+    margin-left: 1em;
+    transform: rotate(90deg);
+}
+
+.sc_button.right{
+    right: 0;
+    margin-right: 0.3em;
+    transform: rotate(-90deg);
+}
