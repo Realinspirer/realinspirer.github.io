@@ -38,13 +38,13 @@
 
 .sc_button.left{
     left: 0;
-    margin-left: 1em;
+    margin-left: 0.5em;
     transform: rotate(90deg);
 }
 
 .sc_button.right{
     right: 0;
-    margin-right: 0.3em;
+    margin-right: 0.5em;
     transform: rotate(-90deg);
 }
 
