@@ -324,50 +324,6 @@
 }
 
 
-.discover_item .back_slide_img{
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    height: 8em;
-    width: max-content;
-    object-fit: contain;
-    opacity: 0.3;
-    pointer-events: none;
-    
-}
-.discover_item:nth-child(even) .back_slide_img{
-    left: 1em;
-}
-@supports(animation-timeline: view()){
-    @media (prefers-reduced-motion: no-preference){
-        
-        .discover_item .back_slide_img{
-            animation: slide_img_anim linear forwards;
-            animation-timeline: view(y);
-        }
-        .discover_item:nth-child(even) .back_slide_img{
-            animation: slide_img_anim_back linear forwards;
-            animation-timeline: view(y);
-        }
-        @keyframes slide_img_anim {
-            from{
-                transform: translateX(1em);
-            }
-            to{
-                transform: translateX(-5em);
-            }
-        }
-        @keyframes slide_img_anim_back {
-            from{
-                transform: translateX(-1em);
-            }
-            to{
-                transform: translateX(5em);
-            }
-        }
-    }
-}
-
 
 @media screen and (max-width:950px){
     .discover_item{
@@ -382,10 +338,6 @@
         gap: 0;
 
         /* background-color: red; */
-    }
-    .discover_item .back_slide_img{
-        top: 75%;
-        opacity: 0.23;
     }
     .dis_item_sec_img{
         width: 100%;

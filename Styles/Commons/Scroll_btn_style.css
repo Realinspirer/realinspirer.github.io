@@ -47,3 +47,12 @@
     margin-right: 0.3em;
     transform: rotate(-90deg);
 }
+
+
+.no_scroll_bar::-webkit-scrollbar {
+    display: none;
+}
+.no_scroll_bar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
