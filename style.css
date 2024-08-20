@@ -65,65 +65,6 @@ html, body{
 h1, h2, h3{
     font-weight: normal;
 }
-/* @media screen and (max-width:350px) {
-    :root{
-        --margin_sides:0.5rem;
-    }
-}
-@media screen and (max-width:450px) and (min-width:350px) {
-    
-} */
-/* @media screen and (max-width:450px)  {
-    :root{
-        --margin_sides:0.5rem;
-        --base_border_radius:0.13rem;
-        --big_border_radius:0.4rem;
-    }
-}
-@media screen and (max-width:550px) and (min-width:450px) {
-    :root{
-        --margin_sides:0.75rem;
-        --base_border_radius:0.13rem;
-        --big_border_radius:0.4rem;
-    }
-}
-@media screen and (max-width:700px) and (min-width:550px)  {
-    :root{
-        --margin_sides:0.83rem;
-        --base_border_radius:0.13rem;
-        --big_border_radius:0.4rem;
-    }
-}
-@media screen and (max-width:800px) and (min-width:700px) {
-    :root{
-        --margin_sides:0.85rem;
-        --base_border_radius:0.15rem;
-        --big_border_radius:0.50rem;
-    }
-}
-@media screen and (max-width:1025px) and (min-width:801px) {
-    :root{
-        --margin_sides:0.88rem;
-        --base_border_radius:0.18rem;
-        --big_border_radius:0.55rem;
-    }
-}
-@media screen and (max-width:1200px) and (min-width:1025px) {
-    :root{
-        --margin_sides:0.93rem;
-        --base_border_radius:0.2rem;
-        --big_border_radius:0.6rem;
-    }
-}
-
-@media screen and (max-width:1300px) and (min-width:1200px) {
-    :root{
-        --margin_sides:0.95rem;
-        --base_border_radius:0.25rem;
-        --big_border_radius:0.625rem;
-    }
-} */
-
 
 ::selection{
     background-color: #595959ff;
@@ -369,3 +310,4 @@ body{
     }
 }
 /* fading anim end */
+
