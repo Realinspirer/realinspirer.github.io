@@ -231,15 +231,6 @@
 }
 
 
-.img_scroller::-webkit-scrollbar {
-    display: none;
-}
-
-.img_scroller {
-  -ms-overflow-style: none;
-  scrollbar-width: none; 
-}
-
 .cover_img_sec .sc_btn{
     grid-row: 2;
     position: absolute;
