@@ -2,11 +2,9 @@
     padding: initial;
     margin: initial;
 }
-
-
 .Middle_section_text{
     --section_color:#2e2e2eff;
-    margin: 1.5em 0.7em 1.5em;
+    margin: 1.75em 0.7em 1.5em;
     text-align: center;
     color: var(--section_color);
     position: relative;
@@ -25,7 +23,10 @@
     font-size: 1.38rem;
 
     font-size: clamp(1.38rem, 1.269rem + 0.589vw, 1.8rem);
-    scroll-margin-top: 2.9em;
+    /* scroll-margin-top: 2.9em; */
+}
+.add_scroll_margin{
+    /* scroll-margin-top: 2.9em; */
 }
 .Middle_section_text::after{
     position: absolute;
@@ -46,4 +47,9 @@
 
 .Middle_section_text:hover::after{
     width: var(--hover_line_width);
+}
+
+.Middle_section_text.recent{
+    --def_line_width:4em;
+    --hover_line_width:6.5em;
 }

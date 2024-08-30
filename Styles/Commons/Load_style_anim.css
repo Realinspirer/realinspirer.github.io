@@ -1,0 +1,10 @@
+@keyframes load_more_anim {
+    from{
+        transform: translateY(6em);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}

@@ -2,6 +2,10 @@
     --temp_color:var(--button_accent_color);
     --temp_color_hover:var(--button_hover_color);
 }
+.Middle_section_text.socials{
+    --def_line_width:2em;
+    --hover_line_width:3.5em;
+}
 .social_section, .social_section *{
    margin: initial;
 }

@@ -1,0 +1,106 @@
+[
+    {
+        "img_path": "/Games/Banana_Bounce!/Images/Assets/bb_overview.png",
+        "custom_style": "--background:url(/Games/Banana_Bounce!/Images/Background.png);",
+        "title": "Banana Bounce Assets",
+        "desc": "Banana Bounce contains various high quality assets, from its UI to its obstacles, characters, environment and all other components. All assets are passionately created by Realinspirer.",
+        "date": "28th August 2024",
+        "buttons": [
+            {
+                "label": "View Assets",
+                "action": "viewing asset"
+            }
+        ]
+    },
+    {
+        "img_path": "/Games/Banana_Bounce!/Images/Assets/bb_obstacles.png",
+        "custom_style": "--background:url(/Games/Banana_Bounce!/Images/Background.png);",
+        "title": "Banana Bounce Obstacles",
+        "desc": "Banana Bounce features a lot of obstacles. These obstacles are high-quality assets, which are created from scratch just to make the game feel more neat and consistent!",
+        "date": "28th August 2024",
+        "buttons": [
+            {
+                "label": "View Assets",
+                "action": "viewing asset"
+            }
+        ]
+    },
+    {
+        "img_path": "/Games/Banana_Bounce!/Images/Assets/bb_ch.png",
+        "custom_style": "--fit:cover;",
+        "title": "Banana Bounce Characters",
+        "desc": "In Banana Bounce, you can see some cool and fun characters, most of which are actually first made in 3D and then rendered, which adds another level of depth to the assets!",
+        "date": "28th August 2024",
+        "buttons": [
+            {
+                "label": "View Assets",
+                "action": "viewing asset"
+            }
+        ]
+    },
+    {
+        "img_path": "/Games/Banana_Bounce!/Images/Assets/bb_anim.png",
+        "custom_style": "--background:url(/Games/Banana_Bounce!/Images/Background.png);",
+        "title": "Banana Bounce Animations",
+        "desc": "From obstacle animations, to character and UI animations, Banana Bounce features all the fun and vibrant assets to deliver a fun and playful environment for its players!",
+        "date": "28th August 2024",
+        "buttons": [
+            {
+                "label": "View Asset",
+                "action": "viewing asset"
+            }
+        ]
+    },
+    {
+        "img_path": "/Games/Banana_Bounce!/Images/Assets/tuto_render.png",
+        "custom_style":"--fit:cover;",
+        "title": "Banana Bounce UI",
+        "desc": "UI in the game uses fun and vibrant assets and also follows some really creative and clutter free layout, that gives it its minimal vibe!",
+        "date": "28th August 2024",
+        "buttons": [
+            {
+                "label": "View Assets",
+                "action": "viewing asset"
+            }
+        ]
+    },
+    {
+        "img_path":"/Projects/Images/Assets/back1.png",
+        "custom_style":"--fit:cover;",
+        "title":"Spooky Background",
+        "desc":"This a spooky background, that is used in the game Sling & Shoot. This is a common yet very impressive piece of art you can find online, but still this was made from scratch using some inspiration!",
+        "date":"28th August 2024",
+        "buttons":[
+            {
+                "label":"View Asset",
+                "action":"viewing asset"
+            }
+        ]
+    },
+    {
+        "img_path":"/Projects/Images/Assets/assets0.png",
+        "custom_style":"--background:radial-gradient(#1ce1ebff, #399ae5ff);",
+        "title":"Various Assets",
+        "desc":"Here you can see assets from the previous games like Drag Race, and Package Delivery. These assets are crafted from scratch to match their respective games!",
+        "date":"28th August 2024",
+        "buttons":[
+            {
+                "label":"View Asset",
+                "action":"viewing asset"
+            }
+        ]
+    },
+    {
+        "img_path":"/Projects/Images/Assets/pk_assets.png",
+        "custom_style":"--background:url(/Projects/Images/Assets/pk_back_dark.png);",
+        "title":"Various Assets",
+        "desc":"Here you can see assets from the previous games like Package Delivery and Sling & Shoot. These assets are crafted from scratch to match their respective games!",
+        "date":"28th August 2024",
+        "buttons":[
+            {
+                "label":"View Asset",
+                "action":"viewing asset"
+            }
+        ]
+    }
+]

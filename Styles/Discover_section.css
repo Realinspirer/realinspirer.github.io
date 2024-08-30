@@ -140,7 +140,6 @@
 }
 .cover_img_sec .main_img{
     width: 100%;
-    object-fit: cover;
     height: 100%;
     transition: opacity calc(var(--base_anim_speed) / 2), filter var(--base_anim_speed),
                 transform var(--base_anim_speed);
@@ -211,7 +210,6 @@
 .sc_img img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
     overflow: hidden;
     border-radius: inherit;
 }

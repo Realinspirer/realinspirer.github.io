@@ -1,0 +1,4 @@
+.set_custom_style{
+    object-fit: var(--fit, contain);
+    background: var(--background, none) center/cover;
+}

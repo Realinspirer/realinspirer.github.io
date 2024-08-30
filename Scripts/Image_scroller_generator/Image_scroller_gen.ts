@@ -53,7 +53,7 @@ const Populate_image_scroller = (function(){
         //     if
         // }
         let to_add = `<div class="sc_img">`+
-                                `<img src="${res.img_path}" ${cu_style} ${ot_imgs} ${click_url} ${win_arg} alt="design_item">` +
+                                `<img src="${res.img_path}" ${cu_style} ${ot_imgs} ${click_url} ${win_arg} class="set_custom_style  " alt="design_item">` +
                      `</div>`;
         parent_to_add?.insertAdjacentHTML("beforeend", to_add);
     });

@@ -1,0 +1,114 @@
+[
+    {
+        "img_path":["Images/3D/Spacecraft.png", "Images/3D/not_found_thing.jpeg", "Images/3D/Spacecraft.png", "Images/3D/Spacecraft.png"],
+        "custom_style":"c2 small_9",
+        "title":"Spacecraft 3D build",
+        "desc":"For my upcoming game, I am working on a Spacecraft model, that will serve as the Main Menu for my game!",
+        "date":"27th August 2024",
+        "buttons":[
+            {
+                "label":"View image",
+                "action":"viewing asset"
+            },
+            {
+                "label":"Learn more",
+                "action":"learning more"
+            }
+        ]
+    },
+    {
+        "img_path":["Images/3D/Fireball.png", "Images/3D/Fireball.png", "Images/3D/Fireball.png"],
+        "custom_style":"r2 desc_down small_82 desc_just_midd scroll_down",
+        "title":"Fireball (Blender)",
+        "desc":"A fireball simulation that I rendered and converted into a spritesheet to use as an animation.",
+        "date":"27th August 2024",
+        "buttons":[
+            {
+                "label":"Learn more",
+                "action":"learning more"
+            }
+        ]
+    },
+    {
+        "img_path":["Images/3D/Fireball.png"],
+        "custom_style":"desc_down desc_just_midd small_7 scroll_down",
+        "title":"Fireball (Blender)",
+        "desc":"A fireball simulation that I rendered and converted into a spritesheet to use as an animation.",
+        "date":"27th August 2024",
+        "buttons":[
+            {
+                "label":"Learn more",
+                "action":"learning more"
+            }
+        ]
+    },
+    {
+        "img_path":["Images/3D/Fireball.png"],
+        "custom_style":"desc_down desc_just_midd small_7 scroll_down",
+        "title":"Fireball (Blender)",
+        "desc":"A fireball simulation that I rendered and converted into a spritesheet to use as an animation.",
+        "date":"27th August 2024",
+        "buttons":[
+            {
+                "label":"Learn more",
+                "action":"learning more"
+            }
+        ]
+    },
+    {
+        "img_path":["Images/3D/Fireball.png", "Images/3D/Fireball.png", "Images/3D/Fireball.png"],
+        "custom_style":"r2 desc_down small_82 desc_just_midd scroll_down",
+        "title":"Fireball (Blender)",
+        "desc":"A fireball simulation that I rendered and converted into a spritesheet to use as an animation.",
+        "date":"27th August 2024",
+        "buttons":[
+            {
+                "label":"Learn more",
+                "action":"learning more"
+            }
+        ]
+    },
+    {
+        "img_path":["Images/3D/Spacecraft.png", "Images/3D/Spacecraft.png", "Images/3D/Spacecraft.png", "Images/3D/Spacecraft.png"],
+        "custom_style":"c2 small_9",
+        "title":"Spacecraft 3D build",
+        "desc":"For my upcoming game, I am working on a Spacecraft model, that will serve as the Main Menu for my game!",
+        "date":"27th August 2024",
+        "buttons":[
+            {
+                "label":"View image",
+                "action":"viewing asset"
+            },
+            {
+                "label":"Learn more",
+                "action":"learning more"
+            }
+        ]
+    },
+    {
+        "img_path":["Images/3D/Fireball.png"],
+        "custom_style":"desc_down desc_just_midd small_7 scroll_down",
+        "title":"Fireball (Blender)",
+        "desc":"A fireball simulation that I rendered and converted into a spritesheet to use as an animation.",
+        "date":"27th August 2024",
+        "buttons":[
+            {
+                "label":"Learn more",
+                "action":"learning more"
+            }
+        ]
+    },
+    {
+        "img_path":["Images/3D/Fireball.png"],
+        "custom_style":"desc_down desc_just_midd small_7 scroll_down",
+        "title":"Fireball (Blender)",
+        "desc":"A fireball simulation that I rendered and converted into a spritesheet to use as an animation.",
+        "date":"27th August 2024",
+        "buttons":[
+            {
+                "label":"Learn more",
+                "action":"learning more"
+            }
+        ]
+    }
+]
