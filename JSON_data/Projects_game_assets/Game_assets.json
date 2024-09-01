@@ -7,13 +7,13 @@
         "date": "28th August 2024",
         "buttons": [
             {
-                "label": "View Assets",
-                "action": "viewing asset"
+                "label": "Visit Assets Page ↗",
+                "action": "/Games/Banana_Bounce!/Assets/"
             }
         ]
     },
     {
-        "img_path": "/Games/Banana_Bounce!/Images/Assets/bb_obstacles.png",
+        "img_path": ["/Games/Banana_Bounce!/Images/Assets/bb_obstacles.png", "/Games/Banana_Bounce!/Images/Assets/bb_overview.png"],
         "custom_style": "--background:url(/Games/Banana_Bounce!/Images/Background.png);",
         "title": "Banana Bounce Obstacles",
         "desc": "Banana Bounce features a lot of obstacles. These obstacles are high-quality assets, which are created from scratch just to make the game feel more neat and consistent!",
@@ -21,7 +21,13 @@
         "buttons": [
             {
                 "label": "View Assets",
-                "action": "viewing asset"
+                "action": "viewer"
+            }
+        ],
+        "viewer_btns":[
+            {
+                "label": "Visit Banana Bounce Assets page",
+                "action": "/Games/Banana_Bounce!/Assets/"
             }
         ]
     },
@@ -34,7 +40,13 @@
         "buttons": [
             {
                 "label": "View Assets",
-                "action": "viewing asset"
+                "action": "viewer"
+            }
+        ],
+        "viewer_btns":[
+            {
+                "label": "Visit Banana Bounce Assets page",
+                "action": "/Games/Banana_Bounce!/Assets/"
             }
         ]
     },
@@ -47,7 +59,13 @@
         "buttons": [
             {
                 "label": "View Asset",
-                "action": "viewing asset"
+                "action": "viewer"
+            }
+        ],
+        "viewer_btns":[
+            {
+                "label": "Visit Banana Bounce Assets page",
+                "action": "/Games/Banana_Bounce!/Assets/"
             }
         ]
     },
@@ -60,7 +78,13 @@
         "buttons": [
             {
                 "label": "View Assets",
-                "action": "viewing asset"
+                "action": "viewer"
+            }
+        ],
+        "viewer_btns":[
+            {
+                "label": "Visit Banana Bounce Assets page",
+                "action": "/Games/Banana_Bounce!/Assets/"
             }
         ]
     },
@@ -73,7 +97,13 @@
         "buttons":[
             {
                 "label":"View Asset",
-                "action":"viewing asset"
+                "action":"viewer"
+            }
+        ],
+        "viewer_btns":[
+            {
+                "label": "Let's work together!",
+                "action": "mail"
             }
         ]
     },
@@ -86,7 +116,13 @@
         "buttons":[
             {
                 "label":"View Asset",
-                "action":"viewing asset"
+                "action":"viewer"
+            }
+        ],
+        "viewer_btns":[
+            {
+                "label": "Let's work together!",
+                "action": "mail"
             }
         ]
     },
@@ -99,7 +135,13 @@
         "buttons":[
             {
                 "label":"View Asset",
-                "action":"viewing asset"
+                "action":"viewer"
+            }
+        ],
+        "viewer_btns":[
+            {
+                "label": "Let's work together!",
+                "action": "mail"
             }
         ]
     }

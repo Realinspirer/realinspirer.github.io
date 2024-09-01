@@ -8,6 +8,8 @@
 
     --item_size: 10em;
     --item_size: clamp(10em, 9.737em + 1.404vw, 11em);
+
+    grid-auto-rows: var(--item_size);
 }
 .item_normal{
     --img_size:clamp(5.2rem, 27.733vw, 7.8rem);

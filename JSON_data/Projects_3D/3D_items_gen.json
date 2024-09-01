@@ -30,7 +30,7 @@
         ]
     },
     {
-        "img_path":["Images/3D/Fireball.png"],
+        "img_path":"Images/3D/Fireball.png",
         "custom_style":"desc_down desc_just_midd small_7 scroll_down",
         "title":"Fireball (Blender)",
         "desc":"A fireball simulation that I rendered and converted into a spritesheet to use as an animation.",
@@ -43,7 +43,7 @@
         ]
     },
     {
-        "img_path":["Images/3D/Fireball.png"],
+        "img_path":"Images/3D/Fireball.png",
         "custom_style":"desc_down desc_just_midd small_7 scroll_down",
         "title":"Fireball (Blender)",
         "desc":"A fireball simulation that I rendered and converted into a spritesheet to use as an animation.",
@@ -86,7 +86,7 @@
         ]
     },
     {
-        "img_path":["Images/3D/Fireball.png"],
+        "img_path":"Images/3D/Fireball.png",
         "custom_style":"desc_down desc_just_midd small_7 scroll_down",
         "title":"Fireball (Blender)",
         "desc":"A fireball simulation that I rendered and converted into a spritesheet to use as an animation.",
@@ -99,7 +99,7 @@
         ]
     },
     {
-        "img_path":["Images/3D/Fireball.png"],
+        "img_path":"Images/3D/Fireball.png",
         "custom_style":"desc_down desc_just_midd small_7 scroll_down",
         "title":"Fireball (Blender)",
         "desc":"A fireball simulation that I rendered and converted into a spritesheet to use as an animation.",

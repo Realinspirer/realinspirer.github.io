@@ -5,14 +5,14 @@
         "date":"8th August 2024",
         "title":"Minimal Logo Design for Home Decor Business",
         "desc":"This is a vector-based logo for home decor business, that uses low saturated pastel colors to achieve a modern look. It also includes home decor items, while also presenting the business name in a creative manner."
-
     },
     {
         "img_path":"/Projects/Images/Designs/9.png",
         "custom_style":"--fit:contain; --background:white",
         "title":"Metaball Characterized Sample Logo",
         "date":"8th August 2024",
-        "desc":"This is a sample logo design that uses modern and minimal theme. The main elements closely relate to 3D metaball. This logo uses depth to make the design more vibrant and modern."
+        "desc":"This is a sample logo design that uses modern and minimal theme. The main elements closely relate to 3D metaball. This logo uses depth to make the design more vibrant and modern.",
+        "viewer_img":"/Projects/Images/Designs/9.png"
     },
     {
         "img_path":"/Projects/Images/Designs/10.png",
