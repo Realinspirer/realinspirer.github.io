@@ -50,12 +50,13 @@ function get_json_normal_count(json_loc, id_grid, count) {
     });
 }
 function get_json_normal_random(json_loc_1, id_grid_1, count_1) {
-    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, count, excluded = -1) {
+    return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, count, excluded = null) {
         var response = yield fetch(json_loc);
         var res_ar = yield response.json();
         var res_rand = new Array();
-        if (excluded >= 0) {
-            res_ar.splice(excluded, 1);
+        if (excluded != null) {
+            let found_item = res_ar.findIndex(x => x.title == excluded);
+            res_ar.splice(found_item, 1);
         }
         for (let index = 0; index < count; index++) {
             var rand_index = Math.floor(Math.random() * res_ar.length);

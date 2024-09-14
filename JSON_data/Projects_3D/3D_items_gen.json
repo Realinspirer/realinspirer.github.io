@@ -7,10 +7,6 @@
         "date":"27th August 2024",
         "buttons":[
             {
-                "label":"View image",
-                "action":"viewing asset"
-            },
-            {
                 "label":"Learn more",
                 "action":"learning more"
             }
@@ -75,10 +71,6 @@
         "desc":"For my upcoming game, I am working on a Spacecraft model, that will serve as the Main Menu for my game!",
         "date":"27th August 2024",
         "buttons":[
-            {
-                "label":"View image",
-                "action":"viewing asset"
-            },
             {
                 "label":"Learn more",
                 "action":"learning more"

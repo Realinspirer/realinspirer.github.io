@@ -9,9 +9,12 @@
 .social_section, .social_section *{
    margin: initial;
 }
+#socials_grid{
+    --item_size:12.2em;
+}
 .social_section{
     margin: 0;
-    height: var(--item_size);
+    /* height: var(--item_size); */
     height: 12.2em;
 
     background-color: white;

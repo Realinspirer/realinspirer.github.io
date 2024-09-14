@@ -58,14 +58,15 @@ async function get_json_normal_count(json_loc:string, id_grid:string, count:numb
     
 }
 
-async function get_json_normal_random(json_loc:string, id_grid:string, count:number, excluded:number=-1) 
+async function get_json_normal_random(json_loc:string, id_grid:string, count:number, excluded:string|null=null) 
 {
     var response = await fetch(json_loc);
     var res_ar:Array<normal_section_class> = await response.json();
     var res_rand:Array<normal_section_class> = new Array<normal_section_class>();
 
-    if(excluded >= 0){
-        res_ar.splice(excluded, 1);
+    if(excluded != null){
+        let found_item = res_ar.findIndex(x => x.title == excluded);
+        res_ar.splice(found_item, 1);
     }
 
     for (let index = 0; index < count; index++) {
