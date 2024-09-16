@@ -213,6 +213,9 @@ body{
     overflow: hidden;
     z-index: 1;
     text-decoration: none;
+
+    font-family: inherit;
+    font-size: inherit;
 }
 .normal_button:hover{
     color: var(--button_hover_color);

@@ -71,6 +71,7 @@ const Populate_image_scroller = (function(){
         //     if
         // }
         res.internal_assign.forEach( actual_path => {
+
             let to_add = `<div class="sc_img">`+
                                     `<img src="${actual_path}" ${cu_style} ${ot_imgs} ${click_url} ${win_arg} class="set_custom_style  " alt="design_item">` +
                         `</div>`;

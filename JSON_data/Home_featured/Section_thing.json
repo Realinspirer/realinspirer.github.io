@@ -1,5 +1,13 @@
 [
     {
+        "title": "Latest YT Video",
+        "description": "Talking about COD NEXT, with some 🌶️🔥 video editing",
+        "def_img": "Images/Featured_section/cod_thumb.jpg",
+        "click_url": "https://youtu.be/_alZtrel79Q?si=0sDkqeUCu0UyvtaW",
+        "other_imgs": [{"img_url": "Images/Featured_section/cod_thumb_vert.jpg", "width":950}],
+        "window_argument": ""
+    },
+    {
         "title": "VFX Showcase",
         "description": "Video effects made using Blender",
         "def_img": "Images/Featured_section/frame.png",
@@ -18,14 +26,14 @@
         "title": "Logos & Vector",
         "description": "Vector based artworks!",
         "def_img": "Images/Featured_section/logos_featured.png",
-        "click_url": "",
+        "click_url": "/Projects/#Designs",
         "window_argument": "_self"
     },
     {
         "title": "Heck's Kitchen!",
         "description": "A game that tells a story... a frightening story",
         "def_img": "Images/Featured_section/Heck's_kitchen.png",
-        "click_url": "",
+        "click_url": "/Games/Heck's_Kitchen!/",
         "window_argument": "_self"
     }
 ]

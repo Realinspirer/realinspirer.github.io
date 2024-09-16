@@ -5,6 +5,7 @@ class normal_section_class{
     image_url: string;
     button_text: string;
     click_url: string;
+    custom_data?:string|null;
     constructor(title:string, sub_title:string, des:string,
          img:string, btn_txt:string, cl_url:string){
         this.title = title;
@@ -58,15 +59,19 @@ async function get_json_normal_count(json_loc:string, id_grid:string, count:numb
     
 }
 
-async function get_json_normal_random(json_loc:string, id_grid:string, count:number, excluded:string|null=null) 
+async function get_json_normal_random(json_loc:string, id_grid:string, count:number, excluded:string|null=null) : Promise<string|null>
 {
     var response = await fetch(json_loc);
     var res_ar:Array<normal_section_class> = await response.json();
     var res_rand:Array<normal_section_class> = new Array<normal_section_class>();
+    let to_return:string|null = null;
 
     if(excluded != null){
         let found_item = res_ar.findIndex(x => x.title == excluded);
-        res_ar.splice(found_item, 1);
+        if(found_item >= 0){
+            to_return = res_ar[found_item].custom_data ?? null;
+            res_ar.splice(found_item, 1);
+        }
     }
 
     for (let index = 0; index < count; index++) {
@@ -81,4 +86,6 @@ async function get_json_normal_random(json_loc:string, id_grid:string, count:num
         $(`#${id_grid}`).prepend(items);
         
     });
+    return to_return;
+    
 }

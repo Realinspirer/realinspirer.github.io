@@ -7,6 +7,7 @@
         "image_cover":"/Games/Banana_Bounce!/Images/Banana_bounce_landscape.png",
         "button_text":"Play now",
         "click_url":"/Games/Banana_Bounce!/"
+
     },
     {
         "title":"HK Runner!",
@@ -18,11 +19,12 @@
     },
     {
         "title":"Heck's Kitchen!",
-        "subtitle":"Games • Point & Click",
+        "subtitle":"Games • Story",
         "description":"Let him COOK!",
-        "image_url":"/Images\\Normal_section\\hk.png",
+        "image_url":"/Games/Heck's_Kitchen!/Images/hk_sq.png",
+        "image_cover":"/Games/Heck's_Kitchen!/Images/hk_wide.png",
         "button_text":"Play now",
-        "click_url":""
+        "click_url":"/Games/Heck's_Kitchen!/"
     },
     {
         "title":"Package Delivery",

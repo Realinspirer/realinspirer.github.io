@@ -24,21 +24,36 @@ function get_json_featured(loc, id) {
         var _a;
         var response = yield fetch(loc);
         var res_ar = yield response.json();
+        var parent_ele = document.getElementById(id);
         res_ar.forEach(res => {
-            var items = `<div class="game_feat" onclick="window.open('${res.click_url}', '${res.window_argument}')">
-                <picture>`;
+            var game_feat = document.createElement("div");
+            game_feat.classList.add("game_feat");
+            game_feat.addEventListener("click", () => window.open(`${res.click_url}`, `${res.window_argument}`));
+            var picture = document.createElement("picture");
+            game_feat.appendChild(picture);
             if (res.other_imgs != null && res.other_imgs.length >= 0) {
                 res.other_imgs.forEach(url => {
-                    items += `<source srcset="${url.img_url}" media="(max-width: ${url.width}px)"/>`;
+                    var img_src = document.createElement("source");
+                    img_src.srcset = url.img_url;
+                    img_src.media = `(max-width:${url.width}px)`;
+                    picture.appendChild(img_src);
                 });
             }
-            items += `<img src=${res.def_img} alt="cover_img"/> </picture>`;
-            items += `<div class="game_grad"></div>
-                <h1 class="title">${res.title}
-                    <span>${res.description}</span>
-                </h1>
-    </div>`;
-            $(`#${id}`).append(items);
+            var img = document.createElement("img");
+            img.src = res.def_img;
+            img.alt = "cover_img";
+            picture.appendChild(img);
+            var game_grad = document.createElement("div");
+            game_grad.classList.add("game_grad");
+            game_feat.appendChild(game_grad);
+            var title = document.createElement('h1');
+            title.classList.add("title");
+            title.textContent = res.title;
+            game_feat.appendChild(title);
+            var sub = document.createElement("span");
+            sub.textContent = res.description;
+            title.appendChild(sub);
+            parent_ele.appendChild(game_feat);
         });
         (_a = document.querySelector(`#${id} .game_feat`)) === null || _a === void 0 ? void 0 : _a.classList.add("game_active");
     });

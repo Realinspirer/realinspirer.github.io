@@ -16,7 +16,6 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    
 }
 .game_grad{
     position: absolute;
@@ -98,7 +97,7 @@
     transform: scale(1.1);
 }
 .game_feat .title span{
-    font-size: 0.6em;
+    font-size: 0.5em;
     display: block;
     margin-top: 0.1em;
 }

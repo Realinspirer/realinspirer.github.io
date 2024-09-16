@@ -51,12 +51,17 @@ function get_json_normal_count(json_loc, id_grid, count) {
 }
 function get_json_normal_random(json_loc_1, id_grid_1, count_1) {
     return __awaiter(this, arguments, void 0, function* (json_loc, id_grid, count, excluded = null) {
+        var _a;
         var response = yield fetch(json_loc);
         var res_ar = yield response.json();
         var res_rand = new Array();
+        let to_return = null;
         if (excluded != null) {
             let found_item = res_ar.findIndex(x => x.title == excluded);
-            res_ar.splice(found_item, 1);
+            if (found_item >= 0) {
+                to_return = (_a = res_ar[found_item].custom_data) !== null && _a !== void 0 ? _a : null;
+                res_ar.splice(found_item, 1);
+            }
         }
         for (let index = 0; index < count; index++) {
             var rand_index = Math.floor(Math.random() * res_ar.length);
@@ -68,5 +73,6 @@ function get_json_normal_random(json_loc_1, id_grid_1, count_1) {
             var items = create_string(res);
             $(`#${id_grid}`).prepend(items);
         });
+        return to_return;
     });
 }
