@@ -11,6 +11,7 @@
     cursor: pointer;
     position: relative;
     background-color: white;
+    display: block;
 }
 .more_button::before{
     position: absolute;

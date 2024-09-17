@@ -13,9 +13,10 @@
         "title":"HK Runner!",
         "subtitle":"Games • Runner",
         "description":"A 3D runner",
-        "image_url":"/Images\\Featured_section\\Runner.png",
+        "image_url":"/Games/HK_runner/Images/run_sq.png",
+        "image_cover":"/Games/HK_runner/Images/cover.jpg",
         "button_text":"Play now",
-        "click_url":""
+        "click_url":"/Games/HK_runner/"
     },
     {
         "title":"Heck's Kitchen!",
