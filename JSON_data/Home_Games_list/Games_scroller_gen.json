@@ -16,8 +16,8 @@
         "custom_style":"--fit:contain; --background:url(/Games/HK_runner/Images/run_back.png)"
     },
     {
-        "img_path":"/Images/Games/pk.png",
-        "custom_style":"--fit:contain; --background:url(/Images/Games/pk_back.png)"
+        "img_path":"/Games/Package_Delivery!/Images/pd_transparent.png",
+        "custom_style":"--fit:contain; --background:url(/Games/Package_Delivery!/Images/pd_back.png)"
     },
     {
         "img_path":"/Images/Games/Sling.png",
