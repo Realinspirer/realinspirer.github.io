@@ -28,12 +28,13 @@
         "click_url":"/Games/Heck's_Kitchen!/"
     },
     {
-        "title":"Package Delivery",
+        "title":"Package Delivery!",
         "subtitle":"Games • Side Scrolling",
         "description":"Collect and avoid",
-        "image_url":"\\Images\\Normal_section\\pk.png",
+        "image_url":"/Games/Package_Delivery!/Images/pd_sq.png",
+        "image_cover":"/Games/Package_Delivery!/Images/pd_cover.png",
         "button_text":"Play now",
-        "click_url":"https://bing.com"
+        "click_url":"/Games/Package_Delivery!/"
     },
     {
         "title":"Sling & Shoot!",
