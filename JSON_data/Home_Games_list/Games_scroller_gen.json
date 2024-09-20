@@ -13,22 +13,29 @@
     },
     {
         "img_path":"/Games/HK_runner/Images/run_transparent.png",
+        "click_url":"/Games/HK_runner/",
         "custom_style":"--fit:contain; --background:url(/Games/HK_runner/Images/run_back.png)"
     },
     {
         "img_path":"/Games/Package_Delivery!/Images/pd_transparent.png",
-        "custom_style":"--fit:contain; --background:url(/Games/Package_Delivery!/Images/pd_back.png)"
+        "click_url":"/Games/Package_Delivery!/",
+        "custom_style":"--fit:contain; --background:url(/Games/Package_Delivery!/Images/pd_back.png)",
+        "window_argument":"_self"
     },
     {
-        "img_path":"/Images/Games/Sling.png",
-        "custom_style":"--fit:contain; --background:url(/Images/Games/Sling_back.png)"
+        "img_path":"/Games/Sling_Shoot/Images/ss_transparent.png",
+        "custom_style":"--fit:contain; --background:url(/Games/Sling_Shoot/Images/ss_back.png)",
+        "click_url":"/Games/Sling_Shoot/",
+        "window_argument":"_self"
     },
     {
         "img_path":"/Images/Games/drag.png",
-        "custom_style":"--fit:cover; --background:linear-gradient(66deg, #46a1ceff, #e9c3ff)"
+        "custom_style":"--fit:cover; --background:linear-gradient(66deg, #46a1ceff, #e9c3ff)",
+        "window_argument":"_self"
     },
     {
         "img_path":"/Images/Games/escape.png",
-        "custom_style":"--fit:contain; --background:url(/Images/Games/escape_back.png)"
+        "custom_style":"--fit:contain; --background:url(/Images/Games/escape_back.png)",
+        "window_argument":"_self"
     }
 ]

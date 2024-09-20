@@ -40,9 +40,10 @@
         "title":"Sling & Shoot!",
         "subtitle":"Games • Casual",
         "description":"Eliminate targets!",
-        "image_url":"\\Images\\Normal_section\\ss.png",
+        "image_url":"/Games/Sling_Shoot/Images/ss_sq.jpg",
+        "image_cover":"/Games/Sling_Shoot/Images/ss_cover.jpg",
         "button_text":"Play now",
-        "click_url":""
+        "click_url":"/Games/Sling_Shoot/"
     },
     {
         "title":"Drag Race!",
