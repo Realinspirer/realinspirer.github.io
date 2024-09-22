@@ -49,9 +49,10 @@
         "title":"Drag Race!",
         "subtitle":"Games • Casual Racing",
         "description":"Can you win?",
-        "image_url":"\\Images\\Normal_section\\dr.png",
+        "image_url":"/Games/Drag_Race/Images/dr_sq.jpg",
+        "image_cover":"/Games/Drag_Race/Images/dr_cover.png",
         "button_text":"Play now",
-        "click_url":""
+        "click_url":"/Games/Drag_Race/"
     },
     {
         "title":"INVERSION 2048",

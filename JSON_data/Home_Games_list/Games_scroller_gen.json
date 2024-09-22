@@ -29,9 +29,10 @@
         "window_argument":"_self"
     },
     {
-        "img_path":"/Images/Games/drag.png",
-        "custom_style":"--fit:cover; --background:linear-gradient(66deg, #46a1ceff, #e9c3ff)",
-        "window_argument":"_self"
+        "img_path":"/Games/Drag_Race/Images/dr_cover.png",
+        "custom_style":"--fit:cover;",
+        "window_argument":"_self",
+        "click_url":"/Games/Drag_Race/"
     },
     {
         "img_path":"/Images/Games/escape.png",
