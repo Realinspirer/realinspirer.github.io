@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title Realinspirer</title>
+    <title>Apps - Realinspirer</title>
     <link rel="icon" href="/Images/logo.svg">
-    <meta name="description" content="Discover fun, awesome and amazing content from Realinspirer - a game
-    developer, programmer and a vector artist! Experience all kinds of content -
-    from games to 3D projects, apps, really outstanding designs, and even 
-    blogs by Realinspirer. All that can be found here at this one destination!">
+    <meta name="description" content="Discover real-life practical apps from Realinspirer.
+    I can also create custom apps for individual needs. Have a look around!">
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -18,6 +16,7 @@
     <link rel="stylesheet" href="/Styles/Hamburger_nav_icon_style.css">
     <link rel="stylesheet" href="/Styles/Footer.css">
     <link rel="stylesheet" href="/Styles/Hire_div.css">
+    <link rel="stylesheet" href="Styles/style.css">
 
     
 </head>
@@ -26,11 +25,11 @@
     <div class="logo_div">
         <img class="logo_img" src="/Images/logo.svg" onclick="window.open('/', '_self')" alt="">
         <div class="Main_links_div">
-            <a class="Main_links active" href="/"><span>HOME</span></a>
+            <a class="Main_links" href="/"><span>HOME</span></a>
             <a class="Main_links donate" href="/Donate/"><span>DONATE</span></a>
             <a class="Main_links" href="/Games/"><span>GAMES</span></a>
             <a class="Main_links" href="/Projects/"><span>PROJECTS</span></a>
-            <a class="Main_links" href="/Apps/"><span>APPS</span></a>
+            <a class="Main_links active" href="/Apps/"><span>APPS</span></a>
             <a class="Main_links" href="/About_me/"><span>ABOUT ME</span></a>
             <a class="Main_links icon" id="nav_bar" onclick="open_close_nav()">
                 <i class="bars">
@@ -50,29 +49,70 @@
             <!-- &#8801; -->
         </div>
         <div class="not_visible" id="verticle_menu" tabindex="0">
-            <a class="Main_links active" href="/"><span>HOME</span></a>
+            <a class="Main_links" href="/"><span>HOME</span></a>
             <a class="Main_links donate" href="/Donate/"><span>DONATE</span></a>
             <a class="Main_links" href="/Games/"><span>GAMES</span></a>
             <a class="Main_links" href="/Projects/"><span>PROJECTS</span></a>
-            <a class="Main_links" href="/Apps/"><span>APPS</span></a>
+            <a class="Main_links active" href="/Apps/"><span>APPS</span></a>
             <a class="Main_links" href="/About_me/"><span>ABOUT ME</span></a>
         </div>
     </div>
     <!-- header end -->
 
-
-    <!-- hire_section -->
-    <div class="hire_div">
-        <p class="title">Hire or donate 🤍
-            <span class="desc">Have a look at <a href="/About_me/">About me</a> for my skills. I can design you some unique, modern and exceptional <a href="/Projects/#Designs">designs</a>, that I can transform into logos, animations, advertisements, flyers, banners, menus, game UIs, and much- much more. You can have a look at some of my <a href="/Projects/#Designs">Designs</a> on this website. Accelerate your business/work (or anything) for some really affordable prices using my unique designs that will quickly become an attention grabber.</span>
-            <span class="desc">Support me on this journey of creating exceptional projects and games by donating or hiring me. Your support will greatly help me towards making more unique, fun and big games.</span>
-            <span class="desc">Making games require intense hard work, passion, time, money, skills and much more. Your support can really make a difference.</span>
-            <span class="desc">You can also contact me to hire for game development if you like what I do. Have a look at some of my <a href="/Games/">Games</a>. Thank you!</span>
-        </p>
-        <a class="block_button" href="mailto:realinspirer@outlook.com">HIRE ME</a>
-        <a class="block_button dotted" href="/Donate/">DONATE</a>
+    <div class="big_back_parent">
+        <div class="big_back_thing">
+            <img class="big_back_img" src="Images/thumbnail.jpg" alt="Back_cover">
+        </div>
     </div>
-    <!-- hire section end -->
+
+    <h1 class="apps_title">
+        Discover Real-Life Practical apps
+        <span>from Realinspirer</span>
+    </h1>
+
+    <div class="apps_card app_need fading_element_card">
+        <h2 class="need_custom_text">Need a custom app?</h2>
+        <div>
+            <p class="need_custom_desc">Just give me an email, and I can create local custom apps according to your needs
+            on top of it being <b>Cross-platform</b>,
+            for a really affordable price!</p>
+            <a class="normal_button main_btn need_custom_btn"
+            href="mailto:realinspirer@outlook.com">Contact Me</a>
+        </div>
+    </div>
+
+    <p class="check_text fading_element_card">
+        <span>OR</span> 
+        Check out my previously made apps
+    </p>
+
+    <div class="apps_card fading_element_card">
+        <div class="apps_about">
+            <img src="Images/DT_sq.png" alt="app_logo"/>
+            <div class="app_desc">
+                <h3 class="title">Due Tracker</h3>
+                <p class="desc">Tracking client dues and details can be so much pain, especially when you are a small/medium business, and have to track hundreds and thousands of client dues entries every week. This app is a simple and effective way to track all those data easily. Just enter the data and forget about managing it!</p>
+            </div>
+        </div>
+
+        <div class="app_feature">
+            <p class="app_feature_title">Some features:</p>
+            <ul class="app_feature_list">
+                <li>With just one click, you can get a record and net due for any of your saved client! Save  hours and hours of time finding a client's outstanding dues when they ask for it.</li>
+                <li>You can also add images of your client along with other details in the comments. You can also request me for additional detail types.</li>
+                <li>This app can also track date and time of entered data. This app has powerful tools to assign date and time to really simplify your work!</li>
+                <li>This app can generate an invoice that you can provide to the client in a click of a button! The range of the exported data as well as the whole invoice is customizable, and you can export as an image file or .HTML.</li>
+            </ul>
+            <p class="app_feature_more">...and much- much more! For full feature list visit app page.</p>
+
+            <div class="app_feature_btns">
+                <a class="normal_button main_btn with_icon">App Page 
+                    <img class="external_symbol" src="/Images/Symbols/external.png" alt=""></a>
+            <a class="normal_button main_btn other_btn"
+             href="mailto:realinspirer@outlook.com">Want this app?</a>
+            </div>
+        </div>
+    </div>
 
 
     <!-- footer section -->
