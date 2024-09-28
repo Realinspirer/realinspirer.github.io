@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apps - Realinspirer</title>
+    <title>Loop Comment - Web App - Realinspirer</title>
     <link rel="icon" href="/Images/logo.svg">
-    <meta name="description" content="Discover real-life practical apps from Realinspirer.
-    I can also create custom apps for individual needs. Have a look around!">
+    <meta name="description" content="Create meme loop comments without manually typing!">
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -14,8 +13,9 @@
 
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/Styles/Hamburger_nav_icon_style.css">
+    <link rel="stylesheet" href="/Projects/Styles/Visit_page_style.css">
+    <link rel="stylesheet" href="/Styles/Middle_section_style.css">
     <link rel="stylesheet" href="/Styles/Footer.css">
-    <link rel="stylesheet" href="/Styles/Hire_div.css">
     <link rel="stylesheet" href="Styles/style.css">
 
     
@@ -59,75 +59,48 @@
     </div>
     <!-- header end -->
 
-    <div class="big_back_parent">
-        <div class="big_back_thing">
-            <img class="big_back_img" src="Images/thumbnail.jpg" alt="Back_cover">
+    <h1 class="app_title">Generate Loop Comments</h1>
+    <h2 class="app_sub">This is a handy web tool to generate continuous meme comments.
+        <br>Page Context: <a class="normal_link" href="https://bing.com" target="_blank" rel="noopener">YouTube Video</a>
+    </h2>
+
+    <div class="text_grid">
+        <div class="text_div">
+            <p class="text_title">Enter initial comment:</p>
+            <textarea id="initial_comment" placeholder="Comment to repeat">The guy who said oil up is a menace</textarea>
+        </div>
+        <div class="text_div">
+            <p class="text_title">Enter word/words to replace:</p>
+            <input placeholder="Substring to replace" value="Oil up" id="replace_word_input">
+        </div>
+        <div class="text_div">
+            <p class="text_title">Enter string to decorate the repeated text with:</p>
+            <input placeholder="Prefix & Suffix" id="decoration_input" value="&quot;">
+        </div>
+        <div class="text_div">
+            <p class="text_title">Enter Repeating amount:</p>
+            <input placeholder="Repeating amount" id="repeating_amount" type="number" min="0" step="1" value="1"/>
         </div>
     </div>
 
-    <h1 class="apps_title">
-        Discover Real-Life Practical apps
-        <span>from Realinspirer</span>
-    </h1>
-
-    <div class="apps_card app_need fading_element_card">
-        <h2 class="need_custom_text">Need a custom app?</h2>
-        <div>
-            <p class="need_custom_desc">Just give me an email, and I can create local custom apps according to your needs
-            on top of it being <b>Cross-platform</b>,
-            for a really affordable price!</p>
-            <a class="normal_button main_btn need_custom_btn"
-            href="mailto:realinspirer@outlook.com">Contact Me</a>
+    <div class="prompt ">
+        <p id="msg">This is a message</p>
+    </div>
+    
+    <div class="result_div">
+        <textarea placeholder="Result" id="result_text"></textarea>
+        <div class="btn_div">
+            <button type="button" class="normal_button main_btn" id="generate_btn">Generate comment</button>
+            <button type="button" class="normal_button sub_btn" id="copy_btn">Copy Comment</button>
         </div>
     </div>
 
-    <p class="check_text fading_element_card">
-        <span>OR</span> 
-        Check out my previously made apps
-    </p>
-
-    <div class="apps_card fading_element_card">
-        <div class="apps_about">
-            <img src="Looper_comment/Images/logo.png" alt="app_logo"/>
-            <div class="app_desc">
-                <h3 class="title">Comment Looper</h3>
-                <p class="desc">A handy web tool to generate a specific type of comments. This
-                    is meant to be a joke and funny web tool. The context for this app can be found in this
-                    <a class="normal_link" href="https://bing.com" target="_blank" rel="noopener">YouTube Video</a>.
-                </p>
-                <div class="app_feature_btns">
-                    <a class="normal_button main_btn with_icon" href="Looper_comment/">App Page 
-                        <img class="external_symbol" src="/Images/Symbols/arrow_dark.png" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="apps_card fading_element_card">
-        <div class="apps_about">
-            <img src="Images/DT_sq.png" alt="app_logo"/>
-            <div class="app_desc">
-                <h3 class="title">Due Tracker</h3>
-                <p class="desc">Tracking client dues and details can be so much pain, especially when you are a small/medium business, and have to track hundreds and thousands of client dues entries every week. This app is a simple and effective way to track all those data easily. Just enter the data and forget about managing it!</p>
-            </div>
-        </div>
-
-        <div class="app_feature">
-            <p class="app_feature_title">Some features:</p>
-            <ul class="app_feature_list">
-                <li>With just one click, you can get a record and net due for any of your saved client! Save  hours and hours of time finding a client's outstanding dues when they ask for it.</li>
-                <li>You can also add images of your client along with other details in the comments. You can also request me for additional detail types.</li>
-                <li>This app can also track date and time of entered data. This app has powerful tools to assign date and time to really simplify your work!</li>
-                <li>This app can generate an invoice that you can provide to the client in a click of a button! The range of the exported data as well as the whole invoice is customizable, and you can export as an image file or .HTML.</li>
-            </ul>
-            <p class="app_feature_more">...and much- much more! For full feature list visit app page.</p>
-
-            <div class="app_feature_btns">
-                <a class="normal_button main_btn with_icon">App Page 
-                    <img class="external_symbol" src="/Images/Symbols/external.png" alt=""></a>
-                <a class="normal_button main_btn other_btn"
-                href="mailto:realinspirer@outlook.com">Want this app?</a>
-            </div>
+    <div class="view_more">
+        <div class="view_more_back">
+            <h3 class="view_more_prompt">Support me on my game dev journey 💖</h3>
+            <a class="normal_button" href="/Donate/">Donate
+                <img src="/Images/Symbols/arrow.png" alt=""/>
+            </a>
         </div>
     </div>
 
@@ -197,4 +170,5 @@
     <!-- footer section end -->
 
 </body>
+<script src="Scripts/comment_generator.js"></script>
 </html>

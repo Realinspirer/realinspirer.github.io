@@ -314,3 +314,18 @@ body{
 }
 /* fading anim end */
 
+
+.normal_link{
+
+    cursor: pointer;
+    text-decoration: underline dashed;
+    text-underline-offset: 0.15em;
+    transition: color var(--base_anim_speed);
+    color: var(--desc_color_a);
+    font-family: inherit;
+    border: none;
+    background-color: transparent;
+}
+.normal_link:hover{
+    color: #d76a6a;
+}

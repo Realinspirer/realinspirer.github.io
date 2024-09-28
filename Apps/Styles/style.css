@@ -76,7 +76,7 @@ body{
 .apps_card{
     padding: 2.5em;
     background-color: white;
-    margin: 0 var(--side_mar);
+    margin: 0 var(--side_mar) 2em;
     border-radius: var(--brd_rad);
 
     font-size: 1rem;
@@ -109,6 +109,8 @@ body{
     font-size: 1rem;
     font-size: 0.9rem;
     font-size: clamp(0.9rem, 0.805rem + 0.216vw, 1rem);
+
+    margin: 0 var(--side_mar);
 }
 
 .need_custom_text{
@@ -193,7 +195,7 @@ body{
     grid-template-columns: auto 1fr;
     gap: 1.75em;
 }
-.apps_about img{
+.apps_about > img{
     border-radius: var(--brd_rad);
     width: var(--size);
     height: 100%;
@@ -262,6 +264,7 @@ body{
     --size:1em;
     height: var(--size);
     width: var(--size);
+    object-fit: contain;
     margin-bottom: 0.15em;
 
     filter: brightness(0) saturate(80%) invert(1);
@@ -310,7 +313,7 @@ body{
         min-width: max-content;
         flex: 1;
     }
-    .apps_about img{
+    .apps_about > img{
         width: 100%;
         height: var(--size);
     }
