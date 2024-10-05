@@ -1,0 +1,85 @@
+.main_btn{
+    --btn_back: #354451ff;
+    --btn_fore: #dae0e9ff;
+    --btn_col: #dae0e9ff;
+    --btn_hover_col:#1b2431;
+
+    background-color: var(--btn_back);
+    color: var(--btn_col);
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.75em 1.5em;
+}
+.main_btn::before{
+    background-color: var(--btn_fore);
+}
+.main_btn:hover{
+    color: var(--btn_hover_col);
+}
+
+
+.need_custom_btn{
+    margin-top: 1em;
+    --btn_back : #dae0e9ff;
+    --btn_col: #1b2431;
+    font-size: 1.15em;
+}
+.need_custom_btn::before{
+    --btn_fore: #354451ff;
+}
+.need_custom_btn:hover{
+    --btn_hover_col: #dae0e9ff;
+}
+
+
+.normal_button.with_icon{
+    --btn_min_width:10em;
+    
+    display: flex;
+    gap: 0.4em;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--btn_min_width);
+
+}
+.external_symbol{
+    --size:1em;
+    height: var(--size);
+    width: var(--size);
+    object-fit: contain;
+    margin-bottom: 0.15em;
+
+    filter: brightness(0) saturate(80%) invert(1);
+    transition: filter var(--base_anim_speed),
+                margin-left var(--base_anim_speed);
+}
+.normal_button.with_icon:hover .external_symbol{
+    filter: none;
+    margin-left: 0.4em;
+}
+.other_btn{
+    background-color: transparent;
+    color: #1b2431;
+    border: 2px solid #36475eff;
+}
+.other_btn::before{
+    background-color: #1b2431;
+}
+.other_btn:hover{
+    color: #dae0e9ff;
+    border: 2px solid #36475eff;
+}
+
+.hash_anchor{
+    font-family: inherit;
+    font-size: 0.8em;
+    border: none;
+    background:none;
+    cursor: pointer;
+    color: #a9a9a9;
+
+    transition: color var(--base_anim_speed) ease;
+}
+.hash_anchor:hover{
+    color: #838383;
+}

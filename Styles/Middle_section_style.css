@@ -25,9 +25,9 @@
     font-size: clamp(1.38rem, 1.269rem + 0.589vw, 1.8rem);
     /* scroll-margin-top: 2.9em; */
 }
-.add_scroll_margin{
-    /* scroll-margin-top: 2.9em; */
-}
+/* .add_scroll_margin{
+    scroll-margin-top: 2.9em;
+} */
 .Middle_section_text::after{
     position: absolute;
     left: 0;

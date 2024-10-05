@@ -1,0 +1,37 @@
+:where(.infinite_scroller *, .infinite_scroller){
+    padding: initial;
+    margin: initial;
+}
+.infinite_scroller{
+    --inf_height:8em;
+    --inf_height:3em;
+    --inf_height:clamp(3em, 1.684em + 7.018vw, 8em);
+
+
+    --mar_top:1em;
+    --dis:17vw;
+    --anim_time:25s;
+    
+    height: var(--inf_height);
+    margin-top: var(--mar_top);
+
+    overflow: hidden;
+    mask: linear-gradient(90deg, transparent, white 15% 85%, transparent);
+}
+.infinite_scroller_inner{
+    display: flex;
+    height: 100%;
+    gap: var(--dis);
+    width: max-content;
+
+    animation: infinite_animation var(--anim_time) infinite linear;
+}
+.infinite_scroller_inner > *{
+    height: 100%;
+}
+
+@keyframes infinite_animation {
+    to{
+        transform: translate(calc(-50% - calc(var(--dis) / 2)));
+    }
+}

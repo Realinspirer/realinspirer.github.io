@@ -1,0 +1,64 @@
+:where(.big_back_parent, .big_back_parent *){
+    padding: initial;
+    margin: initial;
+}
+.big_back_parent{
+    position: relative;
+    z-index: -5;
+
+    font-size: 1rem;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.684rem + 0.351vw, 1rem);
+}
+.big_back_thing{
+    height: 40em;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.big_back_img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.big_back_thing::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(transparent 70%, #ebebebff);
+}
+.big_back_thing::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #0000007a;
+}
+
+
+.apps_title{
+    color: #eeeeeeff;
+    
+    text-align: center;
+    
+    font-size: 2.5rem;
+    font-size: 1.6rem;
+    font-size: clamp(1.6rem, 1.363rem + 1.263vw, 2.5rem);
+
+    margin: 5em 2em;
+    margin: 5em 0.8em;
+    margin: 5em clamp(0.8em, 0.484em + 1.684vw, 2em);
+}
+.apps_title span{
+    display: block;
+    font-family: LT_light;
+    margin-top: 0.3em;
+    font-size: 0.65em;
+}
