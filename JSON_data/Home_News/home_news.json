@@ -1,0 +1,21 @@
+[
+    {
+        "title": "YouTube Release: Understanding 4th dimension!",
+        "date": "10th October 2024",
+        "img": "/Images/Featured_section/video_dimensions.jpg",
+        "click_url": "https://youtu.be/pqa7vKbMS7k",
+        "external": true
+    },
+    {
+        "title":"3D: Low poly build for video",
+        "date":"10th October 2024",
+        "img":"/Projects/3D_projects/Images/low_poly/0.jpg",
+        "click_url": "/Projects/3D_projects/"
+    },
+    {
+        "title":"Game Release: Banana Bounce! is LIVE",
+        "date":"15 September 2024",
+        "img":"/Games/Banana_Bounce!/Images/Banana_bounce_landscape_small.png",
+        "click_url": "/Games/Banana_Bounce!/"
+    }
+]

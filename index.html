@@ -13,11 +13,11 @@
     <link rel="icon" href="Images/logo.svg">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="Scripts/Commons/common_classes.js"></script>
     <script src="Scripts/script.js"></script>
     <script src="/Scripts/Featured_section_things/script_section_gen.js"></script>
     <script src="/Scripts/Normal_sections_generator/Normal_section_gen.js"></script>
     <script src="/Scripts/Image_scroller_generator/Image_scroller_gen.js"></script>
-    <script src="/Scripts/Sections_current_generator/Sections_current.js"></script>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Styles/Hamburger_nav_icon_style.css">
@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="Styles/Featured_style.css">
     <link rel="stylesheet" href="Styles/Donate_style.css">
     <link rel="stylesheet" href="Styles/Know_more_style.css">
+    <link rel="stylesheet" href="Styles/Latest_news/latest_news.css">
 
 </head>
 
@@ -118,25 +119,26 @@
         <a id="sc_button"><img src="/Images/Symbols/pause.png" alt="pause/play"></a>
         <div class="timer" id="timer_circle"></div>
     </div>
-    <img src="" alt="">
     <!-- featured section end -->
 
-    <!-- featured sections -->
-    <!-- <p class="section_text">FEATURED PROJECTS</p> -->
-    <!-- <div class="items_grid" id="featured_section"> -->
+    <h2 class="Middle_section_text news_sec fading_element_card small">Latest News</h2>
 
-    <!-- <div class="grid_item">
-            <p>Banana Bounce!
-                <span><br>Avoid obstacles while you bounce^^!</span>
-            </p>
-            <img src="Images/Featured_section/Banana Bounce!.png" alt="game_cover">
-            <div class="item_shadow">
-                <p>Play now!</p>
-            </div>
-        </div> -->
+    <div class="latest_news_parent fading_element_card">
+        <div class="latest_news">
 
-    <!-- </div> -->
-    <!-- featured section end -->
+            <!-- <a class="news" href="" target="_blank" rel="noopener">
+                <img class="news_img" src="" alt="">
+                <div class="news_text">
+                    <h3 class="text"></h3>
+                    <p class="date"></p>
+                </div>
+            </a> -->
+
+
+        </div>
+
+    </div>
+
 
     <!-- Section 1 start -->
     <div class="discover_sec" id="section_discover">
@@ -521,6 +523,8 @@
 
 <script src="Scripts/Image_scroller_scripts/Img_sc_script.js"></script>
 <script src="Scripts/Scroller_main_script/Scroll_vertical.js"></script>
+<script src="Scripts/News_generator/news_gen.js"></script>
 <script src="Scripts/Commons/Scroll_on_load.js"></script>
+<script src="/Scripts/Sections_current_generator/Sections_current.js"></script>
 
 </html>
