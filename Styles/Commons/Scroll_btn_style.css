@@ -1,4 +1,6 @@
 .sc_button{
+    --mar:0.5em;
+
     position: absolute;
     z-index: 2;
 
@@ -39,13 +41,16 @@
 
 .sc_button.left{
     left: 0;
-    margin-left: 0.5em;
+    margin-left: var(--mar);
     transform: rotate(90deg);
+}
+.sc_button.mid{
+    --mar:-1em;
 }
 
 .sc_button.right{
     right: 0;
-    margin-right: 0.5em;
+    margin-right: var(--mar);
     transform: rotate(-90deg);
 }
 
