@@ -3,6 +3,7 @@
     --btn_fore: #dae0e9ff;
     --btn_col: #dae0e9ff;
     --btn_hover_col:#1b2431;
+    --btn_min_width:10em;
 
     background-color: var(--btn_back);
     color: var(--btn_col);
@@ -33,7 +34,6 @@
 
 
 .normal_button.with_icon{
-    --btn_min_width:10em;
     
     display: flex;
     gap: 0.4em;
@@ -58,16 +58,24 @@
     margin-left: 0.4em;
 }
 .other_btn{
-    background-color: transparent;
-    color: #1b2431;
-    border: 2px solid #36475eff;
+    --btn_back: transparent;
+    --btn_col: #1b2431;
+    --btn_fore: #1b2431;
+    --btn_hover_col:#dae0e9ff;
+    border: 2px solid var(--btn_fore);
 }
-.other_btn::before{
+/* .other_btn::before{
     background-color: #1b2431;
-}
+} */
 .other_btn:hover{
-    color: #dae0e9ff;
-    border: 2px solid #36475eff;
+    /* color: #dae0e9ff; */
+    border: 2px solid var(--btn_fore);
+}
+.other_btn .external_symbol{
+    filter: none;
+}
+.other_btn.with_icon:hover .external_symbol{
+    filter: invert(1);
 }
 
 .hash_anchor{
@@ -77,9 +85,47 @@
     background:none;
     cursor: pointer;
     color: #a9a9a9;
+    margin-left: 0.2em;
 
     transition: color var(--base_anim_speed) ease;
 }
 .hash_anchor:hover{
     color: #838383;
+}
+
+.shared{
+    --highlighted_color: #8bdaa5;
+    --prompt:"Link Copied!";
+    transition: border-color var(--base_anim_speed),
+                color var(--base_anim_speed);
+
+}
+.shared.active{
+    border-color: transparent;
+}
+.shared.active::after{
+    opacity: 1;
+    font-size: 1em;
+
+    transition: opacity var(--base_anim_speed),
+                font-size var(--base_anim_speed);
+}
+.shared::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--highlighted_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: var(--prompt);
+    color: white;
+
+    opacity: 0;
+    font-size: 0.3em;
+
+    transition: opacity var(--base_anim_speed),
+                font-size var(--base_anim_speed);
 }
