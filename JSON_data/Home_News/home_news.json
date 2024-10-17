@@ -2,7 +2,7 @@
     {
         "title": "YouTube Release: Understanding 4th dimension!",
         "date": "10th October 2024",
-        "img": "/Images/Featured_section/video_dimensions.jpg",
+        "img": "/Blogs/Images/fourth_dimension_video/thumbnail.jpg",
         "click_url": "https://youtu.be/pqa7vKbMS7k",
         "external": true
     },
@@ -11,6 +11,12 @@
         "date":"10th October 2024",
         "img":"/Projects/3D_projects/Images/low_poly/0.jpg",
         "click_url": "/Projects/3D_projects/?title=Low-Poly+3D+Area+Design+using+Blender"
+    },
+    {
+        "title":"Post: I fixed a specific problem",
+        "date":"29th September 2024",
+        "img":"/Blogs/Images/oiled_up/0.png",
+        "click_url":"/Blogs/?title=I+Fixed+a+Problem%21"
     },
     {
         "title":"Game Release: Banana Bounce! is LIVE",

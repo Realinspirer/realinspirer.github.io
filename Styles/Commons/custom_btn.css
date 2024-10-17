@@ -1,3 +1,8 @@
+:where(.normal_button, .normal_button *)
+{
+    margin: initial;
+    padding: initial;
+}
 .main_btn{
     --btn_back: #354451ff;
     --btn_fore: #dae0e9ff;

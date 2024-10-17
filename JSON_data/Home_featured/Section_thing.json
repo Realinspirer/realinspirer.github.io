@@ -2,17 +2,17 @@
     {
         "title": "Latest YT Video",
         "description": "Talking about time and 4th dimension!",
-        "def_img": "/Images/Featured_section/video_dimensions.jpg",
-        "other_imgs": [{"img_url": "/Images/Featured_section/video_dimensions_long.jpg", "width":950}],
+        "def_img": "/Blogs/Images/fourth_dimension_video/thumbnail.jpg",
+        "other_imgs": [{"img_url": "/Blogs/Images/fourth_dimension_video/thumbnail_vert.png", "width":950}],
         "click_url": "https://youtu.be/pqa7vKbMS7k",
         "window_argument": ""
     },
     {
         "title": "COD NEXT",
         "description": "Talking about COD NEXT, with some 🌶️🔥 video editing",
-        "def_img": "Images/Featured_section/cod_thumb.jpg",
+        "def_img": "/Blogs/Images/cod_next/cod_thumb.jpg",
         "click_url": "https://youtu.be/_alZtrel79Q?si=0sDkqeUCu0UyvtaW",
-        "other_imgs": [{"img_url": "Images/Featured_section/cod_thumb_vert.jpg", "width":950}],
+        "other_imgs": [{"img_url": "/Blogs/Images/cod_next/cod_thumb_vert.jpg", "width":950}],
         "window_argument": ""
     },
     {
