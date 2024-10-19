@@ -1,6 +1,23 @@
 "use strict";
 const Blogs_and_posts_data = new Array();
 Blogs_and_posts_data.push({
+    title: "Background Design for Upcoming Video (Domino\'s experience)",
+    subtitle: "Just created a background design using procedural shaders in Blender for my upcoming YouTube video. Have a look!",
+    date: "19th October 2024",
+    imgs: [
+        "/Blogs/Images/dominos_video/back0.jpg",
+        "/Blogs/Images/dominos_video/back1.jpg",
+        "/Blogs/Images/dominos_video/back2.jpg"
+    ],
+    btns: [
+        {
+            btn_string: "LinkedIn Video",
+            click_url: "https://www.linkedin.com/posts/realinspirer_blender-shaders-activity-7253472608094961664-vOdn",
+            external: true
+        }
+    ]
+});
+Blogs_and_posts_data.push({
     title: "Dwelling into 4th Dimension and Time",
     subtitle: "Just created and dropped a YouTube video with some spicy 🌶️ video editing. I talk about 4th dimension and time in this video. I edited the video using DaVinci Resolve and Blender. \n I also created a thumbnail for the video.",
     date: "10th October 2024",
