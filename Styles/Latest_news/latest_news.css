@@ -10,7 +10,7 @@
 
 .latest_news_parent{
     background-color: #f6f6f6;
-    margin: 0em var(--margin_sides) 3em;
+    margin: 0em var(--margin_sides) 2em;
 
     border-radius: 1.5em;
     max-height: 30em;
@@ -93,6 +93,7 @@
 @media screen and (max-width:450px) {
     .news_img{
         height: auto;
+        max-height: 13em;
         width: 100%;
     }
 }

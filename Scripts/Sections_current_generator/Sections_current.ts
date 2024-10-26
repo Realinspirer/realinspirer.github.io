@@ -7,4 +7,6 @@ Populate_image_scroller("/JSON_data/Projects_vector_designs/vector_gen.json", "d
 Populate_image_scroller("/JSON_data/Home_Games_list/Games_scroller_gen.json", "games_sc");
 Populate_image_scroller("/JSON_data/Projects_game_assets/Game_assets.json", "assets_sc");
 Populate_image_scroller("/JSON_data/TEMP/Home_UI/UI_gen.json", "UI_sec");
-news_generator("/JSON_data/Home_News/home_news.json", ".latest_news")
+
+
+news_generator(Blogs_and_posts_data, ".latest_news")

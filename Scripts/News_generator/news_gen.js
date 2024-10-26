@@ -9,28 +9,40 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const news_generator = (function () {
-    return function generator(json_path, selector) {
+    return function generator(res_ar, selector) {
         return __awaiter(this, void 0, void 0, function* () {
             let parent = document.querySelector(selector);
-            var response = yield fetch(json_path);
-            var res_ar = yield response.json();
+            // var response = await fetch(json_path);
+            // var res_ar:Array<Data_class> = await response.json();
+            let index = 0;
+            let count = 5;
             res_ar.forEach(data => {
                 var _a;
+                if (index >= 5) {
+                    return;
+                }
+                index++;
                 let news = document.createElement("a");
                 news.classList.add("news");
                 let click_url = data.click_url;
-                if (click_url != null) {
-                    news.href = click_url;
-                    let is_ext = data.external;
-                    if (is_ext) {
-                        news.target = "_blank";
-                        news.rel = "noopener";
-                    }
-                }
+                // if(click_url != null){
+                //     news.href = click_url;
+                //     let is_ext = data.external;
+                //     if(is_ext){
+                //         news.target = "_blank";
+                //         news.rel = "noopener"
+                //     }
+                // }
+                let target_href = new URLSearchParams();
+                target_href.append("title", data.title);
+                let req_url = window.location.protocol + '//' + window.location.host + "/Blogs/" + "?" + target_href;
+                news.href = req_url;
                 parent.appendChild(news);
                 let news_img = document.createElement("img");
                 news_img.classList.add("news_img");
-                news_img.src = (_a = data.img) !== null && _a !== void 0 ? _a : "";
+                if (data.imgs != null && data.imgs.length >= 1) {
+                    news_img.src = data.imgs[0];
+                }
                 news_img.alt = "";
                 news.appendChild(news_img);
                 let news_text = document.createElement("div");
@@ -42,7 +54,7 @@ const news_generator = (function () {
                 news_text.appendChild(text);
                 let date = document.createElement("p");
                 date.classList.add("date");
-                date.textContent = data.date;
+                date.textContent = (_a = data.date) !== null && _a !== void 0 ? _a : "";
                 news_text.appendChild(date);
             });
         });

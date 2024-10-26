@@ -26,10 +26,10 @@ Blogs_and_posts_data.push(
         subtitle:"Just created and dropped a YouTube video with some spicy 🌶️ video editing. I talk about 4th dimension and time in this video. I edited the video using DaVinci Resolve and Blender. \n I also created a thumbnail for the video.",
         date: "10th October 2024",
         imgs:[
+            "/Blogs/Images/fourth_dimension_video/3.jpg",
             "/Blogs/Images/fourth_dimension_video/1.jpg",
             "/Blogs/Images/fourth_dimension_video/2.jpg",
             "/Blogs/Images/fourth_dimension_video/0.jpg",
-            "/Blogs/Images/fourth_dimension_video/3.jpg",
             "/Blogs/Images/fourth_dimension_video/4.jpg",
             "/Blogs/Images/fourth_dimension_video/5.jpg",
         ],
@@ -117,3 +117,25 @@ Blogs_and_posts_data.push(
         
     }
 )
+
+Blogs_and_posts_data.push(...projects_3d_posts_data);
+Blogs_and_posts_data.sort( (x,y) => {
+
+    let req_regex = new RegExp("th|rd|nd", "i")
+
+    let first_date = (x.date ?? "").replace(req_regex, "");
+    let second_date = (y.date ?? "").replace(req_regex, "");
+    var first = Date.parse(first_date);
+    var second = Date.parse(second_date);
+
+    if(first < second){
+        return 1;
+    }
+    else if(first > second){
+        return -1;
+    }
+    else{
+        return 0;
+    }
+    
+});
