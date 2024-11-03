@@ -1,6 +1,13 @@
 [
     {
         "title": "Latest YT Video",
+        "description": "Lost my aura at a Domino's... 😣",
+        "def_img": "/Blogs/Images/dominos_video/thumbnail.jpg",
+        "click_url": "https://youtu.be/1xkqAfQTgCE",
+        "window_argument": ""
+    },
+    {
+        "title": "4th Dimension & Time",
         "description": "Talking about time and 4th dimension!",
         "def_img": "/Blogs/Images/fourth_dimension_video/thumbnail.jpg",
         "other_imgs": [{"img_url": "/Blogs/Images/fourth_dimension_video/thumbnail_vert.png", "width":950}],

@@ -2,6 +2,30 @@ const Blogs_and_posts_data = new Array<Data_class_multiple_imgs_btn>();
 
 Blogs_and_posts_data.push(
     {
+        title:"Losing my aura at a Domino's",
+        subtitle:"Just dropped another video where I talk about an embarrassing moment at a Domino's. \r\n I used Blender and DaVinci Resolve to create the video and all the assets required.",
+        date: "3rd November 2024",
+        imgs:[
+            "/Blogs/Images/dominos_video/thumbnail.jpg",
+            "/Blogs/Images/dominos_video/0.png",
+            "/Blogs/Images/dominos_video/1.jpg",
+            "/Blogs/Images/dominos_video/2.jpg",
+            "/Blogs/Images/dominos_video/3.jpg",
+            "/Blogs/Images/dominos_video/4.jpg",
+            "/Blogs/Images/dominos_video/5.jpg",
+        ],
+        btns:[
+            {
+                btn_string: "Watch Video",
+                click_url:"https://youtu.be/1xkqAfQTgCE",
+                external: true
+            }
+        ]
+    }
+);
+
+Blogs_and_posts_data.push(
+    {
         title:"Background Design for Upcoming Video (Domino\'s experience)",
         subtitle:"Just created a background design using procedural shaders in Blender for my upcoming YouTube video. Have a look!",
         date: "19th October 2024",
@@ -117,25 +141,3 @@ Blogs_and_posts_data.push(
         
     }
 )
-
-Blogs_and_posts_data.push(...projects_3d_posts_data);
-Blogs_and_posts_data.sort( (x,y) => {
-
-    let req_regex = new RegExp("th|rd|nd", "i")
-
-    let first_date = (x.date ?? "").replace(req_regex, "");
-    let second_date = (y.date ?? "").replace(req_regex, "");
-    var first = Date.parse(first_date);
-    var second = Date.parse(second_date);
-
-    if(first < second){
-        return 1;
-    }
-    else if(first > second){
-        return -1;
-    }
-    else{
-        return 0;
-    }
-    
-});

@@ -9,4 +9,5 @@ Populate_image_scroller("/JSON_data/Projects_game_assets/Game_assets.json", "ass
 Populate_image_scroller("/JSON_data/TEMP/Home_UI/UI_gen.json", "UI_sec");
 
 
+combine_all_known_posts_to_blogs();
 news_generator(Blogs_and_posts_data, ".latest_news")
