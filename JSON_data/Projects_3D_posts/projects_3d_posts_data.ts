@@ -1,5 +1,52 @@
 let projects_3d_posts_data = new Array<Data_class_multiple_imgs_btn>();
 
+projects_3d_posts_data.push(
+    {
+        title:"Low-Poly 3D Short Washroom Animation for a Video [Losing Aura at Domino's] using Blender",
+        subtitle:"I made this low poly short animation for some demonstration on my latest YouTube video. I also simulated water physics using Blender's physics system. Though I paused it and export it in the middle because I was running out of time. It was only for a video still. haha. \n\n The video on LinkedIn will arrive soon, you can watch the full video right now on YouTube though!",
+        date: "5th November 2024",
+        imgs:["/Blogs/Images/dominos_video/5.jpg",
+            "/Projects/3D_projects/Images/dominos_room_act/0.jpg",
+            "/Projects/3D_projects/Images/dominos_room_act/1.jpg",
+            "/Projects/3D_projects/Images/dominos_room_act/2.jpg",
+            "/Projects/3D_projects/Images/dominos_room_act/3.jpg"
+        ],
+        btns:[
+            {
+                btn_string:"YouTube Video",
+                click_url:"https://youtu.be/1xkqAfQTgCE?si=q5NsT2gSHGMNLphL",
+                external:true
+                
+            }
+        ]
+    }
+);
+
+projects_3d_posts_data.push(
+    {
+        title:"Low-Poly 3D Short Car Animation for a Video [Losing Aura at Domino's] using Blender",
+        subtitle:"I made this low poly short animation for some demonstration on my latest YouTube video. I also used Blender's particles system to create some generic and simple smoke effect.\n\n You can view the short animation on LinkedIn or visit my YouTube for the full video!",
+        date: "5th November 2024",
+        imgs:["/Projects/3D_projects/Images/dominos_car_act/0.jpg",
+            "/Blogs/Images/dominos_video/4.jpg",
+            "/Projects/3D_projects/Images/dominos_car_act/2.jpg",
+            "/Blogs/Images/dominos_video/0.png"
+        ],
+        btns:[
+            {
+                btn_string:"LinkedIn Video",
+                click_url:"https://www.linkedin.com/posts/realinspirer_animation-blender-activity-7259620621146316800-qAWQ?utm_source=share&utm_medium=member_desktop",
+                external:true
+            },
+            {
+                btn_string:"YouTube Video",
+                click_url:"https://youtu.be/1xkqAfQTgCE?si=q5NsT2gSHGMNLphL",
+                external:true
+                
+            }
+        ]
+    }
+);
 
 projects_3d_posts_data.push(
     {
@@ -24,12 +71,6 @@ projects_3d_posts_data.push(
         date: "8th October 2024",
         imgs:["/Projects/3D_projects/Images/fui/profile.jpg",
             "/Projects/3D_projects/Images/fui/thumbnail.jpg"
-        ],
-        btns:[
-            {
-                btn_string:"Read full blog post",
-                click_url:"/"
-            }
         ]
     }
 );
