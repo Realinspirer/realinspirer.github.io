@@ -3,7 +3,7 @@ let projects_3d_posts_data = new Array<Data_class_multiple_imgs_btn>();
 projects_3d_posts_data.push(
     {
         title:"Low-Poly 3D Short Washroom Animation for a Video [Losing Aura at Domino's] using Blender",
-        subtitle:"I made this low poly short animation for some demonstration on my latest YouTube video. I also simulated water physics using Blender's physics system. Though I paused it and export it in the middle because I was running out of time. It was only for a video still. haha. \n\n The video on LinkedIn will arrive soon, you can watch the full video right now on YouTube though!",
+        subtitle:"I made this low poly short animation for some demonstration on my latest YouTube video. I also simulated water physics using Blender's physics system. Though I paused it and export it in the middle because I was running out of time. It was only for a video still. haha. \n\n You can watch the short animation on LinkedIn and you can also watch the full video on YouTube!",
         date: "5th November 2024",
         imgs:["/Blogs/Images/dominos_video/5.jpg",
             "/Projects/3D_projects/Images/dominos_room_act/0.jpg",
@@ -12,6 +12,11 @@ projects_3d_posts_data.push(
             "/Projects/3D_projects/Images/dominos_room_act/3.jpg"
         ],
         btns:[
+            {
+                btn_string:"LinkedIn Video",
+                click_url:"https://www.linkedin.com/posts/realinspirer_blender-activity-7261064056529149952-vxFZ?utm_source=share&utm_medium=member_desktop",
+                external:true
+            },
             {
                 btn_string:"YouTube Video",
                 click_url:"https://youtu.be/1xkqAfQTgCE?si=q5NsT2gSHGMNLphL",
