@@ -3,6 +3,10 @@
     src: url("/Fonts/LTSaeada-Regular.otf");
 }
 @font-face {
+    font-family: LT_Bold;
+    src: url("/Fonts/LTSaeada-Bold.otf");
+}
+@font-face {
     font-family: LT_Medium;
     src: url("/Fonts/LTSaeada-Medium.otf");
 }

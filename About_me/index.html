@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Realinspirer</title>
+    <link rel="icon" href="/Images/logo.svg">
+    <meta name="description" content="Read about Realinspirer - a programmer,
+    developer, and a creator!">
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/Scripts/script.js"></script>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/Styles/Hamburger_nav_icon_style.css">
+    <link rel="stylesheet" href="/Styles/Middle_section_style.css">
+    <link rel="stylesheet" href="/Styles/Footer.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    
+</head>
+<body>
+    <!-- header -->
+    <div class="logo_div">
+        <img class="logo_img" src="/Images/logo.svg" onclick="window.open('/', '_self')" alt="">
+        <div class="Main_links_div">
+            <a class="Main_links " href="/"><span>HOME</span></a>
+            <a class="Main_links donate" href="/Donate/"><span>DONATE</span></a>
+            <a class="Main_links" href="/Games/"><span>GAMES</span></a>
+            <a class="Main_links" href="/Projects/"><span>PROJECTS</span></a>
+            <a class="Main_links" href="/Apps/"><span>APPS</span></a>
+            <a class="Main_links active" href="/About_me/"><span>ABOUT ME</span></a>
+            <a class="Main_links icon" id="nav_bar" onclick="open_close_nav()">
+                <i class="bars">
+                    <svg class="ham hamRotate ham7" id="ham_icon" viewBox="-1 -7 100 100" width="40">
+                        <path
+                              class="line top"
+                              d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
+                        <path
+                              class="line middle"
+                              d="m 70,50 h -40" />
+                        <path
+                              class="line bottom"
+                              d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
+                      </svg>
+                </i>
+            </a>
+            <!-- &#8801; -->
+        </div>
+        <div class="not_visible" id="verticle_menu" tabindex="0">
+            <a class="Main_links " href="/"><span>HOME</span></a>
+            <a class="Main_links donate" href="/Donate/"><span>DONATE</span></a>
+            <a class="Main_links" href="/Games/"><span>GAMES</span></a>
+            <a class="Main_links" href="/Projects/"><span>PROJECTS</span></a>
+            <a class="Main_links" href="/Apps/"><span>APPS</span></a>
+            <a class="Main_links active" href="/About_me/"><span>ABOUT ME</span></a>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <div class="cover">
+        <img class="cover_img" src="Images/cover.jpg" alt="">
+        <div class="title_div">
+                <h1 class="title">I'm Realinspirer</h1>
+                <p class="subtitle">Developer <span>•</span> Video editor <span>•</span> 3D & Vector Artist</p>
+        </div>
+    </div>
+
+    <p class="about_desc fading_element_card">
+        My online and work name is 'Realinspirer'. Primarily a programmer, I now make and work on a lot of things which I love.<br><br>
+
+        Programming has always been my go to since I was like 14. I loved programming when I was first introduced to it during my school time. Soon I discovered about C# and my first projects include making some small console programs using .NET. I started and learnt C# after I decided to make apps and also to pursue game development in the future and here I am!<br><br>
+
+        
+        Since we are talking about me, I also loved watching romance anime (I don't watch it anymore), and the reason I am mentioning this is because I am obsessed with true love because of this. Haha, maybe a bit personal... I felt adding this here because this trait of mine has helped during various times of life... yeah. <br><br>
+        
+        <span class="point fading_element_card">Work:</span> <span class="point_desc fading_element_card">Now, I work on various different things which include <b>game development</b>, <b>video editing</b>, <b>3D designing</b>, <b>shading & visual effects</b>, <b>app development</b> and <b>vector designing</b>.</span>
+
+        <br><br>
+
+        <span class="point fading_element_card">Experience:</span> <span class="point_desc fading_element_card">I have been doing programming in general and working with languages and apps since around 2018. But if we're talking about game development, I have been making games since around 2020, right around the time when a 'certain pandemic' started.</span><br><br>
+
+        <span class="point fading_element_card">People:</span> <span class="point_desc fading_element_card">Realinspirer' is a 'one man army'... for now. 😉 I wanna get more exposure in the gaming industry and wanna work on things I have loved since forever. I would love to work with like-minded people and progress and learn together. I look forward to what the future beholds!</span>
+    </p>
+
+    <div class="buttons_parent">
+        <a class="about_btn donate_btn" title="Donate" href="https://ko-fi.com/realinspirer"
+        target="_blank" rel="noopener">
+            <img class="btn_img" src="Images/Buttons/support_me_on_kofi_beige.png" alt="Donate">
+        </a>
+
+        <div class="small_btns">
+            <a class="about_btn" title="Email" href="mailto:realinspirer@outlook.com">
+                <img class="btn_img" src="Images/Buttons/email.png" alt="Email">
+            </a>
+
+            <a class="about_btn" title="YouTube" href="https://www.youtube.com/@Realinspirer?sub_confirmation=1" target="_blank" rel="noopener">
+                <img class="btn_img" src="Images/Buttons/youtube.png" alt="YouTube">
+            </a>
+
+            <a class="about_btn" title="LinkedIn" href="https://www.linkedin.com/in/realinspirer/" target="_blank" rel="noopener">
+                <img class="btn_img" src="Images/Buttons/linkedin.png" alt="LinkedIn">
+            </a>
+
+            <a class="about_btn" title="GitHub" href="https://github.com/Realinspirer/"
+            target="_blank" rel="noopener">
+                <img class="btn_img" src="Images/Buttons/github.png" alt="GitHub">
+            </a>
+        </div>
+
+    </div>
+
+
+    <h2 class="Middle_section_text fading_element_card small works_sec">MY WORKS</h2>
+
+    <div class="scroller_shadow_parent fading_element_card">
+        <div class="scroller_parent">
+            <img class="scroller_item item0" alt="" src="Images/Works/0.png">
+            <img class="scroller_item item1" alt="" src="Images/Works/1.png">
+            <img class="scroller_item item2" alt="" src="Images/Works/2.png">
+            <img class="scroller_item item3" alt="" src="Images/Works/3.png">
+            <img class="scroller_item item4" alt="" src="Images/Works/4.png">
+            <img class="scroller_item item5" alt="" src="Images/Works/5.png">
+            <img class="scroller_item item6" alt="" src="Images/Works/6.png">
+            <!-- <img class="scroller_item item5" alt=""> -->
+        </div>
+    </div>
+
+
+    <h3 class="end_text"><span class="gradient_text">Thank you</span> for visiting my page!<br><span class="gradient_text">Good Luck!</span></h3>
+
+    <!-- footer section -->
+    <div class="footer_div">
+        <div class="footer_logo">
+            <img class="footer_img" src="/Images/logo_light.svg" alt="footer_img">
+            <p class="footer_logo_title">REALINSPIRER
+                <span><br>IMAGINE AND CREATE</span>
+            </p>
+        </div>
+
+        <div class="footer_links_parent">
+            <div class="footer_links_section">
+                <p class="footer_links_title">Contact</p>
+                <ul class="footer_links_list">
+                    <li><a href="mailto:realinspirer@outlook.com">Email</a></li>
+                </ul>
+            </div>
+            <div class="footer_links_section">
+                <p class="footer_links_title">Socials</p>
+                <ul class="footer_links_list">
+                    <li><a href="https://www.youtube.com/@Realinspirer?sub_confirmation=1" rel="noopener" target="_blank">YouTube</a></li>
+                    <li><a href="https://realinspirer.itch.io/" rel="noopener" target="_blank">Itch.io</a></li>
+                    <li><a href="https://github.com/Realinspirer/" rel="noopener" target="_blank">Github</a></li>
+                </ul>
+            </div>
+            <div class="footer_links_section">
+                <p class="footer_links_title">Creations</p>
+                <ul class="footer_links_list">
+                    <li><a href="/Games/">Games</a></li>
+                    <li><a href="/Apps/">Apps</a></li>
+                    <li><a href="/Projects/#Designs">Designs</a></li>
+                </ul>
+                <ul class="footer_links_list footer_links_margin">
+                    <li><a href="/Projects/#Animations">Animations</a></li>
+                    <li><a href="/Projects/3D_projects/">3D</a></li>
+                    <li><a href="/Projects/">..and much more</a></li>
+                </ul>
+            </div>
+            <div class="footer_links_section">
+                <p class="footer_links_title">More links</p>
+                <ul class="footer_links_list">
+                    <li><a href="/Blogs/">Blogs</a></li>
+                    <li><a href="/About_me/">About me</a></li>
+                    <li><a href="/Donate/">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer_links_section">
+                <p class="footer_links_title">Hire me</p>
+                <ul class="footer_links_list">
+                    <li><a href="https://www.linkedin.com/in/realinspirer/" rel="noopener" target="_blank">Linkedin</a></li>
+                    <li>Freelancer</li>
+                    <li><a href="mailto:realinspirer@outlook.com">Email</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <p class="github_thing_footer">This site is hosted on Github pages
+            <span><a href="https://github.com/Realinspirer/realinspirer.github.io" target="_blank" rel="noopener"><br>Check out the site repository</a></span>
+        </p>
+        <div class="separator_footer"></div>
+        <p class="copyright_thing_footer">This website is fully designed by Realinspirer
+            <span><br>©️ Realinspirer 2024, All rights reserved</span>
+        </p>
+    </div>
+    <!-- footer section end -->
+
+</body>
+</html>
