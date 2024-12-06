@@ -36,51 +36,87 @@ const Populate_image_scroller = (function(){
             }
         }
     }
-    
-    return async function(json_path:string, id:string, count:number=8){
 
-    var response = await fetch(json_path);
-    var res_ar_b:Array<img_scroller_class> = await response.json();
-    let res_ar = res_ar_b.slice(0, count);
-
-    var parent_to_add = document.querySelector(`#${id}`);
-
-    
-    res_ar.forEach(res_b => {
-        let res = new img_scroller_class(res_b.img_path, res_b.custom_style, res_b.other_imgs, res_b.click_url, res_b.window_argument);
+    class just_img{
+        image_cover:string="";
+        click_url:string|null = null;
+    }
+    async function Populate_image_scroller_posts(data:Array<Data_class_multiple_imgs_btn>, id:string, count:number=8){
         
-        let cu_style = `style="${res.custom_style}"`;
-        let ot_imgs = `data-other_imgs="${res.other_imgs}"`;
+        var parent_to_add = document.querySelector(`#${id}`);
 
-        let win_arg = ""
-        let click_url = ""
-        if(res.custom_style == null){
-            cu_style = "";
-        }
-        if(res.other_imgs == null){
-            ot_imgs = "";
-        }
-        if(res.click_url != null && res.click_url != ""){
-            click_url = `data-click_url="${res.click_url}"`;
-            if(res.window_argument != null && res.window_argument != ""){
-                win_arg = `data-window_argument="${res.window_argument}"`;
+        let index = 0;
+        data.forEach(
+            res_b => {
+                // let res = new img_scroller_class(res_b.image_url, "", null, res_b.click_url, null);
+
+                res_b.imgs?.forEach(x=> {
+
+                    if(index >= count){
+                        return;
+                    }
+                    
+                    let to_add = `<div class="sc_img">`+
+                                            `<img src="${x}" style="--fit:cover;" class="set_custom_style" alt="design_item">` +
+                                `</div>`;
+                    parent_to_add?.insertAdjacentHTML("beforeend", to_add);
+                    index++;
+                });
             }
-        }
-        // let back_thing;
-        // if(cu_style.includes("url")){
-        //     if
-        // }
-        res.internal_assign.forEach( actual_path => {
+        )
 
-            let to_add = `<div class="sc_img">`+
-                                    `<img src="${actual_path}" ${cu_style} ${ot_imgs} ${click_url} ${win_arg} class="set_custom_style  " alt="design_item">` +
-                        `</div>`;
-            parent_to_add?.insertAdjacentHTML("beforeend", to_add);
+        parent_to_add?.dispatchEvent(added_event);
+    }
+
+    async function Populate_image_scroller_def(json_path:string, id:string, count:number=8)
+    {
+        var response = await fetch(json_path);
+        var res_ar_b:Array<img_scroller_class> = await response.json();
+        let res_ar = res_ar_b.slice(0, count);
+
+        var parent_to_add = document.querySelector(`#${id}`);
+
+        
+        res_ar.forEach(res_b => {
+            let res = new img_scroller_class(res_b.img_path, res_b.custom_style, res_b.other_imgs, res_b.click_url, res_b.window_argument);
+            
+            let cu_style = `style="${res.custom_style}"`;
+            let ot_imgs = `data-other_imgs="${res.other_imgs}"`;
+
+            let win_arg = ""
+            let click_url = ""
+            if(res.custom_style == null){
+                cu_style = "";
+            }
+            if(res.other_imgs == null){
+                ot_imgs = "";
+            }
+            if(res.click_url != null && res.click_url != ""){
+                click_url = `data-click_url="${res.click_url}"`;
+                if(res.window_argument != null && res.window_argument != ""){
+                    win_arg = `data-window_argument="${res.window_argument}"`;
+                }
+            }
+            // let back_thing;
+            // if(cu_style.includes("url")){
+            //     if
+            // }
+            res.internal_assign.forEach( actual_path => {
+
+                let to_add = `<div class="sc_img">`+
+                                        `<img src="${actual_path}" ${cu_style} ${ot_imgs} ${click_url} ${win_arg} class="set_custom_style  " alt="design_item">` +
+                            `</div>`;
+                parent_to_add?.insertAdjacentHTML("beforeend", to_add);
+            });
         });
-    });
 
-    parent_to_add?.dispatchEvent(added_event);
-    
-    }}
+        parent_to_add?.dispatchEvent(added_event);
+    }
+    return{
+        Populate_image_scroller_def:Populate_image_scroller_def,
+        Populate_image_scroller_posts:Populate_image_scroller_posts
+
+    }
+}
 
 )();

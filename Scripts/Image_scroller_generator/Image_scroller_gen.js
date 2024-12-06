@@ -36,7 +36,34 @@ const Populate_image_scroller = (function () {
             }
         }
     }
-    return function (json_path_1, id_1) {
+    class just_img {
+        constructor() {
+            this.image_cover = "";
+            this.click_url = null;
+        }
+    }
+    function Populate_image_scroller_posts(data_1, id_1) {
+        return __awaiter(this, arguments, void 0, function* (data, id, count = 8) {
+            var parent_to_add = document.querySelector(`#${id}`);
+            let index = 0;
+            data.forEach(res_b => {
+                // let res = new img_scroller_class(res_b.image_url, "", null, res_b.click_url, null);
+                var _a;
+                (_a = res_b.imgs) === null || _a === void 0 ? void 0 : _a.forEach(x => {
+                    if (index >= count) {
+                        return;
+                    }
+                    let to_add = `<div class="sc_img">` +
+                        `<img src="${x}" style="--fit:cover;" class="set_custom_style" alt="design_item">` +
+                        `</div>`;
+                    parent_to_add === null || parent_to_add === void 0 ? void 0 : parent_to_add.insertAdjacentHTML("beforeend", to_add);
+                    index++;
+                });
+            });
+            parent_to_add === null || parent_to_add === void 0 ? void 0 : parent_to_add.dispatchEvent(added_event);
+        });
+    }
+    function Populate_image_scroller_def(json_path_1, id_1) {
         return __awaiter(this, arguments, void 0, function* (json_path, id, count = 8) {
             var response = yield fetch(json_path);
             var res_ar_b = yield response.json();
@@ -73,5 +100,9 @@ const Populate_image_scroller = (function () {
             });
             parent_to_add === null || parent_to_add === void 0 ? void 0 : parent_to_add.dispatchEvent(added_event);
         });
+    }
+    return {
+        Populate_image_scroller_def: Populate_image_scroller_def,
+        Populate_image_scroller_posts: Populate_image_scroller_posts
     };
 })();
