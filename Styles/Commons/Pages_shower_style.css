@@ -1,0 +1,69 @@
+:where(.pages_shower, .pages_shower *){
+    padding: initial;
+    margin: initial;
+}
+.pages_shower{
+    --side_mar:2rem;
+    --side_mar:1rem;
+    --side_mar:clamp(1rem, 0.737rem + 1.404vw, 2rem);
+
+    margin: 3em var(--side_mar) 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+    font-size: 1rem;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.684rem + 0.351vw, 1rem);
+}
+
+.page_btn{
+    padding: 0.35em;
+    display: block;
+
+    background-color: white;
+    --size:2em;
+    height: var(--size);
+    width: var(--size);
+
+    border-radius: 0.4em;
+    filter: drop-shadow(0 0 0.3em #52525266);
+    cursor: pointer;
+
+    transition: filter var(--base_anim_speed) ease-in-out,
+                scale var(--base_anim_speed) ease-in-out;
+}
+.page_btn:hover{
+    filter: drop-shadow(0 0 0.7em #525252a8);
+    scale: 1.1;
+}
+
+.page_selector_symbol{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+
+    opacity: 0.8;
+}
+.page_btn.previous{
+    transform: rotate(90deg);
+}
+.page_btn.next{
+    transform: rotate(-90deg);
+}
+.page_indicator_text{
+    font: LT_light;
+    color: #6d6d6d;
+    font-size: 1.1em;
+}
+.page_btn.disabled{
+    background-color: #b6b6b6;
+    pointer-events: none;
+    filter: drop-shadow(0 0 0.3em #52525275);
+
+}
+.page_btn.disabled .page_selector_symbol{
+    opacity: 0.5;
+}

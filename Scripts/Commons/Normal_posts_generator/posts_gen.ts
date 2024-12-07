@@ -3,6 +3,7 @@ const posts_gen = (function(){
     let parent = document.querySelector("#posts")!;
     let query = new URLSearchParams(window.location.search);
     let req_title = query.get("title");
+    let req_page = Number.parseInt(query.get("page") ?? "1");
 
     let viewer_parent = document.querySelector("#viewer")!;
     let close_btn = viewer_parent.querySelector<HTMLButtonElement>(".close_btn")!;
@@ -23,6 +24,13 @@ const posts_gen = (function(){
     });
 
     let query_met = false;
+
+    let posts_per_page = 5;
+
+    let previous_btn = document.querySelector<HTMLLinkElement>(".page_btn.previous")!;
+    let next_btn = document.querySelector<HTMLLinkElement>(".page_btn.next")!;
+    let page_text = document.querySelector(".page_indicator_text")!;
+
     return function generate(data:Array<Data_class_multiple_imgs_btn>){
         if(req_title != null){
             let req_index = data.findIndex(x => x.title == req_title);
@@ -32,9 +40,38 @@ const posts_gen = (function(){
 
                 document.getElementById("clear_query")?.classList.remove("hidden");
             }
+            else{
+                window.location.href = "/404.html";
+            }
+        }
+        if(req_page <= 0){ req_page = 1; }
+        let post_count = (req_page - 1) * posts_per_page;
+        
+        let total_pages = Math.ceil(data.length/posts_per_page);
+        page_text.textContent = `Viewing page ${req_page} of ${total_pages}`;
+        if(req_page <= 1){
+            previous_btn.classList.add("disabled");
+        }
+        else{
+            previous_btn.href = return_page_url(req_page - 1);
+        }
+        if(total_pages <= 1 || req_page >= total_pages){
+            next_btn.classList.add("disabled");
+        }
+        else{
+            next_btn.href = return_page_url(req_page + 1);
         }
 
-        data.forEach(post_data => {
+        for (let count = 0; count < posts_per_page; count++) 
+        {
+            if(post_count >= data.length){
+                if(count == 0){
+                    window.location.href = ".";
+                }
+                return;
+            }
+            let post_data = data[post_count];
+
             let card =  document.createElement("div");
             card.classList.add("card", "fading_element_card");
             parent.appendChild(card);
@@ -101,6 +138,8 @@ const posts_gen = (function(){
                     symbol.alt = "";
                     full_screen_prompt.appendChild(symbol);
                 })
+
+                post_count++;
             }
 
 
@@ -227,7 +266,7 @@ const posts_gen = (function(){
                 check_sc_btns(images_post, checker, right_btn, left_btn);
             }, 700);
 
-        });
+        };
     }
     
     function check_sc_btns(sc_ele:HTMLElement, checker:number, ...to_hide_elements:HTMLElement[]){
@@ -248,6 +287,14 @@ const posts_gen = (function(){
         let req_url = window.location.protocol + '//' + window.location.host + window.location.pathname + "?" + search_params;
 
         navigator.clipboard.writeText(req_url)
+    }
+    function return_page_url(page_num:number):string{
+        let search_params = new URLSearchParams();
+        
+        search_params.append("page", page_num.toString());
+        
+        let req_url = window.location.protocol + '//' + window.location.host + window.location.pathname + "?" + search_params;
+        return req_url;
     }
 
     function posts_viewer(img_url:string){
