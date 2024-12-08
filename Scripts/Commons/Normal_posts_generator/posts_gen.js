@@ -37,7 +37,7 @@ const posts_gen = (function () {
     function generate(data_raw, ...tag) {
         return __awaiter(this, void 0, void 0, function* () {
             var _a, _b, _c;
-            let data = yield post_tag_searcher.return_found_tagged_items(data_raw, ...tag);
+            let data = yield post_tag_searcher.return_found_tagged_items(data_raw, 0, ...tag);
             //sorting
             data.sort((x, y) => {
                 var _a, _b;

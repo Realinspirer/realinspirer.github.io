@@ -9,10 +9,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const post_tag_searcher = (function () {
-    function return_found_tagged_items(data_raw, ...tag) {
-        return __awaiter(this, void 0, void 0, function* () {
+    function return_found_tagged_items(data_raw_1) {
+        return __awaiter(this, arguments, void 0, function* (data_raw, limit = 0, ...tag) {
             var _a;
             let data = [];
+            let items_added = 0;
             if (tag != null && tag.length > 0) {
                 for (let index = 0; index < data_raw.length; index++) {
                     const element = data_raw[index];
@@ -22,8 +23,12 @@ const post_tag_searcher = (function () {
                             const x = element_tags[tag_ind];
                             if (tag.some(ta => ta.toLowerCase().trim() == x.toLocaleLowerCase().trim())) {
                                 data.push(element);
+                                items_added++;
                                 break;
                             }
+                        }
+                        if (limit > 0 && items_added >= limit) {
+                            break;
                         }
                     }
                     yield new Promise(resolve => setTimeout(resolve, 5));
@@ -35,9 +40,10 @@ const post_tag_searcher = (function () {
             return data;
         });
     }
-    function return_found_tagged_items_excluded(data_raw, ...tag) {
-        return __awaiter(this, void 0, void 0, function* () {
+    function return_found_tagged_items_excluded(data_raw_1) {
+        return __awaiter(this, arguments, void 0, function* (data_raw, limit = 0, ...tag) {
             var _a;
+            let items_added = 0;
             let data = [];
             if (tag != null && tag.length > 0) {
                 for (let index = 0; index < data_raw.length; index++) {
@@ -54,6 +60,10 @@ const post_tag_searcher = (function () {
                         }
                         if (to_add) {
                             data.push(element);
+                            items_added++;
+                        }
+                        if (limit > 0 && items_added >= limit) {
+                            break;
                         }
                     }
                     yield new Promise(resolve => setTimeout(resolve, 5));

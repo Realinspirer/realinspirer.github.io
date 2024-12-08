@@ -33,7 +33,7 @@ const posts_gen = (function(){
 
     async function generate(data_raw:Array<Data_class_multiple_imgs_btn>, ...tag:Array<string>){
 
-        let data = await post_tag_searcher.return_found_tagged_items(data_raw, ...tag);
+        let data = await post_tag_searcher.return_found_tagged_items(data_raw, 0, ...tag);
 
         //sorting
         data.sort( (x,y) => {

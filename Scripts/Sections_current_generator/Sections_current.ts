@@ -8,7 +8,7 @@ get_json_normal_count("/JSON_data/Games_games_list/Games_gen.json", "more_games_
 Populate_image_scroller.Populate_image_scroller_def("/JSON_data/Projects_vector_designs/vector_gen.json", "design_sc");
 Populate_image_scroller.Populate_image_scroller_def("/JSON_data/Home_Games_list/Games_scroller_gen.json", "games_sc");
 Populate_image_scroller.Populate_image_scroller_def("/JSON_data/Projects_game_assets/Game_assets.json", "assets_sc");
-Populate_image_scroller.Populate_image_scroller_posts(await post_tag_searcher.return_found_tagged_items(Blogs_and_posts_data, "3D", "Blender"), "section_3d");
+Populate_image_scroller.Populate_image_scroller_posts(await post_tag_searcher.return_found_tagged_items(Blogs_and_posts_data, 10, "3D", "Blender"), "section_3d");
 
 
 

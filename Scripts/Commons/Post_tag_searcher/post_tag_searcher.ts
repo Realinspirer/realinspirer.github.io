@@ -1,8 +1,10 @@
 const post_tag_searcher = (function() {
 
 
-     async function return_found_tagged_items(data_raw:Array<Data_class_multiple_imgs_btn>, ...tag:Array<string>):Promise<Array<Data_class_multiple_imgs_btn>> {
+     async function return_found_tagged_items(data_raw:Array<Data_class_multiple_imgs_btn>, limit:number = 0, ...tag:Array<string>):Promise<Array<Data_class_multiple_imgs_btn>> {
         let data:Array<Data_class_multiple_imgs_btn> = [];
+
+        let items_added = 0;
         if(tag != null && tag.length > 0){
             
             for (let index = 0; index < data_raw.length; index++) {
@@ -15,9 +17,13 @@ const post_tag_searcher = (function() {
                         const x = element_tags[tag_ind];
                         if(tag.some(ta => ta.toLowerCase().trim() == x.toLocaleLowerCase().trim())){
                             data.push(element);
+                            items_added++;
                             break;
                         }
-                    }           
+                    }
+                    if(limit > 0 && items_added >= limit){
+                        break;
+                    }
                 }
                 await new Promise(resolve => setTimeout(resolve, 5));
             }
@@ -28,7 +34,9 @@ const post_tag_searcher = (function() {
         return data;
     }
     
-    async function return_found_tagged_items_excluded(data_raw:Array<Data_class_multiple_imgs_btn>, ...tag:Array<string>):Promise<Array<Data_class_multiple_imgs_btn>> {
+    async function return_found_tagged_items_excluded(data_raw:Array<Data_class_multiple_imgs_btn>, limit:number = 0, ...tag:Array<string>):Promise<Array<Data_class_multiple_imgs_btn>> {
+
+        let items_added = 0;
         let data:Array<Data_class_multiple_imgs_btn> = [];
         if(tag != null && tag.length > 0){
             
@@ -48,6 +56,10 @@ const post_tag_searcher = (function() {
                     }
                     if(to_add){
                         data.push(element);
+                        items_added++;
+                    }
+                    if(limit > 0 && items_added >= limit){
+                        break;
                     }
                 }
                 await new Promise(resolve => setTimeout(resolve, 5));
