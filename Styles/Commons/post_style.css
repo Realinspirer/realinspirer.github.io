@@ -137,6 +137,31 @@ body{
     white-space: pre-line;
 }
 
+.post_text .tags{
+    margin: 1.7em 0em 1em;
+    font-size: 1.15em;
+    color: #989898;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    flex-flow: row wrap;
+}
+.post_text .tags a{
+    background-color: #e4e4e4;
+    color: #7a7a7a;
+    border-radius: 0.4em;
+    padding: 0.3em;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: color var(--base_anim_speed),
+                background-color var(--base_anim_speed);
+}
+.post_text .tags a:hover{
+    background-color: #6d6d6d;
+    color: #dedede;
+}
+
 .btn_holder{
     
     margin-top: 1.5em;

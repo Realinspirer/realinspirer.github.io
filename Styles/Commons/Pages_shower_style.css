@@ -53,6 +53,9 @@
 .page_btn.next{
     transform: rotate(-90deg);
 }
+.page_btn.home{
+    padding: 0.35em 0.4em;
+}
 .page_indicator_text{
     font: LT_light;
     color: #6d6d6d;

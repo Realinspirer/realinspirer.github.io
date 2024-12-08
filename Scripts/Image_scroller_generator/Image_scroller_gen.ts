@@ -50,7 +50,9 @@ const Populate_image_scroller = (function(){
             res_b => {
                 // let res = new img_scroller_class(res_b.image_url, "", null, res_b.click_url, null);
 
-                res_b.imgs?.forEach(x=> {
+                if(res_b.imgs != null && res_b.imgs.length > 0)
+                for (let img_i = 0; img_i < Math.min(res_b.imgs.length, 1); img_i++) {
+                    const x = res_b.imgs[img_i];
 
                     if(index >= count){
                         return;
@@ -61,7 +63,8 @@ const Populate_image_scroller = (function(){
                                 `</div>`;
                     parent_to_add?.insertAdjacentHTML("beforeend", to_add);
                     index++;
-                });
+                    
+                }
             }
         )
 

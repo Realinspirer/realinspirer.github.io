@@ -1,18 +1,20 @@
 class Data_class{
     title:string;
     subtitle:string|null;
+    tags:string|null;
     date:string|null;
     img:string|null;
     click_url:string|null;
     external:boolean|null;
     custom_data:string|null;
 
-    constructor(title:string, subtitle:string|null, date:string|null, img:string|null,
+    constructor(title:string, subtitle:string|null, tags:string|null, date:string|null, img:string|null,
                 click_url:string|null, external:boolean|null,
                 custom_data:string|null
     ){
         this.title = title;
         this.subtitle = subtitle;
+        this.tags = tags;
         this.date = date;
         this.img = img;
         this.click_url = click_url;
@@ -29,6 +31,7 @@ class btn_data{
 class Data_class_multiple_imgs_btn{
     title:string;
     subtitle?:string|null;
+    tags?:string|null;
     date?:string|null;
     imgs?:Array<string>|null;
     click_url?:string|null;
@@ -36,13 +39,14 @@ class Data_class_multiple_imgs_btn{
     btns?:Array<btn_data>;
     custom_data?:string|null;
 
-    constructor(title:string, subtitle:string|null, date:string|null, imgs:Array<string>|null,
+    constructor(title:string, subtitle:string|null, date:string|null, imgs:Array<string>|null, tags:string|null,
                 click_url:string|null, external:boolean|null, btns?:Array<btn_data>,
                 custom_data?:string|null
     ){
         this.title = title;
         this.subtitle = subtitle;
         this.date = date;
+        this.tags = tags;
         this.imgs = imgs;
         this.click_url = click_url;
         this.external = external;

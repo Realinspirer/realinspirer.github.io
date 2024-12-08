@@ -48,17 +48,18 @@ const Populate_image_scroller = (function () {
             let index = 0;
             data.forEach(res_b => {
                 // let res = new img_scroller_class(res_b.image_url, "", null, res_b.click_url, null);
-                var _a;
-                (_a = res_b.imgs) === null || _a === void 0 ? void 0 : _a.forEach(x => {
-                    if (index >= count) {
-                        return;
+                if (res_b.imgs != null && res_b.imgs.length > 0)
+                    for (let img_i = 0; img_i < Math.min(res_b.imgs.length, 1); img_i++) {
+                        const x = res_b.imgs[img_i];
+                        if (index >= count) {
+                            return;
+                        }
+                        let to_add = `<div class="sc_img">` +
+                            `<img src="${x}" style="--fit:cover;" class="set_custom_style" alt="design_item">` +
+                            `</div>`;
+                        parent_to_add === null || parent_to_add === void 0 ? void 0 : parent_to_add.insertAdjacentHTML("beforeend", to_add);
+                        index++;
                     }
-                    let to_add = `<div class="sc_img">` +
-                        `<img src="${x}" style="--fit:cover;" class="set_custom_style" alt="design_item">` +
-                        `</div>`;
-                    parent_to_add === null || parent_to_add === void 0 ? void 0 : parent_to_add.insertAdjacentHTML("beforeend", to_add);
-                    index++;
-                });
             });
             parent_to_add === null || parent_to_add === void 0 ? void 0 : parent_to_add.dispatchEvent(added_event);
         });

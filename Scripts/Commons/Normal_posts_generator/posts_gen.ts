@@ -31,7 +31,34 @@ const posts_gen = (function(){
     let next_btn = document.querySelector<HTMLLinkElement>(".page_btn.next")!;
     let page_text = document.querySelector(".page_indicator_text")!;
 
-    return function generate(data:Array<Data_class_multiple_imgs_btn>){
+    async function generate(data_raw:Array<Data_class_multiple_imgs_btn>, ...tag:Array<string>){
+
+        let data = await post_tag_searcher.return_found_tagged_items(data_raw, ...tag);
+
+        //sorting
+        data.sort( (x,y) => {
+
+            let req_regex = new RegExp("th|rd|nd", "i")
+
+            let first_date = (x.date ?? "").replace(req_regex, "");
+            let second_date = (y.date ?? "").replace(req_regex, "");
+            var first = Date.parse(first_date);
+            var second = Date.parse(second_date);
+
+            if(first < second){
+                return 1;
+            }
+            else if(first > second){
+                return -1;
+            }
+            else{
+                return 0;
+            }
+            
+        });
+
+        //sorting end
+
         if(req_title != null){
             let req_index = data.findIndex(x => x.title == req_title);
             if(req_index != -1){
@@ -44,6 +71,7 @@ const posts_gen = (function(){
                 window.location.href = "/404.html";
             }
         }
+
         if(req_page <= 0){ req_page = 1; }
         let post_count = (req_page - 1) * posts_per_page;
         
@@ -64,7 +92,7 @@ const posts_gen = (function(){
 
         for (let count = 0; count < posts_per_page; count++) 
         {
-            if(post_count >= data.length){
+            if(post_count >= data.length && data.length != 0){
                 if(count == 0){
                     window.location.href = ".";
                 }
@@ -172,6 +200,19 @@ const posts_gen = (function(){
             desc.classList.add("desc");
             desc.textContent = post_data.subtitle ?? "";
             post_text.appendChild(desc);
+
+            let tags = document.createElement("p");
+            tags.classList.add("tags");
+            tags.textContent = "Tags: "
+            post_text.appendChild(tags);
+            
+            post_data.tags?.split(",").forEach(tag => {
+                if(tag.length > 0){
+                    let ele = document.createElement("a");
+                    ele.textContent = "#" + tag.trim();
+                    tags.appendChild(ele);
+                }
+            });
             
             let btn_holder = document.createElement("div");
             btn_holder.classList.add("btn_holder");
@@ -306,6 +347,10 @@ const posts_gen = (function(){
             viewer_parent.classList.add("visible");
         });
         document.documentElement.classList.add("viewer_active");
+    }
+
+    return{
+        generate:generate
     }
     
 })();
