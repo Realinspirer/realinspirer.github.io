@@ -4,6 +4,7 @@ const posts_gen = (function(){
     let query = new URLSearchParams(window.location.search);
     let req_title = query.get("title");
     let req_page = Number.parseInt(query.get("page") ?? "1");
+    let req_tag = query.get("tag");
 
     let viewer_parent = document.querySelector("#viewer")!;
     let close_btn = viewer_parent.querySelector<HTMLButtonElement>(".close_btn")!;
@@ -29,11 +30,20 @@ const posts_gen = (function(){
 
     let previous_btn = document.querySelector<HTMLLinkElement>(".page_btn.previous")!;
     let next_btn = document.querySelector<HTMLLinkElement>(".page_btn.next")!;
+    let home_btn = document.querySelector<HTMLLinkElement>(".page_btn.home")!;
     let page_text = document.querySelector(".page_indicator_text")!;
 
     async function generate(data_raw:Array<Data_class_multiple_imgs_btn>, ...tag:Array<string>){
 
-        let data = await post_tag_searcher.return_found_tagged_items(data_raw, 0, ...tag);
+        let data;
+        if(req_tag != null && req_tag != ""){
+            data = await post_tag_searcher.return_found_tagged_items_searched(data_raw, 0, [req_tag], ...tag);
+            document.getElementById("clear_query")?.classList.remove("hidden");
+            console.log("hello");
+        }
+        else{
+            data = await post_tag_searcher.return_found_tagged_items(data_raw, 0, ...tag);
+        }
 
         //sorting
         data.sort( (x,y) => {
@@ -89,6 +99,7 @@ const posts_gen = (function(){
         else{
             next_btn.href = return_page_url(req_page + 1);
         }
+        home_btn.href = return_page_url(0);
 
         for (let count = 0; count < posts_per_page; count++) 
         {
@@ -210,6 +221,8 @@ const posts_gen = (function(){
                 if(tag.length > 0){
                     let ele = document.createElement("a");
                     ele.textContent = "#" + tag.trim();
+                    let tag_to_search = tag;
+                    ele.href = return_tag_url(tag_to_search);
                     tags.appendChild(ele);
                 }
             });
@@ -301,6 +314,9 @@ const posts_gen = (function(){
 
                 card.scrollIntoView({block:"center",inline:"center"});
             }
+            if(req_tag != null && req_tag != null && count == 0){
+                card.scrollIntoView({block:"center", inline:"center"})
+            }
 
 
             let checker = setInterval(() => {
@@ -332,7 +348,25 @@ const posts_gen = (function(){
     function return_page_url(page_num:number):string{
         let search_params = new URLSearchParams();
         
-        search_params.append("page", page_num.toString());
+        if(page_num != 0){
+            search_params.append("page", page_num.toString());
+        }
+        if(req_tag != null && req_tag != ""){
+            search_params.append("tag", req_tag);
+        }
+        let req_url;
+        if(search_params != null && search_params.size != 0){
+            req_url = window.location.protocol + '//' + window.location.host + window.location.pathname + "?" + search_params;
+        }
+        else{
+            req_url = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        }
+        return req_url;
+    }
+    function return_tag_url(tag:string):string{
+        let search_params = new URLSearchParams();
+        
+        search_params.append("tag", tag);
         
         let req_url = window.location.protocol + '//' + window.location.host + window.location.pathname + "?" + search_params;
         return req_url;

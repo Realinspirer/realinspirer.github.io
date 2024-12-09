@@ -14,6 +14,7 @@ const posts_gen = (function () {
     let query = new URLSearchParams(window.location.search);
     let req_title = query.get("title");
     let req_page = Number.parseInt((_a = query.get("page")) !== null && _a !== void 0 ? _a : "1");
+    let req_tag = query.get("tag");
     let viewer_parent = document.querySelector("#viewer");
     let close_btn = viewer_parent.querySelector(".close_btn");
     let main_img = viewer_parent.querySelector(".main_img");
@@ -33,11 +34,20 @@ const posts_gen = (function () {
     let posts_per_page = 5;
     let previous_btn = document.querySelector(".page_btn.previous");
     let next_btn = document.querySelector(".page_btn.next");
+    let home_btn = document.querySelector(".page_btn.home");
     let page_text = document.querySelector(".page_indicator_text");
     function generate(data_raw, ...tag) {
         return __awaiter(this, void 0, void 0, function* () {
-            var _a, _b, _c;
-            let data = yield post_tag_searcher.return_found_tagged_items(data_raw, 0, ...tag);
+            var _a, _b, _c, _d;
+            let data;
+            if (req_tag != null && req_tag != "") {
+                data = yield post_tag_searcher.return_found_tagged_items_searched(data_raw, 0, [req_tag], ...tag);
+                (_a = document.getElementById("clear_query")) === null || _a === void 0 ? void 0 : _a.classList.remove("hidden");
+                console.log("hello");
+            }
+            else {
+                data = yield post_tag_searcher.return_found_tagged_items(data_raw, 0, ...tag);
+            }
             //sorting
             data.sort((x, y) => {
                 var _a, _b;
@@ -62,7 +72,7 @@ const posts_gen = (function () {
                 if (req_index != -1) {
                     var req_element = data.splice(req_index, 1)[0];
                     data.splice(0, 0, req_element);
-                    (_a = document.getElementById("clear_query")) === null || _a === void 0 ? void 0 : _a.classList.remove("hidden");
+                    (_b = document.getElementById("clear_query")) === null || _b === void 0 ? void 0 : _b.classList.remove("hidden");
                 }
                 else {
                     window.location.href = "/404.html";
@@ -86,6 +96,7 @@ const posts_gen = (function () {
             else {
                 next_btn.href = return_page_url(req_page + 1);
             }
+            home_btn.href = return_page_url(0);
             for (let count = 0; count < posts_per_page; count++) {
                 if (post_count >= data.length && data.length != 0) {
                     if (count == 0) {
@@ -170,16 +181,18 @@ const posts_gen = (function () {
                 title.appendChild(hash_anchor);
                 let desc = document.createElement("p");
                 desc.classList.add("desc");
-                desc.textContent = (_b = post_data.subtitle) !== null && _b !== void 0 ? _b : "";
+                desc.textContent = (_c = post_data.subtitle) !== null && _c !== void 0 ? _c : "";
                 post_text.appendChild(desc);
                 let tags = document.createElement("p");
                 tags.classList.add("tags");
                 tags.textContent = "Tags: ";
                 post_text.appendChild(tags);
-                (_c = post_data.tags) === null || _c === void 0 ? void 0 : _c.split(",").forEach(tag => {
+                (_d = post_data.tags) === null || _d === void 0 ? void 0 : _d.split(",").forEach(tag => {
                     if (tag.length > 0) {
                         let ele = document.createElement("a");
                         ele.textContent = "#" + tag.trim();
+                        let tag_to_search = tag;
+                        ele.href = return_tag_url(tag_to_search);
                         tags.appendChild(ele);
                     }
                 });
@@ -249,6 +262,9 @@ const posts_gen = (function () {
                     parent.appendChild(more_header);
                     card.scrollIntoView({ block: "center", inline: "center" });
                 }
+                if (req_tag != null && req_tag != null && count == 0) {
+                    card.scrollIntoView({ block: "center", inline: "center" });
+                }
                 let checker = setInterval(() => {
                     check_sc_btns(images_post, checker, right_btn, left_btn);
                 }, 700);
@@ -273,7 +289,24 @@ const posts_gen = (function () {
     }
     function return_page_url(page_num) {
         let search_params = new URLSearchParams();
-        search_params.append("page", page_num.toString());
+        if (page_num != 0) {
+            search_params.append("page", page_num.toString());
+        }
+        if (req_tag != null && req_tag != "") {
+            search_params.append("tag", req_tag);
+        }
+        let req_url;
+        if (search_params != null && search_params.size != 0) {
+            req_url = window.location.protocol + '//' + window.location.host + window.location.pathname + "?" + search_params;
+        }
+        else {
+            req_url = window.location.protocol + '//' + window.location.host + window.location.pathname;
+        }
+        return req_url;
+    }
+    function return_tag_url(tag) {
+        let search_params = new URLSearchParams();
+        search_params.append("tag", tag);
         let req_url = window.location.protocol + '//' + window.location.host + window.location.pathname + "?" + search_params;
         return req_url;
     }
