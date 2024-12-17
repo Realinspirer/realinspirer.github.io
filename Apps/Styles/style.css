@@ -10,6 +10,11 @@ body{
     --side_mar:clamp(1rem, 0.474rem + 2.807vw, 3rem);
 
 }
+
+.post_image_scroller{
+    margin: 2em 0 2em;
+}
+
 .apps_card{
     padding: 2.5em;
     background-color: white;
