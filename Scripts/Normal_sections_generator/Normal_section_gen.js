@@ -57,7 +57,7 @@ function get_json_normal_random(json_loc_1, id_grid_1, count_1) {
         var res_rand = new Array();
         let to_return = null;
         if (excluded != null) {
-            let found_item = res_ar.findIndex(x => x.title == excluded);
+            let found_item = res_ar.findIndex(x => x.title.toLowerCase().trim() == excluded.toLowerCase().trim());
             if (found_item >= 0) {
                 to_return = (_a = res_ar[found_item].custom_data) !== null && _a !== void 0 ? _a : null;
                 res_ar.splice(found_item, 1);

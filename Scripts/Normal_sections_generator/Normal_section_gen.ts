@@ -67,7 +67,7 @@ async function get_json_normal_random(json_loc:string, id_grid:string, count:num
     let to_return:string|null = null;
 
     if(excluded != null){
-        let found_item = res_ar.findIndex(x => x.title == excluded);
+        let found_item = res_ar.findIndex(x => x.title.toLowerCase().trim() == excluded.toLowerCase().trim());
         if(found_item >= 0){
             to_return = res_ar[found_item].custom_data ?? null;
             res_ar.splice(found_item, 1);
