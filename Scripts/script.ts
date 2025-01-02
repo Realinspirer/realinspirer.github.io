@@ -12,7 +12,9 @@ class Image_with_viewport{
 //navigation menu thing
 $(Loaded);
 let verticle_nav : HTMLElement;
+
 function Loaded(){
+  set_current_year();
   verticle_nav = $("#verticle_menu")[0];
   $(window).on("click", Hide_nav);
 }
@@ -27,6 +29,12 @@ function open_close_nav() {
         verticle_nav.className ="not_visible";
     }
   }
+}
+
+function set_current_year(){
+  var copyright_thing = document.querySelector<HTMLSpanElement>(".copyright_thing_footer span")!;
+  
+  copyright_thing.innerText = `\n ©️ Realinspirer ${new Date().getFullYear()}, All rights reserved`;
 }
 
 function Hide_nav(element:any) {

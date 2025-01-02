@@ -9,6 +9,7 @@ class Image_with_viewport {
 $(Loaded);
 let verticle_nav;
 function Loaded() {
+    set_current_year();
     verticle_nav = $("#verticle_menu")[0];
     $(window).on("click", Hide_nav);
 }
@@ -23,6 +24,10 @@ function open_close_nav() {
             verticle_nav.className = "not_visible";
         }
     }
+}
+function set_current_year() {
+    var copyright_thing = document.querySelector(".copyright_thing_footer span");
+    copyright_thing.innerText = `\n ©️ Realinspirer ${new Date().getFullYear()}, All rights reserved`;
 }
 function Hide_nav(element) {
     if (!(verticle_nav === null || verticle_nav === void 0 ? void 0 : verticle_nav.contains(element.target)) && !$("#nav_bar").has(element.target).length) {
