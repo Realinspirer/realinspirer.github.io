@@ -36,9 +36,11 @@ const posts_gen = (function () {
     let next_btn = document.querySelector(".page_btn.next");
     let home_btn = document.querySelector(".page_btn.home");
     let page_text = document.querySelector(".page_indicator_text");
-    function generate(data_raw, ...tag) {
+    function generate(data_path, ...tag) {
         return __awaiter(this, void 0, void 0, function* () {
             var _a, _b, _c, _d;
+            var response = yield fetch(data_path);
+            var data_raw = yield response.json();
             let data;
             if (req_tag != null && req_tag != "") {
                 data = yield post_tag_searcher.return_found_tagged_items_searched(data_raw, 0, [req_tag], ...tag);

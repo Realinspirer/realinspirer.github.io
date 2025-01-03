@@ -33,7 +33,10 @@ const posts_gen = (function(){
     let home_btn = document.querySelector<HTMLLinkElement>(".page_btn.home")!;
     let page_text = document.querySelector(".page_indicator_text")!;
 
-    async function generate(data_raw:Array<Data_class_multiple_imgs_btn>, ...tag:Array<string>){
+    async function generate(data_path:string, ...tag:Array<string>){
+
+        var response = await fetch(data_path);
+        var data_raw:Array<Data_class_multiple_imgs_btn> = await response.json();
 
         let data;
         if(req_tag != null && req_tag != ""){
