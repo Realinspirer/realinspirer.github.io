@@ -42,7 +42,6 @@ const posts_gen = (function(){
         if(req_tag != null && req_tag != ""){
             data = await post_tag_searcher.return_found_tagged_items_searched(data_raw, 0, [req_tag], ...tag);
             document.getElementById("clear_query")?.classList.remove("hidden");
-            console.log("hello");
         }
         else{
             data = await post_tag_searcher.return_found_tagged_items(data_raw, 0, ...tag);

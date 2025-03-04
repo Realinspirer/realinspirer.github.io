@@ -45,7 +45,6 @@ const posts_gen = (function () {
             if (req_tag != null && req_tag != "") {
                 data = yield post_tag_searcher.return_found_tagged_items_searched(data_raw, 0, [req_tag], ...tag);
                 (_a = document.getElementById("clear_query")) === null || _a === void 0 ? void 0 : _a.classList.remove("hidden");
-                console.log("hello");
             }
             else {
                 data = yield post_tag_searcher.return_found_tagged_items(data_raw, 0, ...tag);
